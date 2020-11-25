@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/graduation.iml" filepath="$PROJECT_DIR$/graduation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradution-admin/gradution-admin.iml" filepath="$PROJECT_DIR$/gradution-admin/gradution-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradution-common/gradution-common.iml" filepath="$PROJECT_DIR$/gradution-common/gradution-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradution-mbg/gradution-mbg.iml" filepath="$PROJECT_DIR$/gradution-mbg/gradution-mbg.iml" />
+    </modules>
+  </component>
+</project>
