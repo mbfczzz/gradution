@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<!-- 配置生成器 -->
+<generatorConfiguration>
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+        <!-- 生成的 Java 文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 增加 Models ToStirng 方法 -->
+        <plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>
+        <!-- 增加 Models Serializable 实现 -->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!-- 分页插件 -->
+        <!-- 在 example 类中增 page 属性，并在 mapper.xml 的查询中加入 page !=null 时的查询 -->
+        <!-- <plugin type="org.mybatis.generator.plugins.MySQLPagerPlugin" /> -->
+        <!-- 在 example 类中增 offset 和 limit 属性，并在 mapper.xml 的查询中加入 limit ${offset} , ${limit} 提供在
+       offset 和 limit>0 时的查询 -->
+        <!-- <plugin type="org.mybatis.generator.plugins.MySQLPaginationPlugin"></plugin> -->
+        <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+        <commentGenerator>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!-- mysql 数据库连接配置 -->
+        <!--
+        JAVA 数据类型和 MYSQL 的数据类型转换，要注意 TINYINT 类型，且存储长度为 1 的情况。
+        TINYINT(1)只用来代表 Boolean 含义的字段，且 0 代表 false，1 代表 true。
+        想给 1，给 true 即可会转换为 1，但想给 2 怎么办？
+        如果想要存储多个数值，则定义为 TINYINT(N)，N>1。例如 TINYINT(2)
+        解决办法一：修改字段 ALTER TABLE t_goods_category MODIFY LEVEL TINYINT(2) COMMENT '等级';(需要多次修改)
+        解决办法二：在连接 mysql 的 url 后添加 tinyInt1isBit=false,该属性默认为 true(修改一次即可)
+        -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+
+                        connectionURL="jdbc:mysql://localhost:3306/gradution?useUnicode=true&amp;characterEncoding=UTF8&amp;tinyInt1isBit=false"
+                        userId="root" password="123456">
+        </jdbcConnection>
+        <!--
+        是否忽略 BigDecimals 非必填项
+        自动生成 Java 对象的时候，会根据 number 类型的长度不同生成不同的数据类型
+        number 长度 Java 类型
+        1~4 Short
+        5~9 Integer
+        10~18 Long
+        18+ BigDecimal
+        -->
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="true"/>
+        </javaTypeResolver>
+        <!-- 以下内容，需要改动 -->
+        <!-- java 类生成的位置 -->
+        <javaModelGenerator targetPackage="jz.cdgy.mbg.pojo" targetProject="src/main/java">
+            <!-- 在 targetPackage 的基础上，根据数据库的 schema 再生成一层 package，最终生成的类放在这个 package 下，默认
+           为 false -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 从数据库返回的值去除前后空格 -->
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- *Mapper.xml 配置文件生成的位置 -->
+        <sqlMapGenerator targetPackage="jz.cdgy.mbg.xml" targetProject="src/main/java">
+            <!-- 是否让 schema 作为包后缀 -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- java mapper 接口生成的位置(interface) -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="jz.cdgy.mbg.mapper" targetProject="src/main/java">
+            <!-- 是否让 schema 作为包后缀 -->
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!--
+        指定数据库表
+        tableName 数据库表名
+        domainObjectName 生成的实体类名
+        是否需要 mapper 配置文件加入 sql 的 where 条件查询,需要将 enableCountByExample 等设为 true,会生成一个对应
+       domainObjectName 的 Example 类
+
+
+       创建查询对象   enableCountByExample
+        -->
+        <table tableName="t_user" domainObjectName="User"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_emp" domainObjectName="Emp"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_department" domainObjectName="Department"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_permission" domainObjectName="Permission"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_position" domainObjectName="Position"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_role" domainObjectName="Role"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_user_role" domainObjectName="UserRole"
+
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+        <table tableName="t_role_permission" domainObjectName="RolePermission"
+               enableCountByExample="true" enableDeleteByExample="true"
+               enableSelectByExample="true" enableUpdateByExample="true">
+            <!-- 用于 insert 时，返回主键的编号 -->
+            <generatedKey column="id" sqlStatement="MySql" identity="true"/>
+        </table>
+
+    </context>
+</generatorConfiguration>
