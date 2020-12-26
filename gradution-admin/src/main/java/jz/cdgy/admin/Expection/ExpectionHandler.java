@@ -24,9 +24,9 @@ public class ExpectionHandler {
         return CommonResult.FAILED("用户名密码错误!");
     }
 
-    @ExceptionHandler(Exception.class)
-     public CommonResult handExpection(Exception ex){
-        log.error("{}",ex.getMessage()+ex.fillInStackTrace()+ex.getCause()+ex.getStackTrace());
-        return CommonResult.FAILED(StatusCode.FAILED_CODE.getMessage());
-     }
+//    @ExceptionHandler(Exception.class)
+//     public CommonResult handExpection(Exception ex){
+//        log.error("{}",ex.getMessage()+ex.fillInStackTrace()+ex.getCause()+ex.getStackTrace());
+//        return CommonResult.FAILED(StatusCode.FAILED_CODE.getMessage());
+//     }
 }

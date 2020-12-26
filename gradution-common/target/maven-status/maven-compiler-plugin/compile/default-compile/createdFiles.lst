@@ -1,5 +1,8 @@
 jz\cdgy\common\annotion\WebLog.class
+jz\cdgy\common\model\esLog.class
 jz\cdgy\common\exception\ParamException.class
-jz\cdgy\common\CommonApplication.class
+jz\cdgy\common\aop\LogAspect.class
+jz\cdgy\common\springbootApplication.class
+jz\cdgy\common\esLogService\LogRepository.class
 jz\cdgy\common\api\CommonResult.class
 jz\cdgy\common\constant\StatusCode.class
