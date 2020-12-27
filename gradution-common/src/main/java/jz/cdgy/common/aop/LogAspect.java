@@ -57,7 +57,7 @@ public class LogAspect {
         es.setOperatorIp(request.getRemoteAddr());
         es.setOperatorMethod(request.getMethod());
         es.setOperator(SecurityContextHolder.getContext().getAuthentication().getName());
-        es.setOperatorTime(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
+        es.setOperatorTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         ArrayList arrayList = new ArrayList();
         Object[] objects = proceedingJoinPoint.getArgs();
         for(int i=0;i<objects.length;i++){

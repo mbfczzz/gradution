@@ -37,6 +37,7 @@ public class RabbitLogMessageImpl  implements RabbitLogMessage {
             log.info("aop日志收集");
         }
         catch (Exception e){
+            log.error(e.getLocalizedMessage()+e.getStackTrace()+e.getMessage()+e.getCause());
             log.info("消息发送失败!");
         }
     }

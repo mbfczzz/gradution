@@ -60,7 +60,11 @@ public class LoginServiceImpl implements LoginService {
     @Override
     public ActiceUser getUserInfo() {
         log.info("获取用户信息");
-        ActiceUser acticeUser = (ActiceUser) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        ActiceUser acticeUser = null;
+        Object obj= SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        if(obj instanceof ActiceUser){
+            acticeUser = (ActiceUser) obj;
+        }
         AssertsUtil.isTrue(acticeUser==null,"当前用户不存在,当前用户已经过期!");
         return acticeUser;
     }

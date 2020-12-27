@@ -12,6 +12,6 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 public class Esconfig extends AbstractElasticsearchConfiguration {
     @Override
     public RestHighLevelClient elasticsearchClient() {
-        return RestClients.create(ClientConfiguration.create("192.168.37.3:9200")).rest();
+        return RestClients.create(ClientConfiguration.create("mbfczzz.top:9200")).rest();
     }
 }
