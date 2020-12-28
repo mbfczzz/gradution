@@ -1,0 +1,1434 @@
+2020-12-09 22:15:12.173 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Starting AdminApplication using Java 1.8.0_231 on LAPTOP-NFO4RM9J with PID 4184 (D:\graduation\gradution-admin\target\classes started by mbfczzz in D:\graduation)
+2020-12-09 22:15:12.178 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-09 22:15:12.344 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-09 22:15:12.344 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-09 22:15:18.878 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:15:18.883 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:15:18.972 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51ms. Found 0 Elasticsearch repository interfaces.
+2020-12-09 22:15:18.979 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:15:18.982 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:15:18.995 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-12-09 22:15:19.190 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:15:19.208 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-09 22:15:19.242 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
+2020-12-09 22:15:21.479 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2020-12-09 22:15:21.506 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:15:21.508 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 22:15:21.508 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-09 22:15:22.025 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/gradution] - Initializing Spring embedded WebApplicationContext
+2020-12-09 22:15:22.025 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 9678 ms
+2020-12-09 22:15:22.812 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-09 22:15:23.796 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-09 22:15:30.583 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-12-09 22:15:31.287 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+2020-12-09 22:15:31.287 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+2020-12-09 22:15:31.287 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+2020-12-09 22:15:31.288 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/ui'] with []
+2020-12-09 22:15:31.288 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/security'] with []
+2020-12-09 22:15:31.288 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+2020-12-09 22:15:31.288 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/test.html'] with []
+2020-12-09 22:15:31.375 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4104f16b, org.springframework.security.web.context.SecurityContextPersistenceFilter@50839eab, org.springframework.security.web.header.HeaderWriterFilter@f9d1d7d, org.springframework.security.web.authentication.logout.LogoutFilter@4265d1ed, jz.cdgy.admin.config.JwtAuthenticationFilter@3138f7b6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@297160e0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@320e7294, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@380105ea, org.springframework.security.web.session.SessionManagementFilter@1a7736f6, org.springframework.security.web.access.ExceptionTranslationFilter@10b45b2e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c1bcb28]
+2020-12-09 22:15:31.445 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-09 22:15:31.788 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-09 22:15:31.885 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-09 22:15:33.225 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.225 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.225 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.226 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.226 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.226 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.227 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.227 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.228 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.228 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.228 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.228 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.228 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.229 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.229 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.229 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.229 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.230 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.230 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:33.230 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:15:35.122 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Spring Data Elasticsearch: 4.1.1
+2020-12-09 22:15:35.122 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client in build: 7.9.3
+2020-12-09 22:15:35.123 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client used: 7.9.3
+2020-12-09 22:15:36.202 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:15:36.246 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1201 (http) with context path '/gradution'
+2020-12-09 22:15:36.248 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-09 22:15:36.313 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-09 22:15:36.472 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-09 22:15:36.892 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Started AdminApplication in 26.597 seconds (JVM running for 29.856)
+2020-12-09 22:15:37.392 [RMI TCP Connection(9)-192.168.161.2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/gradution] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-09 22:15:37.393 [RMI TCP Connection(9)-192.168.161.2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-09 22:15:37.397 [RMI TCP Connection(9)-192.168.161.2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-12-09 22:15:39.039 [RMI TCP Connection(11)-192.168.161.2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2020-12-09 22:15:39.369 [RMI TCP Connection(11)-192.168.161.2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#61415157:0/SimpleConnection@8ded16e [delegate=amqp://guest@127.0.0.1:5672/, localPort= 50417]
+2020-12-09 22:15:40.460 [RMI TCP Connection(11)-192.168.161.2] WARN  o.s.b.a.e.ElasticsearchRestHealthIndicator - Elasticsearch health check failed
+java.net.ConnectException: Timeout connecting to [localhost/127.0.0.1:9200]
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:849)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:259)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:246)
+	at org.springframework.boot.actuate.elasticsearch.ElasticsearchRestHealthIndicator.doHealthCheck(ElasticsearchRestHealthIndicator.java:65)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:77)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor70.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Timeout connecting to [localhost/127.0.0.1:9200]
+	at org.apache.http.nio.pool.RouteSpecificPool.timeout(RouteSpecificPool.java:169)
+	at org.apache.http.nio.pool.AbstractNIOConnPool.requestTimeout(AbstractNIOConnPool.java:632)
+	at org.apache.http.nio.pool.AbstractNIOConnPool$InternalSessionRequestCallback.timeout(AbstractNIOConnPool.java:898)
+	at org.apache.http.impl.nio.reactor.SessionRequestImpl.timeout(SessionRequestImpl.java:198)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processTimeouts(DefaultConnectingIOReactor.java:213)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:158)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	... 1 common frames omitted
+2020-12-09 22:20:05.083 [Thread-40] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-09 22:20:05.397 [Thread-40] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2020-12-09 22:20:05.403 [Thread-40] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-12-09 22:20:05.843 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Starting AdminApplication using Java 1.8.0_231 on LAPTOP-NFO4RM9J with PID 4184 (D:\graduation\gradution-admin\target\classes started by mbfczzz in D:\graduation)
+2020-12-09 22:20:05.844 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-09 22:20:07.019 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:07.020 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:07.038 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 Elasticsearch repository interfaces.
+2020-12-09 22:20:07.041 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:07.041 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:07.048 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-12-09 22:20:07.054 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:07.054 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-09 22:20:07.062 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7ms. Found 0 Redis repository interfaces.
+2020-12-09 22:20:07.551 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2020-12-09 22:20:07.552 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:20:07.553 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 22:20:07.553 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-09 22:20:07.679 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/gradution] - Initializing Spring embedded WebApplicationContext
+2020-12-09 22:20:07.679 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1828 ms
+2020-12-09 22:20:07.813 [restartedMain] ERROR o.s.boot.web.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsService' defined in class path resource [jz/cdgy/admin/config/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception; nested exception is java.lang.NoClassDefFoundError: jz/cdgy/admin/service/impl/UserDetailServiceImpl
+2020-12-09 22:20:07.815 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-09 22:20:07.819 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-12-09 22:20:07.831 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-09 22:20:07.950 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:162)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:582)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at jz.cdgy.admin.AdminApplication.main(AdminApplication.java:11)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:142)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:104)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:451)
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:200)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:181)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:159)
+	... 14 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsService' defined in class path resource [jz/cdgy/admin/config/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception; nested exception is java.lang.NoClassDefFoundError: jz/cdgy/admin/service/impl/UserDetailServiceImpl
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:213)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(ServletContextInitializerBeans.java:212)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:175)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAsRegistrationBean(ServletContextInitializerBeans.java:170)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.addAdaptableBeans(ServletContextInitializerBeans.java:155)
+	at org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(ServletContextInitializerBeans.java:87)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans(ServletWebServerApplicationContext.java:259)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(ServletWebServerApplicationContext.java:233)
+	at org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(TomcatStarter.java:53)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5166)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:843)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75)
+	at java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:134)
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909)
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183)
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:486)
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:123)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userDetailsService' defined in class path resource [jz/cdgy/admin/config/SpringSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception; nested exception is java.lang.NoClassDefFoundError: jz/cdgy/admin/service/impl/UserDetailServiceImpl
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 60 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.core.userdetails.UserDetailsService]: Factory method 'userDetailsService' threw exception; nested exception is java.lang.NoClassDefFoundError: jz/cdgy/admin/service/impl/UserDetailServiceImpl
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 73 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: jz/cdgy/admin/service/impl/UserDetailServiceImpl
+	at jz.cdgy.admin.config.SpringSecurityConfig.userDetailsService(SpringSecurityConfig.java:99)
+	at jz.cdgy.admin.config.SpringSecurityConfig$$EnhancerBySpringCGLIB$$cca9ab77.CGLIB$userDetailsService$7(<generated>)
+	at jz.cdgy.admin.config.SpringSecurityConfig$$EnhancerBySpringCGLIB$$cca9ab77$$FastClassBySpringCGLIB$$2a1c4bb3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at jz.cdgy.admin.config.SpringSecurityConfig$$EnhancerBySpringCGLIB$$cca9ab77.userDetailsService(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 74 common frames omitted
+Caused by: java.lang.ClassNotFoundException: jz.cdgy.admin.service.impl.UserDetailServiceImpl
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:382)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:418)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:355)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:351)
+	... 85 common frames omitted
+2020-12-09 22:20:09.536 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Starting AdminApplication using Java 1.8.0_231 on LAPTOP-NFO4RM9J with PID 4184 (D:\graduation\gradution-admin\target\classes started by mbfczzz in D:\graduation)
+2020-12-09 22:20:09.537 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-09 22:20:11.088 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:11.089 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:11.102 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12ms. Found 0 Elasticsearch repository interfaces.
+2020-12-09 22:20:11.104 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:11.104 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:11.110 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-12-09 22:20:11.114 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:11.115 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-09 22:20:11.121 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-12-09 22:20:11.353 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2020-12-09 22:20:11.354 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:20:11.354 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 22:20:11.355 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-09 22:20:11.593 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/gradution] - Initializing Spring embedded WebApplicationContext
+2020-12-09 22:20:11.594 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2051 ms
+2020-12-09 22:20:11.818 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-09 22:20:12.072 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} inited
+2020-12-09 22:20:13.009 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-12-09 22:20:13.089 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+2020-12-09 22:20:13.089 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+2020-12-09 22:20:13.089 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+2020-12-09 22:20:13.089 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/ui'] with []
+2020-12-09 22:20:13.089 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/security'] with []
+2020-12-09 22:20:13.090 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+2020-12-09 22:20:13.090 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/test.html'] with []
+2020-12-09 22:20:13.103 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@53506c53, org.springframework.security.web.context.SecurityContextPersistenceFilter@7618688, org.springframework.security.web.header.HeaderWriterFilter@3da794ac, org.springframework.security.web.authentication.logout.LogoutFilter@74de589d, jz.cdgy.admin.config.JwtAuthenticationFilter@524eb515, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a69a900, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6b6a4215, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b20bb4c, org.springframework.security.web.session.SessionManagementFilter@2c57152e, org.springframework.security.web.access.ExceptionTranslationFilter@4834aa3e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3a84da4d]
+2020-12-09 22:20:13.115 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-09 22:20:13.265 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-09 22:20:13.286 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-09 22:20:13.430 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.430 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.430 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.430 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.431 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.432 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.433 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:13.433 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:20:14.564 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:20:14.583 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1201 (http) with context path '/gradution'
+2020-12-09 22:20:14.584 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-09 22:20:14.585 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-09 22:20:14.592 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-09 22:20:14.622 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Started AdminApplication in 5.183 seconds (JVM running for 307.586)
+2020-12-09 22:20:14.626 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2020-12-09 22:20:56.286 [Thread-66] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-09 22:20:56.294 [Thread-66] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closing ...
+2020-12-09 22:20:56.296 [Thread-66] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-2} closed
+2020-12-09 22:20:56.899 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Starting AdminApplication using Java 1.8.0_231 on LAPTOP-NFO4RM9J with PID 4184 (D:\graduation\gradution-admin\target\classes started by mbfczzz in D:\graduation)
+2020-12-09 22:20:56.899 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-09 22:20:58.056 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:58.056 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:58.072 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15ms. Found 0 Elasticsearch repository interfaces.
+2020-12-09 22:20:58.074 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:58.074 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:20:58.079 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-12-09 22:20:58.082 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:20:58.082 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-09 22:20:58.089 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6ms. Found 0 Redis repository interfaces.
+2020-12-09 22:20:58.823 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2020-12-09 22:20:58.823 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:20:58.824 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 22:20:58.824 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-09 22:20:58.909 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/gradution] - Initializing Spring embedded WebApplicationContext
+2020-12-09 22:20:58.910 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2004 ms
+2020-12-09 22:20:59.121 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-09 22:20:59.265 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} inited
+2020-12-09 22:20:59.468 [restartedMain] ERROR o.s.boot.web.embedded.tomcat.TomcatStarter - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthenticationFilter': Unsatisfied dependency expressed through field 'userDetailsService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userDetailsService': Unsatisfied dependency expressed through field 'loginService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'jz.cdgy.admin.service.impl.LoginServiceImpl' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-09 22:20:59.469 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2020-12-09 22:20:59.472 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [gradution] appears to have started a thread named [Druid-ConnectionPool-Create-536057287] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ sun.misc.Unsafe.park(Native Method)
+ java.util.concurrent.locks.LockSupport.park(LockSupport.java:175)
+ java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:2039)
+ com.alibaba.druid.pool.DruidDataSource$CreateConnectionThread.run(DruidDataSource.java:2728)
+2020-12-09 22:20:59.472 [restartedMain] WARN  org.apache.catalina.loader.WebappClassLoaderBase - The web application [gradution] appears to have started a thread named [Druid-ConnectionPool-Destroy-536057287] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.lang.Thread.sleep(Native Method)
+ com.alibaba.druid.pool.DruidDataSource$DestroyConnectionThread.run(DruidDataSource.java:2824)
+2020-12-09 22:20:59.473 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
+2020-12-09 22:20:59.473 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closing ...
+2020-12-09 22:20:59.475 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-3} closed
+2020-12-09 22:20:59.486 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-09 22:20:59.495 [restartedMain] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field loginService in jz.cdgy.admin.service.impl.UserDetailServiceImpl required a bean of type 'jz.cdgy.admin.service.impl.LoginServiceImpl' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'jz.cdgy.admin.service.impl.LoginServiceImpl' in your configuration.
+
+2020-12-09 22:21:59.288 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Starting AdminApplication using Java 1.8.0_231 on LAPTOP-NFO4RM9J with PID 5608 (D:\graduation\gradution-admin\target\classes started by mbfczzz in D:\graduation)
+2020-12-09 22:21:59.292 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - No active profile set, falling back to default profiles: default
+2020-12-09 22:21:59.370 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-09 22:21:59.370 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-09 22:22:01.043 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:22:01.046 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:22:01.069 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16ms. Found 0 Elasticsearch repository interfaces.
+2020-12-09 22:22:01.074 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:22:01.074 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2020-12-09 22:22:01.079 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Reactive Elasticsearch repository interfaces.
+2020-12-09 22:22:01.089 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-12-09 22:22:01.090 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2020-12-09 22:22:01.104 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2020-12-09 22:22:01.956 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2020-12-09 22:22:01.970 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:22:01.971 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2020-12-09 22:22:01.971 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.39]
+2020-12-09 22:22:02.385 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/gradution] - Initializing Spring embedded WebApplicationContext
+2020-12-09 22:22:02.386 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3014 ms
+2020-12-09 22:22:03.020 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2020-12-09 22:22:03.460 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-12-09 22:22:06.282 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-12-09 22:22:06.504 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-ui.html'] with []
+2020-12-09 22:22:06.504 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/swagger-resources/**'] with []
+2020-12-09 22:22:06.505 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/v2/api-docs'] with []
+2020-12-09 22:22:06.506 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/ui'] with []
+2020-12-09 22:22:06.506 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='configuration/security'] with []
+2020-12-09 22:22:06.506 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/webjars/**'] with []
+2020-12-09 22:22:06.506 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure Ant [pattern='/test.html'] with []
+2020-12-09 22:22:06.570 [restartedMain] INFO  o.s.security.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@397a812d, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b920f05, org.springframework.security.web.header.HeaderWriterFilter@19d3fc81, org.springframework.security.web.authentication.logout.LogoutFilter@2faa496c, jz.cdgy.admin.config.JwtAuthenticationFilter@e5d770c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1817b7ff, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55d9bfb7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@300f2623, org.springframework.security.web.session.SessionManagementFilter@62d82ad6, org.springframework.security.web.access.ExceptionTranslationFilter@229ff89a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@190bcb60]
+2020-12-09 22:22:06.620 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2020-12-09 22:22:06.805 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-09 22:22:06.873 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2020-12-09 22:22:07.576 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.581 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.581 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.582 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.582 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface org.springframework.data.elasticsearch.core.geo.GeoJson to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.582 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to interface org.springframework.data.elasticsearch.core.geo.GeoJson as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.583 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.583 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.583 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.583 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.583 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.584 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.584 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.584 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiLineString as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.584 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.586 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.586 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.587 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonMultiPolygon as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.587 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:07.587 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoJsonGeometryCollection as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2020-12-09 22:22:08.693 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Spring Data Elasticsearch: 4.1.1
+2020-12-09 22:22:08.694 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client in build: 7.9.3
+2020-12-09 22:22:08.694 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client used: 7.9.3
+2020-12-09 22:22:09.349 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1201"]
+2020-12-09 22:22:09.386 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1201 (http) with context path '/gradution'
+2020-12-09 22:22:09.388 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2020-12-09 22:22:09.413 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2020-12-09 22:22:09.469 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2020-12-09 22:22:09.703 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Started AdminApplication in 11.413 seconds (JVM running for 14.316)
+2020-12-09 22:22:10.882 [RMI TCP Connection(3)-192.168.161.2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [localhost:5672]
+2020-12-09 22:22:10.887 [RMI TCP Connection(4)-192.168.161.2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/gradution] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-09 22:22:10.887 [RMI TCP Connection(4)-192.168.161.2] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2020-12-09 22:22:10.891 [RMI TCP Connection(4)-192.168.161.2] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2020-12-09 22:22:10.933 [RMI TCP Connection(3)-192.168.161.2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#726b42c0:0/SimpleConnection@48c36b27 [delegate=amqp://guest@127.0.0.1:5672/, localPort= 50758]
+2020-12-09 22:22:11.975 [RMI TCP Connection(3)-192.168.161.2] WARN  o.s.b.a.e.ElasticsearchRestHealthIndicator - Elasticsearch health check failed
+java.net.ConnectException: Connection refused: no further information
+	at org.elasticsearch.client.RestClient.extractAndWrapCause(RestClient.java:849)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:259)
+	at org.elasticsearch.client.RestClient.performRequest(RestClient.java:246)
+	at org.springframework.boot.actuate.elasticsearch.ElasticsearchRestHealthIndicator.doHealthCheck(ElasticsearchRestHealthIndicator.java:65)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:77)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.GeneratedMethodAccessor71.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:717)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvent(DefaultConnectingIOReactor.java:174)
+	at org.apache.http.impl.nio.reactor.DefaultConnectingIOReactor.processEvents(DefaultConnectingIOReactor.java:148)
+	at org.apache.http.impl.nio.reactor.AbstractMultiworkerIOReactor.execute(AbstractMultiworkerIOReactor.java:351)
+	at org.apache.http.impl.nio.conn.PoolingNHttpClientConnectionManager.execute(PoolingNHttpClientConnectionManager.java:221)
+	at org.apache.http.impl.nio.client.CloseableHttpAsyncClientBase$1.run(CloseableHttpAsyncClientBase.java:64)
+	... 1 common frames omitted
+2020-12-09 22:22:25.710 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:25.765 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:25.766 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:25.795 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 22:22:25.796 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 22:22:26.343 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 22:22:26.731 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 22:22:26.961 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 22:22:26.977 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 22:22:27.190 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:27.198 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:27.198 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 22:22:27.213 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 22:22:27.213 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 22:22:27.224 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 22:22:27.228 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 22:22:27.232 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 22:27:15.060 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:27:15.082 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:27:15.117 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:32:16.051 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:32:16.080 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:32:16.122 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:37:17.039 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:37:17.079 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:37:17.113 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:42:18.000 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:42:18.080 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:42:18.142 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:47:19.100 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:47:19.180 [lettuce-eventExecutorLoop-1-7] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:47:19.211 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:52:20.007 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:52:20.079 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:52:20.115 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 22:57:21.070 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 22:57:21.079 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 22:57:21.111 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:02:22.101 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:02:22.179 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:02:22.216 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:07:23.085 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:07:23.179 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:07:23.216 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:12:24.083 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:12:24.179 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:12:24.208 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:17:25.058 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:17:25.079 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:17:25.107 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:20:38.835 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:38.841 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:38.841 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:38.841 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:20:38.842 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:20:38.844 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:20:39.045 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:20:39.387 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:20:39.407 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:20:39.435 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:39.451 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:39.451 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:20:39.454 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:20:39.455 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:20:39.480 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:20:39.487 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:20:39.494 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:22:26.061 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:22:26.080 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:22:26.121 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:22:47.815 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:47.820 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:47.820 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:47.821 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:22:47.821 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:22:47.824 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:22:47.836 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:22:48.045 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:22:48.056 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:22:48.068 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:48.074 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:48.074 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:22:48.076 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:22:48.076 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:22:48.084 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:22:48.086 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:22:48.088 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:27:27.100 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:27:27.180 [lettuce-eventExecutorLoop-1-7] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:27:27.212 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:32:28.021 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:32:28.079 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:32:28.114 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:33:02.162 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.170 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.170 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.171 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:33:02.171 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:33:02.173 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:33:02.188 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:33:02.440 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:33:02.447 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:33:02.460 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.465 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.466 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:33:02.467 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:33:02.468 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:33:02.479 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:33:02.484 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:33:02.488 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:37:29.088 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:37:29.179 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:37:29.218 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:42:06.614 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.619 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.619 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.619 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:42:06.619 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:42:06.622 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:42:06.638 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:42:06.838 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:42:06.883 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:42:06.899 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.906 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.906 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:42:06.909 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:42:06.910 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:42:06.921 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:42:06.927 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:42:06.930 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:42:30.019 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:42:30.080 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:42:30.114 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:46:12.249 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.254 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.254 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.254 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:46:12.255 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:46:12.256 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:46:12.269 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:46:12.489 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:46:12.499 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:46:12.512 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.519 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.519 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:46:12.521 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:46:12.521 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:46:12.530 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:46:12.534 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:46:12.536 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:47:31.089 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:47:31.178 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:47:31.197 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:48:20.962 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:20.966 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:20.966 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:20.966 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:48:20.967 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:48:20.969 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:48:20.983 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:48:21.179 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:48:21.185 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:48:21.195 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:21.199 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:21.199 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:48:21.201 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:48:21.201 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:48:21.207 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:48:21.209 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:48:21.212 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:50:39.953 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:39.960 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:39.960 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:39.960 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:50:39.961 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:50:39.963 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:50:39.975 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:50:40.196 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:50:40.203 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:50:40.216 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:40.222 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:40.223 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:50:40.224 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:50:40.224 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:50:40.234 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:50:40.236 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:50:40.237 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:52:32.060 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:52:32.079 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:52:32.113 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:52:39.072 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.076 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.076 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.076 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:52:39.077 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:52:39.079 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:52:39.090 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:52:39.303 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:52:39.312 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:52:39.325 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.332 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.332 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:52:39.333 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:52:39.334 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:52:39.344 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:52:39.347 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:52:39.349 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:55:23.317 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.321 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.321 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.321 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:55:23.322 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:55:23.324 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:55:23.337 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:55:23.600 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:55:23.610 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:55:23.631 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.641 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.641 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:55:23.643 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:55:23.643 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:55:23.657 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:55:23.661 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:55:23.664 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-09 23:57:33.040 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-09 23:57:33.078 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-09 23:57:33.117 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-09 23:59:44.728 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.733 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.733 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.734 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-09 23:59:44.735 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-09 23:59:44.736 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:59:44.751 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:59:44.946 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:59:44.954 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:59:44.966 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.973 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.973 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-09 23:59:44.974 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-09 23:59:44.974 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-09 23:59:44.983 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-09 23:59:44.985 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-09 23:59:44.989 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:02:34.094 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-10 00:02:34.180 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-10 00:02:34.220 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-10 00:03:13.277 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.281 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.281 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.281 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-10 00:03:13.281 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-10 00:03:13.284 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:03:13.298 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:03:13.493 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:03:13.500 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:03:13.513 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.520 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.520 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:03:13.521 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:03:13.522 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:03:13.530 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:03:13.533 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:03:13.536 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:04:23.732 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:23.737 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:23.737 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:23.737 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-10 00:04:23.737 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-10 00:04:23.739 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:04:23.751 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:04:23.982 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:04:23.990 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:04:24.005 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:24.013 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:24.013 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:04:24.015 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:04:24.015 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:04:24.025 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:04:24.027 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:04:24.029 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:07:35.035 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-10 00:07:35.079 [lettuce-eventExecutorLoop-1-7] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-10 00:07:35.113 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-10 00:10:20.330 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.333 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.333 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.334 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:20.335 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:20.346 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:20.347 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:20.349 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:20.354 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:20.584 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:20.593 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:20.609 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.616 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.616 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:20.618 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:20.618 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:20.630 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:20.634 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:20.636 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:10:41.733 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.735 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.735 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.736 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:41.736 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:41.741 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:41.742 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:41.743 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:41.748 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:41.939 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:41.949 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:41.960 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.966 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.967 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:41.968 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:41.968 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:41.979 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:41.982 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:41.984 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:10:56.198 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.202 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.202 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.202 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:56.202 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:56.208 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:56.210 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:56.213 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:56.218 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:56.417 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:56.428 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:56.445 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.454 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.454 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:10:56.457 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:10:56.457 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:10:56.468 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:10:56.470 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:10:56.476 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:11:06.918 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:06.921 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:06.921 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:06.922 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:11:06.922 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:06.927 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:06.928 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:11:06.929 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:06.933 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:07.117 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:07.124 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:07.137 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:07.143 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:07.144 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:07.145 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:11:07.145 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:07.155 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:07.158 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:11:07.160 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:11:54.095 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.099 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.099 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.101 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:11:54.101 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:54.105 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:54.106 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:11:54.107 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:54.112 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:54.311 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:54.318 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:54.328 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.334 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.334 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:11:54.336 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:11:54.336 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:11:54.344 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:11:54.346 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:11:54.349 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:12:36.028 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-10 00:12:36.080 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-10 00:12:36.118 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-10 00:16:13.416 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.420 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.420 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.420 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-10 00:16:13.420 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-10 00:16:13.423 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:13.435 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:13.643 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:13.650 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:13.663 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.669 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.669 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:13.670 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:16:13.670 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:13.676 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:13.679 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:16:13.680 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:16:35.192 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.196 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.196 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.196 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:16:35.196 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:35.201 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:35.202 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:16:35.204 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:35.208 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:35.337 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:35.341 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:35.348 [http-nio-1201-exec-2] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.352 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.352 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:35.352 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:16:35.352 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:35.357 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:35.359 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:16:35.359 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:16:49.240 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.243 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.243 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.244 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:16:49.244 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:49.249 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:49.252 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:16:49.253 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:49.258 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:49.446 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:49.452 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:49.464 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.470 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.470 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:16:49.471 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:16:49.471 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:16:49.477 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:16:49.481 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:16:49.482 [http-nio-1201-exec-7] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:17:11.172 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.176 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.176 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.176 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:17:11.177 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:17:11.181 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:17:11.183 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:17:11.185 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:17:11.190 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:17:11.379 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:17:11.385 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:17:11.392 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.396 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.396 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:17:11.396 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:17:11.396 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:17:11.402 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:17:11.404 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:17:11.405 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:17:37.069 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-10 00:17:37.079 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-10 00:17:37.112 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-10 00:21:05.280 [http-nio-1201-exec-3] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.283 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.284 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.284 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.util.JwtUtil - JWT格式验证失败: undefined
+2020-12-10 00:21:05.284 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:null
+2020-12-10 00:21:05.287 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:21:05.298 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:21:05.632 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:21:05.641 [http-nio-1201-exec-4] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:21:05.665 [http-nio-1201-exec-5] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.674 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.674 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:21:05.676 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:21:05.676 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:21:05.689 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:21:05.693 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:21:05.698 [http-nio-1201-exec-6] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
+2020-12-10 00:22:38.023 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1134)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:719)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:655)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:581)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2020-12-10 00:22:38.080 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was localhost/127.0.0.1:6379
+2020-12-10 00:22:38.108 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to localhost:6379
+2020-12-10 00:24:07.988 [http-nio-1201-exec-9] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:07.992 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:07.993 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:07.993 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:24:07.993 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:24:08.006 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:24:08.008 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:24:08.010 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:24:08.019 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:24:08.171 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:24:08.176 [http-nio-1201-exec-8] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:24:08.187 [http-nio-1201-exec-10] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:08.190 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:08.191 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - Bearer
+2020-12-10 00:24:08.192 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - checking username:admin
+2020-12-10 00:24:08.192 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 授权开始!
+2020-12-10 00:24:08.198 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.UserDetailServiceImpl - 获取信息完成!
+2020-12-10 00:24:08.200 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.config.JwtAuthenticationFilter - authenticated user:admin
+2020-12-10 00:24:08.201 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取用户信息
