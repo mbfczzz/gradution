@@ -13,6 +13,7 @@
     <artifactId>gradution-common</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gradution-common</name>
+    <packaging>jar</packaging>
     <description>common project for gradution</description>
 
     <dependencies>
@@ -20,13 +21,11 @@
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
         </dependency>
-
         <!-- elastic search -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
-
         <!-- 用了 elasticsearch 就要加这么一个，不然要com.sun.jna.Native 错误 -->
         <dependency>
             <groupId>com.sun.jna</groupId>
@@ -46,20 +45,4 @@
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
-
-
 </project>

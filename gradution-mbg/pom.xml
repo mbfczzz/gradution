@@ -13,6 +13,7 @@
     <artifactId>gradution-mbg</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gradution-mbg</name>
+    <packaging>jar</packaging>
     <description>mbg project for gradution</description>
 
     <dependencies>

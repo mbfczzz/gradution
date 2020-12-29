@@ -11,6 +11,7 @@
     <artifactId>gradution-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>gradution-admin</name>
+    <packaging>jar</packaging>
     <description>admin project for gradution</description>
 
     <dependencies>
@@ -134,7 +135,6 @@
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
         </dependency>
-
     </dependencies>
 
     <build>
