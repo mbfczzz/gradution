@@ -1,11 +1,15 @@
 package jz.cdgy.mbg.mapper;
 
 import java.util.List;
+import java.util.Map;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.extension.service.IService;
 import jz.cdgy.mbg.pojo.User;
 import jz.cdgy.mbg.pojo.UserExample;
 import org.apache.ibatis.annotations.Param;
 
-public interface UserMapper {
+public interface UserMapper extends BaseMapper<User> {
     long countByExample(UserExample example);
 
     int deleteByExample(UserExample example);
@@ -27,4 +31,8 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
+    List<Map> gerUserRole(Integer id);
+
+    List<User> getAllUser(User user);
 }

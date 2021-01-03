@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="jz.cdgy.jz.cdgy.mbg.mapper.EmpMapper">
+<mapper namespace="jz.cdgy.mbg.mapper.EmpMapper">
   <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Emp">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="emp_name" jdbcType="VARCHAR" property="empName" />

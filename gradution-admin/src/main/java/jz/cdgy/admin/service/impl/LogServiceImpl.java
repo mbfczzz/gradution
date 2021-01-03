@@ -2,13 +2,12 @@ package jz.cdgy.admin.service.impl;
 
 import jz.cdgy.admin.service.LogService;
 import jz.cdgy.common.esLogService.LogRepository;
+import jz.cdgy.common.model.PageInfo;
 import jz.cdgy.common.model.esLog;
 import org.apache.commons.lang.StringUtils;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
 import org.springframework.data.elasticsearch.core.SearchHits;
@@ -28,7 +27,7 @@ public class LogServiceImpl implements LogService {
     private ElasticsearchRestTemplate elasticsearchRestTemplate;
 
     @Override
-    public Page<esLog> searchAllLog(Integer page, Integer limit, esLog log) {
+    public PageInfo<esLog> searchAllLog(Integer page, Integer limit, esLog log) {
         BoolQueryBuilder boolQueryBuilder = new BoolQueryBuilder();
         if(!StringUtils.isEmpty(log.getOperator())){
                 boolQueryBuilder.must(QueryBuilders.matchQuery("operator",log.getOperator()));
@@ -52,7 +51,7 @@ public class LogServiceImpl implements LogService {
                                   .build();
         SearchHits<esLog> searchHits = elasticsearchRestTemplate.search(query,esLog.class);
         List<esLog>  esLogs =  searchHits.stream().map(s->s.getContent()).collect(Collectors.toList());
-        return new PageImpl<esLog>(esLogs,pageRequest,searchHits.getTotalHits());
+        return new PageInfo<esLog>(page,limit,searchHits.getTotalHits(),esLogs);
     }
 
     @Override

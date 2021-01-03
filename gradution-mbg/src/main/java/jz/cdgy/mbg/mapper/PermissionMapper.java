@@ -1,11 +1,13 @@
 package jz.cdgy.mbg.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import jz.cdgy.mbg.pojo.Permission;
 import jz.cdgy.mbg.pojo.PermissionExample;
 import org.apache.ibatis.annotations.Param;
 
-public interface PermissionMapper {
+public interface PermissionMapper extends BaseMapper<Permission> {
     long countByExample(PermissionExample example);
 
     int deleteByExample(PermissionExample example);

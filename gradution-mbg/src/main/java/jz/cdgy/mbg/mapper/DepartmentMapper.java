@@ -1,11 +1,13 @@
 package jz.cdgy.mbg.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import jz.cdgy.mbg.pojo.Department;
 import jz.cdgy.mbg.pojo.DepartmentExample;
 import org.apache.ibatis.annotations.Param;
 
-public interface DepartmentMapper {
+public interface DepartmentMapper extends BaseMapper<Department> {
     long countByExample(DepartmentExample example);
 
     int deleteByExample(DepartmentExample example);

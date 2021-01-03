@@ -44,13 +44,12 @@ public class LoginServiceImpl implements LoginService {
                 Authentication authentication = authenticationManager.authenticate(usernamePasswordAuthenticationToken);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
                 UserDetails userDetails = userDetailsService.loadUserByUsername(user.getUsername());
-        System.out.println(456);
         return jwtUtil.generateToken(userDetails);
     }
 
     @Override
     public String register(User user) {
-        System.out.println(userMapper);
+        System.out.println(user.toString());
             String password = user.getPassword();
             String encodePassword = passwordEncoder.encode(password);
             user.setPassword(encodePassword);

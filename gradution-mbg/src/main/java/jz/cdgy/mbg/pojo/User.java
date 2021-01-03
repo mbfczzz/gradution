@@ -1,9 +1,18 @@
 package jz.cdgy.mbg.pojo;
 
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
+@TableName(value = "t_user")
 public class User implements Serializable {
+
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
     private String username;
@@ -12,6 +21,7 @@ public class User implements Serializable {
 
     private String salt;
 
+    @TableField(fill = FieldFill.INSERT)
     private Byte isValid;
 
     private Byte isBind;
@@ -20,11 +30,52 @@ public class User implements Serializable {
 
     private String image;
 
+    @TableField(exist = false)
+    //接收查询传的角色id
+    private String userole;
+
+    //用户角色映射
+    @TableField(exist = false)
+    private List<Map> role;
+
+    public String getUserole() {
+        return userole;
+    }
+
+    public void setUserole(String userole) {
+        this.userole = userole;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date createTime;
 
+    public String getStrDate() {
+        return strDate;
+    }
+
+    public void setStrDate(String strDate) {
+        this.strDate = strDate;
+    }
+
+    @TableField(fill = FieldFill.UPDATE)
     private Date updateTime;
 
+    @TableField(exist = false)
+    private String strDate;
+
     private static final long serialVersionUID = 1L;
+
+    public List<Map> getRole() {
+        return role;
+    }
+
+    public void setRole(List<Map> role) {
+        this.role = role;
+    }
 
     public Integer getId() {
         return id;
@@ -108,21 +159,19 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", username=").append(username);
-        sb.append(", password=").append(password);
-        sb.append(", salt=").append(salt);
-        sb.append(", isValid=").append(isValid);
-        sb.append(", isBind=").append(isBind);
-        sb.append(", empId=").append(empId);
-        sb.append(", image=").append(image);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", updateTime=").append(updateTime);
-        sb.append("]");
-        return sb.toString();
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", salt='" + salt + '\'' +
+                ", isValid=" + isValid +
+                ", isBind=" + isBind +
+                ", empId=" + empId +
+                ", image='" + image + '\'' +
+                ", userole='" + userole + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", strDate='" + strDate + '\'' +
+                '}';
     }
 }

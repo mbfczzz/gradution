@@ -14,7 +14,21 @@ public class Role implements Serializable {
 
     private Date updateTime;
 
+    private String rolePermission;
+
     private static final long serialVersionUID = 1L;
+
+    public String getRolePermission() {
+        return rolePermission;
+    }
+
+    public void setRolePermission(String rolePermission) {
+        this.rolePermission = rolePermission;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
 
     public Integer getId() {
         return id;

@@ -11,4 +11,7 @@ public class CommonConfig {
     public ObjectMapper objectMapper(){
      return  new ObjectMapper();
     }
+
+    @Bean
+    public FieldFillConfig fieldFillConfig(){return  new FieldFillConfig();}
 }

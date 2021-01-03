@@ -19,19 +19,19 @@ spring:
         login-password: druid
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: mbfczzz.top # Redis服务器地址
+    host: 47.103.59.236 # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 123456  # Redis服务器连接密码（默认为空）
     timeout: 3000ms # 连接超时时间（毫秒）
   rabbitmq: #rabbitmq相关配置
-    host: mbfczzz.top
+    host: 47.103.59.236
     port: 5672
     username: guest
     password: guest
   elasticsearch:
     rest:
-      uris: mbfczzz.top:9200
+      uris: 47.103.59.236:9200
   #  data:
   #    mongodb:
   #      uri: mongodb://192.168.37.3:27017
@@ -47,9 +47,9 @@ jwt:
 
 mybatis:
   mapper-locations:
-    - classpath*:jz/cdgy/mbg/xml/*.xml
-    - classpath:mybatis/*.xml
-  type-aliases-package: jz/cdgy/mab/pojo
+    - classpath*: jz/cdgy/mbg/xml/*.xml
+    - classpath: mybatis/*.xml
+  type-aliases-package: jz/cdgy/mbg/pojo
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

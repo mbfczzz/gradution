@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="jz.cdgy.jz.cdgy.mbg.mapper.UserMapper">
+<mapper namespace="jz.cdgy.mbg.mapper.UserMapper">
   <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.User">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="username" jdbcType="VARCHAR" property="username" />
@@ -287,4 +287,63 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+  <select id="gerUserRole" parameterType="java.lang.Integer" resultType="java.util.Map">
+    SELECT t_role.role_name as name,t_role.id as value
+    FROM
+    t_role
+    <where>
+        <if test="id !=null">
+        and t_role.id in (SELECT t_user_role.rid from t_user_role where t_user_role.uid = #{id})
+        </if>
+    </where>
+  </select>
+
+  <resultMap id="UserResultMap" type="jz.cdgy.mbg.pojo.User">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="is_valid" jdbcType="TINYINT" property="isValid" />
+    <result column="is_bind" jdbcType="TINYINT" property="isBind" />
+    <result column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="image" jdbcType="VARCHAR" property="image" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="roleName" jdbcType="VARCHAR" property="userole" />
+    <collection column="id" property="role" ofType="java.util.Map"
+                select="gerUserRole"/>
+  </resultMap>
+
+  <select id="getAllUser" parameterType="jz.cdgy.mbg.pojo.User" resultMap="UserResultMap">
+    SELECT t_user.id,
+    t_user.username,
+    t_user.create_time,
+    t_user.is_valid,
+    t_user.is_bind,
+    t_user.emp_id,
+    t_user.image,
+    roleName,
+    rid
+    FROM t_user
+    LEFT JOIN
+    (SELECT t_user.id,GROUP_CONCAT(t_role.id) as rid,GROUP_CONCAT(t_role.role_name) as roleName FROM `t_user`
+    LEFT JOIN t_user_role on t_user.id = t_user_role.uid
+    LEFT JOIN t_role on t_user_role.rid = t_role.id
+    GROUP BY t_user.id) as t  on t_user.id = t.id
+    <where>
+      <if test="username!=null and username!=''">
+        and t_user.username = #{username,jdbcType=VARCHAR}
+      </if>
+      <if test="isValid!=null">
+        and t_user.is_valid = #{isValid,jdbcType=TINYINT}
+      </if>
+      <if test="userole!=null and userole!='' ">
+        and locate(#{userole,jdbcType=VARCHAR},t.rid)!=0
+      </if>
+      <if test="strDate!=null and strDate!=''">
+        and  DATE_FORMAT(create_time,'%Y-%m-%d')
+        between DATE_FORMAT(create_time,SUBSTRING_INDEX(#{strDate,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(create_time,SUBSTRING_INDEX(#{strDate,jdbcType=VARCHAR},",",-1))
+      </if>
+    </where>
+  </select>
 </mapper>

@@ -19,7 +19,7 @@ spring:
         login-password: druid
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: mbfczzz.top # Redis服务器地址
+    host: 47.103.59.236 # Redis服务器地址
     database: 0 # Redis数据库索引（默认为0）
     port: 6379 # Redis服务器连接端口
     password: 123456  # Redis服务器连接密码（默认为空）
@@ -45,11 +45,11 @@ jwt:
   expiration: 3600
   secret: gradution
 
-mybatis:
+mybatis-plus:
   mapper-locations:
     - classpath*:jz/cdgy/mbg/xml/*.xml
     - classpath:mybatis/*.xml
-  type-aliases-package: jz/cdgy/mab/pojo
+  type-aliases-package: jz/cdgy/mbg/pojo
   configuration:
     map-underscore-to-camel-case: true
     log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl

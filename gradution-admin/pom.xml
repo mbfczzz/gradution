@@ -20,7 +20,6 @@
             <artifactId>gradution-mbg</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
         <dependency>
             <groupId>jz.cdgy</groupId>
             <artifactId>gradution-common</artifactId>
@@ -134,6 +133,12 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>5.1.2</version>
         </dependency>
     </dependencies>
 

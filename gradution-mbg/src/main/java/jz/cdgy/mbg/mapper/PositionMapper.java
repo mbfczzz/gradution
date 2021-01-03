@@ -1,11 +1,13 @@
 package jz.cdgy.mbg.mapper;
 
 import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import jz.cdgy.mbg.pojo.Position;
 import jz.cdgy.mbg.pojo.PositionExample;
 import org.apache.ibatis.annotations.Param;
 
-public interface PositionMapper {
+public interface PositionMapper extends BaseMapper<Position> {
     long countByExample(PositionExample example);
 
     int deleteByExample(PositionExample example);
