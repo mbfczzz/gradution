@@ -1,8 +1,13 @@
 package jz.cdgy.mbg.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@TableName("t_permission")
 public class Permission implements Serializable {
     private Integer id;
 
@@ -12,10 +17,18 @@ public class Permission implements Serializable {
 
     private String permissionUrl;
 
+    private String component;
+
+    private String icon;
+
     private Byte isValid;
 
+    private String name;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date createTime;
 
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date updateTime;
 
     private Integer parentId;
@@ -24,7 +37,18 @@ public class Permission implements Serializable {
 
     private Integer hierarchy;
 
+    @TableField(exist = false)
+    private String strDate;
+
     private static final long serialVersionUID = 1L;
+
+    public String getStrDate() {
+        return strDate;
+    }
+
+    public void setStrDate(String strDate) {
+        this.strDate = strDate;
+    }
 
     public Integer getId() {
         return id;
@@ -42,6 +66,14 @@ public class Permission implements Serializable {
         this.permissionName = permissionName == null ? null : permissionName.trim();
     }
 
+    public String getIcon() {
+        return icon;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
     public String getPermissionCode() {
         return permissionCode;
     }
@@ -56,6 +88,22 @@ public class Permission implements Serializable {
 
     public void setPermissionUrl(String permissionUrl) {
         this.permissionUrl = permissionUrl == null ? null : permissionUrl.trim();
+    }
+
+    public String getComponent() {
+        return component;
+    }
+
+    public void setComponent(String component) {
+        this.component = component;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Byte getIsValid() {
@@ -106,23 +154,27 @@ public class Permission implements Serializable {
         this.hierarchy = hierarchy;
     }
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", permissionName=").append(permissionName);
-        sb.append(", permissionCode=").append(permissionCode);
-        sb.append(", permissionUrl=").append(permissionUrl);
-        sb.append(", isValid=").append(isValid);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", updateTime=").append(updateTime);
-        sb.append(", parentId=").append(parentId);
-        sb.append(", permissionType=").append(permissionType);
-        sb.append(", hierarchy=").append(hierarchy);
-        sb.append("]");
-        return sb.toString();
+        return "Permission{" +
+                "id=" + id +
+                ", permissionName='" + permissionName + '\'' +
+                ", permissionCode='" + permissionCode + '\'' +
+                ", permissionUrl='" + permissionUrl + '\'' +
+                ", component='" + component + '\'' +
+                ", icon='" + icon + '\'' +
+                ", isValid=" + isValid +
+                ", name='" + name + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", parentId=" + parentId +
+                ", permissionType='" + permissionType + '\'' +
+                ", hierarchy=" + hierarchy +
+                ", strDate='" + strDate + '\'' +
+                '}';
     }
 }

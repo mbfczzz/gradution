@@ -4,6 +4,7 @@ import io.swagger.annotations.Api;
 import jz.cdgy.admin.service.UserService;
 import jz.cdgy.common.annotion.WebLog;
 import jz.cdgy.common.api.CommonResult;
+import jz.cdgy.mbg.pojo.Permission;
 import jz.cdgy.mbg.pojo.Role;
 import jz.cdgy.mbg.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -79,5 +80,49 @@ public class UserController {
         return CommonResult.SUCCESS("删除成功!");
     }
 
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "获取全部权限")
+    @RequestMapping(value = "/getAllPermission",method = RequestMethod.POST)
+    public CommonResult getAllPermission(@RequestParam(name = "page",defaultValue = "1")Integer page, @RequestParam(name = "limit",defaultValue = "10")Integer limit, Permission permission){
+        return CommonResult.SUCCESS("获取权限成功!",userService.getAllPermission(page,limit,permission));
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "获取树型权限结构")
+    @RequestMapping(value = "/getTreePermission",method = RequestMethod.GET)
+    public CommonResult getTreePermission(){
+        return CommonResult.SUCCESS("获取权限成功!",userService.getTreePermission());
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "更新角色权限")
+    @RequestMapping(value = "/updateTreePermission",method = RequestMethod.PUT)
+    public CommonResult updateTreePermission(@RequestBody  Role role){
+        userService.updateTreePermission(role);
+        return CommonResult.SUCCESS("删除成功!");
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "获取权限类型")
+    @RequestMapping(value = "/getPermissionType",method = RequestMethod.GET)
+    public CommonResult getPermissionType(){
+        return CommonResult.SUCCESS("获取成功!",userService.getPermissionType());
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "获取权限层级")
+    @RequestMapping(value = "/getHierarchy",method = RequestMethod.GET)
+    public CommonResult getHierarchy(){
+        return CommonResult.SUCCESS("获取成功!",userService.getHierarchy());
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "更新权限")
+    @RequestMapping(value = "/updatePermission",method = RequestMethod.POST)
+    public CommonResult updatePermission(@RequestBody  Permission permission){
+        userService.updatePermission(permission);
+        return CommonResult.SUCCESS("更新成功!");
+    }
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "添加权限")
+    @RequestMapping(value = "/addPermission",method = RequestMethod.POST)
+    public CommonResult addPermission(Permission permission){
+        userService.addPermission(permission);
+        return CommonResult.SUCCESS("更新成功!");
+    }
 }
 

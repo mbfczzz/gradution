@@ -8,10 +8,12 @@ import org.springframework.context.annotation.Configuration;
 public class CommonConfig {
 
     @Bean
-    public ObjectMapper objectMapper(){
-     return  new ObjectMapper();
+    public ObjectMapper objectMapper() {
+        return new ObjectMapper();
     }
 
     @Bean
-    public FieldFillConfig fieldFillConfig(){return  new FieldFillConfig();}
+    public FieldFillConfig fieldFillConfig() {
+        return new FieldFillConfig();
+    }
 }

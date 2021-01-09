@@ -4,14 +4,17 @@
   <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Permission">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="permission_name" jdbcType="VARCHAR" property="permissionName" />
-    <result column="permission_code" jdbcType="VARCHAR" property="permissionCode" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="permission_url" jdbcType="VARCHAR" property="permissionUrl" />
+    <result column="component" jdbcType="VARCHAR" property="component" />
+    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
+    <result column="Hierarchy" jdbcType="INTEGER" property="hierarchy" />
+    <result column="icon" jdbcType="VARCHAR" property="icon" />
     <result column="is_valid" jdbcType="TINYINT" property="isValid" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
     <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
     <result column="permission_type" jdbcType="VARCHAR" property="permissionType" />
-    <result column="Hierarchy" jdbcType="INTEGER" property="hierarchy" />
+    <result column="permission_code" jdbcType="VARCHAR" property="permissionCode" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -72,8 +75,8 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, permission_name, permission_code, permission_url, is_valid, create_time, update_time, 
-    parent_id, permission_type, Hierarchy
+    id, permission_name, name, permission_url, component, parent_id, Hierarchy, icon,
+    is_valid, create_time, update_time, permission_type, permission_code
   </sql>
   <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.PermissionExample" resultMap="BaseResultMap">
     select
@@ -90,7 +93,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_permission
     where id = #{id,jdbcType=INTEGER}
@@ -109,14 +112,16 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into t_permission (permission_name, permission_code, permission_url, 
-      is_valid, create_time, update_time, 
-      parent_id, permission_type, Hierarchy
-      )
-    values (#{permissionName,jdbcType=VARCHAR}, #{permissionCode,jdbcType=VARCHAR}, #{permissionUrl,jdbcType=VARCHAR}, 
-      #{isValid,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
-      #{parentId,jdbcType=INTEGER}, #{permissionType,jdbcType=VARCHAR}, #{hierarchy,jdbcType=INTEGER}
-      )
+    insert into t_permission (permission_name, name, permission_url,
+    component, parent_id, Hierarchy,
+    icon, is_valid, create_time,
+    update_time, permission_type, permission_code
+    )
+    values (#{permissionName,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{permissionUrl,jdbcType=VARCHAR},
+    #{component,jdbcType=VARCHAR}, #{parentId,jdbcType=INTEGER}, #{hierarchy,jdbcType=INTEGER},
+    #{icon,jdbcType=VARCHAR}, #{isValid,jdbcType=TINYINT}, #{createTime,jdbcType=TIMESTAMP},
+    #{updateTime,jdbcType=TIMESTAMP}, #{permissionType,jdbcType=VARCHAR}, #{permissionCode,jdbcType=VARCHAR}
+    )
   </insert>
   <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Permission">
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
@@ -127,11 +132,23 @@
       <if test="permissionName != null">
         permission_name,
       </if>
-      <if test="permissionCode != null">
-        permission_code,
+      <if test="name != null">
+        name,
       </if>
       <if test="permissionUrl != null">
         permission_url,
+      </if>
+      <if test="component != null">
+        component,
+      </if>
+      <if test="parentId != null">
+        parent_id,
+      </if>
+      <if test="hierarchy != null">
+        Hierarchy,
+      </if>
+      <if test="icon != null">
+        icon,
       </if>
       <if test="isValid != null">
         is_valid,
@@ -142,25 +159,34 @@
       <if test="updateTime != null">
         update_time,
       </if>
-      <if test="parentId != null">
-        parent_id,
-      </if>
       <if test="permissionType != null">
         permission_type,
       </if>
-      <if test="hierarchy != null">
-        Hierarchy,
+      <if test="permissionCode != null">
+        permission_code,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="permissionName != null">
         #{permissionName,jdbcType=VARCHAR},
       </if>
-      <if test="permissionCode != null">
-        #{permissionCode,jdbcType=VARCHAR},
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
       </if>
       <if test="permissionUrl != null">
         #{permissionUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="component != null">
+        #{component,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="hierarchy != null">
+        #{hierarchy,jdbcType=INTEGER},
+      </if>
+      <if test="icon != null">
+        #{icon,jdbcType=VARCHAR},
       </if>
       <if test="isValid != null">
         #{isValid,jdbcType=TINYINT},
@@ -171,14 +197,11 @@
       <if test="updateTime != null">
         #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="parentId != null">
-        #{parentId,jdbcType=INTEGER},
-      </if>
       <if test="permissionType != null">
         #{permissionType,jdbcType=VARCHAR},
       </if>
-      <if test="hierarchy != null">
-        #{hierarchy,jdbcType=INTEGER},
+      <if test="permissionCode != null">
+        #{permissionCode,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -188,7 +211,7 @@
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+    <update id="updateByExampleSelective" parameterType="map">
     update t_permission
     <set>
       <if test="record.id != null">
@@ -197,11 +220,23 @@
       <if test="record.permissionName != null">
         permission_name = #{record.permissionName,jdbcType=VARCHAR},
       </if>
-      <if test="record.permissionCode != null">
-        permission_code = #{record.permissionCode,jdbcType=VARCHAR},
+      <if test="record.name != null">
+        name = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.permissionUrl != null">
         permission_url = #{record.permissionUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.component != null">
+        component = #{record.component,jdbcType=VARCHAR},
+      </if>
+      <if test="record.parentId != null">
+        parent_id = #{record.parentId,jdbcType=INTEGER},
+      </if>
+      <if test="record.hierarchy != null">
+        Hierarchy = #{record.hierarchy,jdbcType=INTEGER},
+      </if>
+      <if test="record.icon != null">
+        icon = #{record.icon,jdbcType=VARCHAR},
       </if>
       <if test="record.isValid != null">
         is_valid = #{record.isValid,jdbcType=TINYINT},
@@ -212,14 +247,11 @@
       <if test="record.updateTime != null">
         update_time = #{record.updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.parentId != null">
-        parent_id = #{record.parentId,jdbcType=INTEGER},
-      </if>
       <if test="record.permissionType != null">
         permission_type = #{record.permissionType,jdbcType=VARCHAR},
       </if>
-      <if test="record.hierarchy != null">
-        Hierarchy = #{record.hierarchy,jdbcType=INTEGER},
+      <if test="record.permissionCode != null">
+        permission_code = #{record.permissionCode,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -229,15 +261,18 @@
   <update id="updateByExample" parameterType="map">
     update t_permission
     set id = #{record.id,jdbcType=INTEGER},
-      permission_name = #{record.permissionName,jdbcType=VARCHAR},
-      permission_code = #{record.permissionCode,jdbcType=VARCHAR},
-      permission_url = #{record.permissionUrl,jdbcType=VARCHAR},
-      is_valid = #{record.isValid,jdbcType=TINYINT},
-      create_time = #{record.createTime,jdbcType=TIMESTAMP},
-      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
-      parent_id = #{record.parentId,jdbcType=INTEGER},
-      permission_type = #{record.permissionType,jdbcType=VARCHAR},
-      Hierarchy = #{record.hierarchy,jdbcType=INTEGER}
+    permission_name = #{record.permissionName,jdbcType=VARCHAR},
+    name = #{record.name,jdbcType=VARCHAR},
+    permission_url = #{record.permissionUrl,jdbcType=VARCHAR},
+    component = #{record.component,jdbcType=VARCHAR},
+    parent_id = #{record.parentId,jdbcType=INTEGER},
+    Hierarchy = #{record.hierarchy,jdbcType=INTEGER},
+    icon = #{record.icon,jdbcType=VARCHAR},
+    is_valid = #{record.isValid,jdbcType=TINYINT},
+    create_time = #{record.createTime,jdbcType=TIMESTAMP},
+    update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+    permission_type = #{record.permissionType,jdbcType=VARCHAR},
+    permission_code = #{record.permissionCode,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -248,11 +283,23 @@
       <if test="permissionName != null">
         permission_name = #{permissionName,jdbcType=VARCHAR},
       </if>
-      <if test="permissionCode != null">
-        permission_code = #{permissionCode,jdbcType=VARCHAR},
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
       </if>
       <if test="permissionUrl != null">
         permission_url = #{permissionUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="component != null">
+        component = #{component,jdbcType=VARCHAR},
+      </if>
+      <if test="parentId != null">
+        parent_id = #{parentId,jdbcType=INTEGER},
+      </if>
+      <if test="hierarchy != null">
+        Hierarchy = #{hierarchy,jdbcType=INTEGER},
+      </if>
+      <if test="icon != null">
+        icon = #{icon,jdbcType=VARCHAR},
       </if>
       <if test="isValid != null">
         is_valid = #{isValid,jdbcType=TINYINT},
@@ -263,14 +310,11 @@
       <if test="updateTime != null">
         update_time = #{updateTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="parentId != null">
-        parent_id = #{parentId,jdbcType=INTEGER},
-      </if>
       <if test="permissionType != null">
         permission_type = #{permissionType,jdbcType=VARCHAR},
       </if>
-      <if test="hierarchy != null">
-        Hierarchy = #{hierarchy,jdbcType=INTEGER},
+      <if test="permissionCode != null">
+        permission_code = #{permissionCode,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
@@ -278,14 +322,31 @@
   <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Permission">
     update t_permission
     set permission_name = #{permissionName,jdbcType=VARCHAR},
-      permission_code = #{permissionCode,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
       permission_url = #{permissionUrl,jdbcType=VARCHAR},
+      component = #{component,jdbcType=VARCHAR},
+      parent_id = #{parentId,jdbcType=INTEGER},
+      Hierarchy = #{hierarchy,jdbcType=INTEGER},
+      icon = #{icon,jdbcType=VARCHAR},
       is_valid = #{isValid,jdbcType=TINYINT},
       create_time = #{createTime,jdbcType=TIMESTAMP},
       update_time = #{updateTime,jdbcType=TIMESTAMP},
-      parent_id = #{parentId,jdbcType=INTEGER},
       permission_type = #{permissionType,jdbcType=VARCHAR},
-      Hierarchy = #{hierarchy,jdbcType=INTEGER}
+      permission_code = #{permissionCode,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+  <select id="getPermissionType" resultType="java.util.Map">
+    SELECT  permission_type as value,permission_type as label from t_permission group by permission_type
+  </select>
+  <select id="getHierarchy" resultType="java.util.Map">
+     SELECT  Hierarchy as value,
+     case    Hierarchy when 1 then '一级权限'
+     when 2 then '二级权限'
+     when 3 then '三级权限'
+     else '数据权限'
+     end label from t_permission group by permission_type
+  </select>
 </mapper>

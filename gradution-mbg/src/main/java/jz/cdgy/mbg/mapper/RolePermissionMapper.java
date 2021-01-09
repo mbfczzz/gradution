@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import jz.cdgy.mbg.pojo.Permission;
 import jz.cdgy.mbg.pojo.RolePermission;
 import jz.cdgy.mbg.pojo.RolePermissionExample;
 import org.apache.ibatis.annotations.Param;
@@ -33,5 +34,5 @@ public interface RolePermissionMapper extends BaseMapper<RolePermission> {
 
     int updateRolePermission(String rid, List<String> pid);
 
-    List<Map> getRolePermission(Integer id);
+    List<Permission> getRolePermission(Integer id);
 }

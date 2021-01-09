@@ -69,7 +69,7 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public List<Map<String, Object>> getChildren(Long id,List<Map> permission) {
+    public List<Map<String,Object>> getChildren(Long id,List<Map> permission) {
         List<Map<String,Object>> list = new LinkedList<>();
         permission.forEach(k->{
             if((int)k.get("module") !=1 && k.get("parentId").toString().equals(id.toString())){

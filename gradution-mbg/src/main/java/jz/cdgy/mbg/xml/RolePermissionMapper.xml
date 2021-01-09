@@ -223,8 +223,17 @@
         (#{rid},#{item})
       </foreach>
     </update>
-  <select id="getRolePermission" resultType="java.util.Map">
-    SELECT t_permission.permission_name as name,t_permission.id as value
+  <select id="getRolePermission" resultType="jz.cdgy.mbg.pojo.Permission">
+    SELECT id,
+     permission_name,
+     permission_code,
+     permission_url,
+     is_valid,
+     create_time,
+     update_time,
+     parent_id,
+     permission_type,
+     Hierarchy
     FROM
     t_permission
     <where>

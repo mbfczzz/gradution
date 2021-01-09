@@ -8,21 +8,19 @@ import jz.cdgy.admin.mapper.LoginMapper;
 import jz.cdgy.admin.service.RoleService;
 import jz.cdgy.admin.service.UserService;
 import jz.cdgy.admin.util.AssertsUtil;
-import jz.cdgy.mbg.mapper.RoleMapper;
-import jz.cdgy.mbg.mapper.RolePermissionMapper;
-import jz.cdgy.mbg.mapper.UserMapper;
-import jz.cdgy.mbg.mapper.UserRoleMapper;
+import jz.cdgy.mbg.mapper.*;
 import jz.cdgy.mbg.pojo.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.util.CollectionUtils;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 @Slf4j
 @Service
@@ -42,6 +40,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     private RolePermissionMapper rolePermissionMapper;
     @Autowired
     private RoleService roleService;
+    @Autowired
+    private PermissionMapper permissionMapper;
 
     /**
      * 获取所有用户
@@ -125,7 +125,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     @Override
     public PageInfo<Role> getAllRole(Integer page, Integer limit) {
         PageHelper.startPage(page,limit);
-        return new PageInfo<Role>(roleMapper.selectList(new QueryWrapper<>()));
+        List<Role> roles =  roleMapper.selectList(new QueryWrapper<>());
+        roles.forEach(s->{
+            s.setPermission(gerRolePermission(s.getId()));
+        });
+        return new PageInfo<Role>(roles);
     }
 
     /**
@@ -159,22 +163,81 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     @Override
     public void updateRole(Role role) {
             QueryWrapper queryWrapper = new QueryWrapper();
-            queryWrapper.eq("name",role.getRoleName());
+            queryWrapper.eq("role_name",role.getRoleName());
             if(role.getId() == null && roleMapper.selectOne(queryWrapper)!=null){
                 AssertsUtil.isTrue(true,"当前角色已存在!");
             }
-            String result = "添加";
-            if(role.getId() != null){
-                RolePermissionExample  rolePermissionExample  = new RolePermissionExample();
-                RolePermissionExample.Criteria criteria = rolePermissionExample.createCriteria();
-                criteria.andIdEqualTo(role.getId());
-                AssertsUtil.isTrue(rolePermissionMapper.deleteByExample(rolePermissionExample)==0,"用户更新失败");
-                result = "更新";
-            }
-            AssertsUtil.isTrue(roleService.saveOrUpdate(role)==false,result+"失败");
-            role.setId(roleMapper.selectOne(queryWrapper).getId());
-            AssertsUtil.isTrue(rolePermissionMapper.updateRolePermission(role.getId().toString(),
-                Arrays.asList(role.getRolePermission().split(",")))==0,result+"失败");
+            AssertsUtil.isTrue(roleService.saveOrUpdate(role)==false,"更新失败");
+    }
+
+    /**
+     * 获取全部权限
+     * @param page
+     * @param limit
+     * @param permission
+     * @return
+     */
+    @Override
+    public PageInfo<Permission> getAllPermission(Integer page, Integer limit, Permission permission) {
+        QueryWrapper queryWrapper = new QueryWrapper<>();
+        if(StringUtils.isNotBlank(permission.getPermissionName())){
+            queryWrapper.like("permission_name",permission.getPermissionName());
+        }
+        if(StringUtils.isNotBlank(permission.getName())){
+            queryWrapper.like("name",permission.getName());
+        }
+        if(permission.getHierarchy()!=null){
+            queryWrapper.eq("Hierarchy",permission.getHierarchy());
+        }
+        if(StringUtils.isNotBlank(permission.getPermissionType())){
+            queryWrapper.eq("permission_type",permission.getPermissionType());
+        }
+        if(StringUtils.isNotBlank(permission.getStrDate())){
+            queryWrapper.between("create_time",permission.getStrDate().split(",")[0],permission.getStrDate().split(",")[1]);
+        }
+        if(permission.getIsValid()!=null){
+            queryWrapper.eq("is_valid",permission.getIsValid());
+        }
+        PageHelper.startPage(page,limit);
+        return new PageInfo<Permission>(permissionMapper.selectList(queryWrapper));
+    }
+
+    /**
+     * 获取树型权限
+     * @return
+     */
+    @Override
+    public List<Map> getTreePermission(){
+        List<Permission> permissions = permissionMapper.selectList(new QueryWrapper<>());
+        List<Map> treeList = new LinkedList<>();
+        permissions.forEach(s->{
+                    if(s.getHierarchy() == 1){
+                        Map<String,Object> map = new HashMap();
+                        map.put("id",s.getId().toString());
+                        map.put("pid","0");
+                        map.put("label",s.getPermissionName());
+                        map.put("children",getChildren(s.getId(),permissions));
+                        treeList.add(map);
+                    }
+        });
+        return treeList;
+    }
+
+    private List<Map> getChildren(Integer id,List<Permission> permissions) {
+        List<Map> list = new LinkedList<>();
+        permissions.forEach(k->{
+            if((k.getHierarchy()!=1 && k.getParentId() == id)){
+                Map<String,Object> map  = new HashMap();
+                map.put("id",k.getId().toString());
+                map.put("pid",k.getParentId().toString());
+                map.put("label",k.getPermissionName());
+                List<Map> mapList = getChildren(k.getId(),permissions);
+                if(!CollectionUtils.isEmpty(mapList)){
+                    map.put("children",mapList);
+                }
+                list.add(map);
+            }});
+        return list;
     }
 
     /**
@@ -184,7 +247,51 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
      */
     @Override
     public List<Map> gerRolePermission(Integer id) {
-        return rolePermissionMapper.getRolePermission(id);
+        List<Permission> permissions = rolePermissionMapper.getRolePermission(id);
+        List<Map> rolePermissionList = new LinkedList<>();
+        permissions.forEach(s->{
+            if(s.getHierarchy() == 1){
+                Map<String,Object> map = new HashMap();
+                map.put("id",s.getId().toString());
+                map.put("pid","0");
+                map.put("label",s.getPermissionName());
+                map.put("children",getChildren(s.getId(),permissions));
+                rolePermissionList.add(map);
+            }
+        });
+        return rolePermissionList;
+    }
+
+    @Override
+    @Transactional
+    public void updateTreePermission(Role role) {
+        System.out.println(role.toString());
+        RolePermissionExample  rolePermissionExample  = new RolePermissionExample();
+        RolePermissionExample.Criteria criteria = rolePermissionExample.createCriteria();
+        criteria.andRidEqualTo(role.getId());
+        AssertsUtil.isTrue(rolePermissionMapper.deleteByExample(rolePermissionExample)==-1,"角色权限更新失败");
+        AssertsUtil.isTrue(rolePermissionMapper.updateRolePermission(role.getId().toString(),
+                 Arrays.asList(role.getRolePermission().split(",")))==0,"更新角色权限失败");
+    }
+
+    @Override
+    public List<Map> getPermissionType() {
+        return permissionMapper.getPermissionType();
+    }
+
+    @Override
+    public List<Map> getHierarchy() {
+        return permissionMapper.getHierarchy();
+    }
+
+    @Override
+    public void updatePermission(Permission permission) {
+        AssertsUtil.isTrue(permissionMapper.updateByPrimaryKeySelective(permission)!=1,"更新失败!");
+    }
+
+    @Override
+    public void addPermission(Permission permission) {
+        AssertsUtil.isTrue(permissionMapper.updateByPrimaryKey(permission)!=1,"更新失败!");
     }
 }
 
