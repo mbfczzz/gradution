@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.MsgModelMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.MsgModel">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="msg_type" jdbcType="VARCHAR" property="msgType" />
+    <result column="msg_name" jdbcType="VARCHAR" property="msgName" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="is_valid" jdbcType="INTEGER" property="isValid" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="resoure_url" jdbcType="VARCHAR" property="resoureUrl" />
+    <result column="is_use" jdbcType="INTEGER" property="isUse" />
+    <result column="way_id" jdbcType="INTEGER" property="wayId" />
+  </resultMap>
+  <resultMap extends="BaseResultMap" id="ResultMapWithBLOBs" type="jz.cdgy.mbg.pojo.MsgModel">
+    <result column="msg_content" jdbcType="LONGVARCHAR" property="msgContent" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, msg_type, msg_name, title, is_valid, create_time, update_time, resoure_url, is_use, 
+    way_id
+  </sql>
+  <sql id="Blob_Column_List">
+    msg_content
+  </sql>
+  <select id="selectByExampleWithBLOBs" parameterType="jz.cdgy.mbg.pojo.MsgModelExample" resultMap="ResultMapWithBLOBs">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_msg_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.MsgModelExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_msg_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="ResultMapWithBLOBs">
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from t_msg_model
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_msg_model
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.MsgModelExample">
+    delete from t_msg_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.MsgModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_msg_model (msg_type, msg_name, title, 
+      is_valid, create_time, update_time, 
+      resoure_url, is_use, way_id, 
+      msg_content)
+    values (#{msgType,jdbcType=VARCHAR}, #{msgName,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, 
+      #{isValid,jdbcType=INTEGER}, #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{resoureUrl,jdbcType=VARCHAR}, #{isUse,jdbcType=INTEGER}, #{wayId,jdbcType=INTEGER}, 
+      #{msgContent,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.MsgModel">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_msg_model
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="msgType != null">
+        msg_type,
+      </if>
+      <if test="msgName != null">
+        msg_name,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="isValid != null">
+        is_valid,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="resoureUrl != null">
+        resoure_url,
+      </if>
+      <if test="isUse != null">
+        is_use,
+      </if>
+      <if test="wayId != null">
+        way_id,
+      </if>
+      <if test="msgContent != null">
+        msg_content,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="msgType != null">
+        #{msgType,jdbcType=VARCHAR},
+      </if>
+      <if test="msgName != null">
+        #{msgName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null">
+        #{isValid,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resoureUrl != null">
+        #{resoureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isUse != null">
+        #{isUse,jdbcType=INTEGER},
+      </if>
+      <if test="wayId != null">
+        #{wayId,jdbcType=INTEGER},
+      </if>
+      <if test="msgContent != null">
+        #{msgContent,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.MsgModelExample" resultType="java.lang.Long">
+    select count(*) from t_msg_model
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_msg_model
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.msgType != null">
+        msg_type = #{record.msgType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.msgName != null">
+        msg_name = #{record.msgName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isValid != null">
+        is_valid = #{record.isValid,jdbcType=INTEGER},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.resoureUrl != null">
+        resoure_url = #{record.resoureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isUse != null">
+        is_use = #{record.isUse,jdbcType=INTEGER},
+      </if>
+      <if test="record.wayId != null">
+        way_id = #{record.wayId,jdbcType=INTEGER},
+      </if>
+      <if test="record.msgContent != null">
+        msg_content = #{record.msgContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExampleWithBLOBs" parameterType="map">
+    update t_msg_model
+    set id = #{record.id,jdbcType=INTEGER},
+      msg_type = #{record.msgType,jdbcType=VARCHAR},
+      msg_name = #{record.msgName,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      is_valid = #{record.isValid,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      resoure_url = #{record.resoureUrl,jdbcType=VARCHAR},
+      is_use = #{record.isUse,jdbcType=INTEGER},
+      way_id = #{record.wayId,jdbcType=INTEGER},
+      msg_content = #{record.msgContent,jdbcType=LONGVARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_msg_model
+    set id = #{record.id,jdbcType=INTEGER},
+      msg_type = #{record.msgType,jdbcType=VARCHAR},
+      msg_name = #{record.msgName,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      is_valid = #{record.isValid,jdbcType=INTEGER},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      resoure_url = #{record.resoureUrl,jdbcType=VARCHAR},
+      is_use = #{record.isUse,jdbcType=INTEGER},
+      way_id = #{record.wayId,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.MsgModel">
+    update t_msg_model
+    <set>
+      <if test="msgType != null">
+        msg_type = #{msgType,jdbcType=VARCHAR},
+      </if>
+      <if test="msgName != null">
+        msg_name = #{msgName,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="isValid != null">
+        is_valid = #{isValid,jdbcType=INTEGER},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="resoureUrl != null">
+        resoure_url = #{resoureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="isUse != null">
+        is_use = #{isUse,jdbcType=INTEGER},
+      </if>
+      <if test="wayId != null">
+        way_id = #{wayId,jdbcType=INTEGER},
+      </if>
+      <if test="msgContent != null">
+        msg_content = #{msgContent,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="jz.cdgy.mbg.pojo.MsgModel">
+    update t_msg_model
+    set msg_type = #{msgType,jdbcType=VARCHAR},
+      msg_name = #{msgName,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      is_valid = #{isValid,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      resoure_url = #{resoureUrl,jdbcType=VARCHAR},
+      is_use = #{isUse,jdbcType=INTEGER},
+      way_id = #{wayId,jdbcType=INTEGER},
+      msg_content = #{msgContent,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.MsgModel">
+    update t_msg_model
+    set msg_type = #{msgType,jdbcType=VARCHAR},
+      msg_name = #{msgName,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      is_valid = #{isValid,jdbcType=INTEGER},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      resoure_url = #{resoureUrl,jdbcType=VARCHAR},
+      is_use = #{isUse,jdbcType=INTEGER},
+      way_id = #{wayId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

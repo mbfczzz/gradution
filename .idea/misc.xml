@@ -11,6 +11,8 @@
         <option value="$PROJECT_DIR$/gateway/pom.xml" />
         <option value="$PROJECT_DIR$/config/pom.xml" />
         <option value="$PROJECT_DIR$/gradution-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/gradution-msg/pom.xml" />
+        <option value="$PROJECT_DIR$/gradution-auth/pom.xml" />
       </list>
     </option>
   </component>

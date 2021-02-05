@@ -13,8 +13,8 @@ import jz.cdgy.mbg.pojo.*;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -30,8 +30,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     private UserMapper userMapper;
     @Autowired
     private UserRoleMapper userRoleMapper;
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
     @Autowired
     private LoginMapper loginMapper;
     @Autowired
@@ -84,7 +84,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     @Transactional
     @Override
     public void updateUser(User user) {
-        log.info(user.toString());
         if(user.getId() == null && loginMapper.queryByUsername(user.getUsername())!=null){
             log.info("123");
             AssertsUtil.isTrue(true,"当前用户已存在!");
@@ -97,9 +96,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
                 AssertsUtil.isTrue(userRoleMapper.deleteByExample(userRoleExample)==0,"用户更新失败");
                 result = "更新";
             }
-           if(StringUtils.isNotBlank(user.getPassword())){
-            user.setPassword(passwordEncoder.encode(user.getPassword()));
-            }
+//           if(StringUtils.isNotBlank(user.getPassword())){
+//            user.setPassword(passwordEncoder.encode(user.getPassword()));
+//            }
             AssertsUtil.isTrue(saveOrUpdate(user)==false,result+"失败");
             user.setId(loginMapper.queryByUsername(user.getUsername()).getId());
             AssertsUtil.isTrue(userRoleMapper.updateUserRole(user.getId().toString(),

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.msg.mapper.NotifyMapper">
+    <resultMap id="ResultMap" type="jz.cdgy.msg.Dto.MsgDto">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="spend_people" jdbcType="VARCHAR" property="sendPeople" />
+        <result column="send_time" jdbcType="VARCHAR" property="sendTime" />
+        <result column="model_id" jdbcType="VARCHAR" property="modelId" />
+        <result column="way_name" jdbcType="INTEGER" property="sendWay" />
+        <result column="source_name" jdbcType="INTEGER" property="sourceId" />
+        <result column="subject_name" jdbcType="VARCHAR" property="subjectId" />
+        <result column="msg_title" jdbcType="TINYINT" property="msgTitle" />
+        <result column="msg_content" jdbcType="TINYINT" property="msgContent" />
+    </resultMap>
+    <select id="getAllNotify" parameterType="jz.cdgy.msg.Dto.MsgDto" resultMap="ResultMap">
+        SELECT
+        t_msg.id,
+        send_people,
+        send_time,
+        way_name,
+        model_id,
+        source_name,
+        subject_name,
+        msg_title,
+        msg_content
+        FROM
+        t_msg
+        LEFT JOIN t_msg_source on t_msg.msg_source = t_msg_source.id
+        LEFT JOIN t_msg_subject on t_msg.send_subject = t_msg_subject.id
+        LEFT JOIN t_msg_way on t_msg_way.id = t_msg.send_way
+        <where>
+        <if test="sendPeople!=null and sendPeople!=''">
+            and sendPeople = #{sendPeople}
+        </if>
+        <if test="sendTime!=null and sendTime!=''">
+            and  DATE_FORMAT(sendTime,'%Y-%m-%d')
+            between DATE_FORMAT(sendTime,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",1))
+            and  DATE_FORMAT(sendTime,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",-1))
+        </if>
+        <if test="modelId!=null">
+            and model_id = #{modelId}
+        </if>
+        <if test="msgTitle">
+            and msg_title like concat('%',#{msgTitle,jdbcType=VARCHAR},'%')
+        </if>
+       <if test="msgContent">
+            and msg_Content like concat('%',#{msgContent,jdbcType=VARCHAR},'%')
+       </if>
+       <if test="sourceId!=null and sourceId!=''">
+           <foreach item="id" collection='sourceId.split(",")' open="(" separator="," close=")">
+               #{id}
+           </foreach>
+       </if>
+       <if test="subjectId!=null and subjectId!=''">
+           <foreach item="id" collection='subjectId.split(",")' open="(" separator="," close=")">
+               #{id}
+           </foreach>
+       </if>
+            <if test="sendWay!=null and sendWay!=''">
+                <foreach item="id" collection='sendWay.split(",")' open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </if>
+        </where>
+        order by send_time
+    </select>
+</mapper>

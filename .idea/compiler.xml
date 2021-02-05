@@ -9,31 +9,37 @@
         <outputRelativeToContentRoot value="true" />
         <module name="gateway" />
         <module name="gradution-common" />
-        <module name="eureka" />
+        <module name="gradution-auth" />
         <module name="gradution-mbg" />
+        <module name="gradution-msg" />
+        <module name="Nacos" />
         <module name="config" />
         <module name="gradution-admin" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="config" target="1.8" />
-      <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="graduation" target="1.8" />
       <module name="gradution-admin" target="1.8" />
+      <module name="gradution-auth" target="1.8" />
       <module name="gradution-common" target="1.8" />
       <module name="gradution-mbg" target="1.8" />
+      <module name="gradution-msg" target="1.8" />
+      <module name="Nacos" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="Nacos" options="-parameters" />
       <module name="config" options="-parameters" />
-      <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
       <module name="graduation" options="-parameters" />
       <module name="gradution-admin" options="-parameters" />
+      <module name="gradution-auth" options="-parameters" />
       <module name="gradution-common" options="-parameters" />
       <module name="gradution-mbg" options="-parameters" />
+      <module name="gradution-msg" options="-parameters" />
     </option>
   </component>
 </project>

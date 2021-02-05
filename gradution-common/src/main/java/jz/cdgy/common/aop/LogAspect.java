@@ -1,8 +1,12 @@
 package jz.cdgy.common.aop;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jz.cdgy.common.Utils.JsonUtil;
+import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONUtil;
 import jz.cdgy.common.annotion.WebLog;
+import jz.cdgy.common.constant.AuthConstant;
+import jz.cdgy.common.constant.StatusCode;
+import jz.cdgy.common.exception.ParamException;
+import jz.cdgy.common.model.UserDto;
 import jz.cdgy.common.model.esLog;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -13,7 +17,6 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -30,8 +33,6 @@ import java.util.Date;
 public class LogAspect {
     @Autowired
     private RabbitTemplate rabbitTemplate;
-    @Autowired
-    private ObjectMapper objectMapper;
     @Pointcut("@annotation(jz.cdgy.common.annotion.WebLog)")
     public void logCut(){
 
@@ -39,9 +40,14 @@ public class LogAspect {
 
     @Around(value = "logCut()")
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        log.info("开始记录日志信息");
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
+        String userStr = request.getHeader(AuthConstant.USER_TOKEN_HEADER);
+        if(StrUtil.isEmpty(userStr)){
+            throw  new ParamException(StatusCode.UN_LOGIN.getMessage());
+        }
+        UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
+        log.info("开始记录日志信息");
         esLog es = new esLog();
         Object result = proceedingJoinPoint.proceed();
         Signature signature = proceedingJoinPoint.getSignature();
@@ -56,7 +62,7 @@ public class LogAspect {
         es.setRequestUri(request.getRequestURI());
         es.setOperatorIp(request.getRemoteAddr());
         es.setOperatorMethod(request.getMethod());
-        es.setOperator(SecurityContextHolder.getContext().getAuthentication().getName());
+        es.setOperator(userDto.getUsername());
         es.setOperatorTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         ArrayList arrayList = new ArrayList();
         Object[] objects = proceedingJoinPoint.getArgs();

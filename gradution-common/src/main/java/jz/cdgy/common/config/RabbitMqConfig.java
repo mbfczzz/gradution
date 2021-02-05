@@ -19,10 +19,16 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMqConfig {
     @Value("${gradution-log-queue-name}")
     private  String queueName;
+    @Value("${gradution-register-queue-name}")
+    private  String registerQueueName;
     @Value("${gradution-log-exchange-name}")
     private  String exchange;
+    @Value("${gradution-register-exchange-name}")
+    private  String registerExchange;
     @Value("${gradution-log-bind-key}")
     private  String key;
+    @Value("${gradution-register-bind-key}")
+    private  String registerKey;
 
     @Autowired
     private CachingConnectionFactory connectionFactory;
@@ -48,10 +54,14 @@ public class RabbitMqConfig {
                 log.info("消息发送成功:correlationData({}),ack({}),cause({})", correlationData, ack, cause);
             }
         });
-        rabbitTemplate.setReturnsCallback(new RabbitTemplate.ReturnsCallback(){
+        rabbitTemplate.setReturnCallback(new RabbitTemplate.ReturnCallback() {
             @Override
-            public void returnedMessage(ReturnedMessage returnedMessage) {
-                log.info("消息丢失:exchange({}),route({}),replyCode({}),replyText({})",returnedMessage.getExchange(),returnedMessage.getRoutingKey(),returnedMessage.getReplyCode(),returnedMessage.getReplyText());
+            public void returnedMessage(Message message, int replyCode, String replyText, String exchange, String routingKey) {
+                log.info("消息发送ReturnCallback:{0},{1},{2},{3},{4},{5}", message,
+                        replyCode,
+                        replyText,
+                        exchange,
+                        routingKey);
             }
         });
         return rabbitTemplate;
@@ -87,12 +97,27 @@ public class RabbitMqConfig {
     }
 
     @Bean
+    public Queue registerQueue(){
+        return  new Queue(registerQueueName,true);
+    }
+
+    @Bean
     public DirectExchange directExchange(){
         return  new DirectExchange(exchange,true,false);
     }
 
     @Bean
+    public DirectExchange registerDirectExchange(){
+        return  new DirectExchange(registerExchange,true,false);
+    }
+
+    @Bean
     public Binding binding(){
         return BindingBuilder.bind(logQueue()).to(directExchange()).with(key);
+    }
+
+    @Bean
+    public Binding registerBinding(){
+        return BindingBuilder.bind(registerQueue()).to(registerDirectExchange()).with(registerKey);
     }
 }

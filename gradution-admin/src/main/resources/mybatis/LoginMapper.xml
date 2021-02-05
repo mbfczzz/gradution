@@ -27,7 +27,7 @@
         </where>
     </select>
 
-    <select id="queryRoleByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+    <select id="queryRoleByUserId" parameterType="java.lang.Integer" resultType="java.lang.String">
         SELECT t_user_role.rid
         FROM t_user_role
         <where>

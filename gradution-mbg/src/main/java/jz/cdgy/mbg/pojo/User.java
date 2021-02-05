@@ -30,6 +30,8 @@ public class User implements Serializable {
 
     private String image;
 
+    private String email;
+
     @TableField(exist = false)
     //接收查询传的角色id
     private String userole;
@@ -75,6 +77,14 @@ public class User implements Serializable {
 
     public void setRole(List<Map> role) {
         this.role = role;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Integer getId() {

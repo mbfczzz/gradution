@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Nacos/Nacos.iml" filepath="$PROJECT_DIR$/Nacos/Nacos.iml" />
       <module fileurl="file://$PROJECT_DIR$/config/config.iml" filepath="$PROJECT_DIR$/config/config.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka/eureka.iml" filepath="$PROJECT_DIR$/eureka/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/graduation.iml" filepath="$PROJECT_DIR$/graduation.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradution-admin/gradution-admin.iml" filepath="$PROJECT_DIR$/gradution-admin/gradution-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradution-auth/gradution-auth.iml" filepath="$PROJECT_DIR$/gradution-auth/gradution-auth.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradution-common/gradution-common.iml" filepath="$PROJECT_DIR$/gradution-common/gradution-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/gradution-mbg/gradution-mbg.iml" filepath="$PROJECT_DIR$/gradution-mbg/gradution-mbg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gradution-msg/gradution-msg.iml" filepath="$PROJECT_DIR$/gradution-msg/gradution-msg.iml" />
     </modules>
   </component>
 </project>

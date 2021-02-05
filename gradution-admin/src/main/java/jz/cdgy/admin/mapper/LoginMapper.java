@@ -10,7 +10,7 @@ public interface LoginMapper extends BaseMapper {
 
     User queryByUsername(String username);
 
-    List<Map> queryPermissionByRoleId(List<Integer> rid);
+    List<Map> queryPermissionByRoleId(List<String> rid);
 
-    List<Integer> queryRoleByUserId(Integer uid);
+    List<String> queryRoleByUserId(Integer uid);
 }

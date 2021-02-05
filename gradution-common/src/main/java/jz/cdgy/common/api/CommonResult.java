@@ -36,6 +36,14 @@ public class CommonResult<T> {
         return commonResult;
     }
 
+    public static <T>CommonResult SUCCESS(T result){
+        CommonResult commonResult = new CommonResult();
+        commonResult.setCode(StatusCode.SUCCESS_CODE.getCode());
+        commonResult.setMessage("返回成功!");
+        commonResult.setResult(result);
+        return commonResult;
+    }
+
     public static CommonResult FAILED(String message){
         CommonResult commonResult = new CommonResult();
         commonResult.setCode(StatusCode.FAILED_CODE.getCode());
