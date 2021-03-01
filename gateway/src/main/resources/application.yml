@@ -26,6 +26,10 @@ spring:
           - Path=/msg/**
           filters:
           - StripPrefix=1
+        - id: msg-websocket
+          uri: ws://localhost:1324
+          predicates:
+          - Path=/channel/**
   security:
     oauth2:
       resourceserver:
@@ -68,6 +72,7 @@ secure:
       - "/**/*.ico"
       - "/webjars/springfox-swagger-ui/**"
       - "/actuator/**"
+      - "/channel/**"
       - "/auth/oauth/token"
       - "/auth/rsa/publicKey"
       - "/admin/login"

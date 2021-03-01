@@ -21,7 +21,6 @@ public class IgnoreUrlsRemoveJwtFilter implements WebFilter {
     private IgnoreUrlConfig ignoreUrlsConfig;
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
-        System.out.println(1121);
         ServerHttpRequest request = exchange.getRequest();
         URI uri = request.getURI();
         PathMatcher pathMatcher = new AntPathMatcher();

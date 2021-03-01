@@ -9,6 +9,9 @@ import jz.cdgy.mbg.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author mbfczzz
+ */
 @ApiOperation("登录接口")
 @RestController
 public class LoginController {

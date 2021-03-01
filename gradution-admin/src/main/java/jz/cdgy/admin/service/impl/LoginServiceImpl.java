@@ -125,7 +125,7 @@ public class LoginServiceImpl implements LoginService {
             userDto.setHead(head);
             userDto.setSide(side);
             userDto.setUser(user);
-            userDto.setUsername(user.getUsername());
+            userDto.setUser_name(user.getUsername());
             userDto.setId(user.getId().toString());
             userDto.setAuthorities((List<String>) map.get("authority"));
             return userDto;
@@ -157,7 +157,8 @@ public class LoginServiceImpl implements LoginService {
         if(StrUtil.isEmpty(userStr)){
             throw  new ParamException(StatusCode.PERMISSION_UNDIFINE.getMessage());
         }
-        return JSONUtil.toBean(userStr, UserDto.class);
+        UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
+        return loadUserByUsername(userDto.getUser_name());
     }
 
     @Override

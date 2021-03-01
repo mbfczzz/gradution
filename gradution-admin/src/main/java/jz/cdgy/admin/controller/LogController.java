@@ -8,6 +8,9 @@ import jz.cdgy.common.model.esLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author mbfczzz
+ */
 @RestController
 @RequestMapping("/log")
 @ApiOperation("日志管理")

@@ -19,12 +19,13 @@ import java.text.ParseException;
 public class AuthGlobalFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        log.info("454");
+
+        System.out.println(exchange.getRequest().getURI());
         String token = exchange.getRequest().getHeaders().getFirst(AuthConstant.JWT_TOKEN_HEADER);
         if (StrUtil.isEmpty(token)) {
             return chain.filter(exchange);
         }
-        System.out.println(444);
+        log.info("非token返回");
         try {
             //从token中解析用户信息并设置到Header中去
             String realToken = token.replace(AuthConstant.JWT_TOKEN_PREFIX, "");
@@ -44,4 +45,5 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
     public int getOrder() {
         return 0;
     }
+
 }

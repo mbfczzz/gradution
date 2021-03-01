@@ -3,7 +3,7 @@
 <mapper namespace="jz.cdgy.msg.mapper.NotifyMapper">
     <resultMap id="ResultMap" type="jz.cdgy.msg.Dto.MsgDto">
         <id column="id" jdbcType="INTEGER" property="id" />
-        <result column="spend_people" jdbcType="VARCHAR" property="sendPeople" />
+        <result column="send_people" jdbcType="VARCHAR" property="sendPeople" />
         <result column="send_time" jdbcType="VARCHAR" property="sendTime" />
         <result column="model_id" jdbcType="VARCHAR" property="modelId" />
         <result column="way_name" jdbcType="INTEGER" property="sendWay" />
@@ -63,5 +63,20 @@
             </if>
         </where>
         order by send_time
+    </select>
+    <select id="getSendWay" resultType="java.util.Map">
+        select way_name as name,id as value
+        from t_msg_way
+    </select>
+    <select id="getNotifyTemplate" resultType="java.util.Map">
+        select msg_name as name,id as value
+        from t_msg_model
+        where t_msg_model.msg_type = 3
+    </select>
+    <select id="getCurrentTemplate" resultType="jz.cdgy.mbg.pojo.MsgModel">
+        select t_msg_model.id,t_msg_model.msg_type,t_msg_model.msg_content,t_msg_model.msg_name,t_msg_model.title,t_msg_model.is_valid,t_msg_model.create_time,t_msg_model.update_time,t_msg_model.resoure_url,t_msg_model.is_use,t_msg_model.way_id
+        from t_msg_model
+        where t_msg_model.id = #{id}
+        and t_msg_model.msg_type = 3
     </select>
 </mapper>

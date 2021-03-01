@@ -11,7 +11,7 @@ import java.util.List;
 @EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 public class UserDto {
-    private String username;
+    private String user_name;
     private String id;
     private User user;
     private Object head;

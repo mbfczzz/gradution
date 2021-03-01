@@ -2,6 +2,7 @@ package jz.cdgy.msg.Service.Impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import jz.cdgy.common.config.SpringContextUtil;
 import jz.cdgy.mbg.mapper.MsgMapper;
 import jz.cdgy.mbg.pojo.Msg;
@@ -22,6 +23,7 @@ import org.springframework.stereotype.Service;
 import javax.mail.MessagingException;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class NotifyServiceImpl implements NotifyService {
@@ -69,8 +71,32 @@ public class NotifyServiceImpl implements NotifyService {
     }
 
     @Override
-    public List<MsgDto> getAllNotify(Integer page,Integer limit,MsgDto msgDto) {
+    public PageInfo<MsgDto> getAllNotify(Integer page, Integer limit, MsgDto msgDto) {
         PageHelper.startPage(page,limit);
-        return notifyMapper.getAllNotify(msgDto);
+        return new PageInfo<>(notifyMapper.getAllNotify(msgDto));
+    }
+
+    @Override
+    public List<Map> getSendWay() {
+        return notifyMapper.getSendWay();
+    }
+
+    @Override
+    public List<Map> getNotifyTemplate() {
+        return notifyMapper.getNotifyTemplate();
+    }
+
+    @Override
+    public MsgModel getCurrentTemplate(String id) {
+        return notifyMapper.getCurrentTemplate(id);
+    }
+
+    @Override
+    public void sendMessage(Msg msg) {
+        msg.setType("管理员发送消息");
+        msg.setSendTime(new Date());
+        msg.setMsgSource(3);
+        msg.setSendSubject(2);
+        AssertsUtil.isTrue(msgMapper.insertSelective(msg)!=1,"发送添加失败");
     }
 }

@@ -16,11 +16,13 @@ import reactor.core.publisher.Mono;
 
 import java.nio.charset.Charset;
 
+/**
+ * @author mbfczzz
+ */
 @Component
 public class RestAuthenticationEntryPoint implements ServerAuthenticationEntryPoint {
     @Override
     public Mono<Void> commence(ServerWebExchange exchange, AuthenticationException e) {
-        System.out.println(12345678);
         ServerHttpResponse response = exchange.getResponse();
         response.setStatusCode(HttpStatus.OK);
         response.getHeaders().set(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);

@@ -8,6 +8,7 @@ import jz.cdgy.common.constant.StatusCode;
 import jz.cdgy.common.exception.ParamException;
 import jz.cdgy.common.model.UserDto;
 import jz.cdgy.common.model.esLog;
+import jz.cdgy.mbg.pojo.User;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -42,11 +43,6 @@ public class LogAspect {
     public Object around(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
-        String userStr = request.getHeader(AuthConstant.USER_TOKEN_HEADER);
-        if(StrUtil.isEmpty(userStr)){
-            throw  new ParamException(StatusCode.UN_LOGIN.getMessage());
-        }
-        UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
         log.info("开始记录日志信息");
         esLog es = new esLog();
         Object result = proceedingJoinPoint.proceed();
@@ -58,17 +54,31 @@ public class LogAspect {
             es.setOperatorModel(webLog.OperationModule());
             es.setOperatorTarget(webLog.OperationTarget());
         }
-        es.setRequestUrl(request.getRequestURL().toString());
-        es.setRequestUri(request.getRequestURI());
-        es.setOperatorIp(request.getRemoteAddr());
-        es.setOperatorMethod(request.getMethod());
-        es.setOperator(userDto.getUsername());
-        es.setOperatorTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         ArrayList arrayList = new ArrayList();
         Object[] objects = proceedingJoinPoint.getArgs();
         for(int i=0;i<objects.length;i++){
             arrayList.add(objects[i]);
         }
+        String userStr = request.getHeader(AuthConstant.USER_TOKEN_HEADER);
+        if(StrUtil.isEmpty(userStr)){
+            arrayList.forEach(s->{
+                if(s instanceof User){
+                    es.setOperator(((User) s).getUsername());
+                }
+                else {
+                    throw new ParamException(StatusCode.UN_LOGIN.getMessage());
+                }
+            });
+        }
+        else {
+            UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
+            es.setOperator(userDto.getUser_name());
+        }
+        es.setRequestUrl(request.getRequestURL().toString());
+        es.setRequestUri(request.getRequestURI());
+        es.setOperatorIp(request.getRemoteAddr());
+        es.setOperatorMethod(request.getMethod());
+        es.setOperatorTime(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         es.setResult(result);
         es.setParameter(arrayList);
         rabbitTemplate.convertAndSend("admin-log-exchange","admin-log-key",es);
