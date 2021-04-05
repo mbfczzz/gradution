@@ -346,4 +346,7 @@
       </if>
     </where>
   </select>
+    <select id="getAllId" resultType="java.lang.Integer">
+      select id from t_user where is_valid=1;
+    </select>
 </mapper>

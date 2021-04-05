@@ -17,6 +17,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @Slf4j
 public class RabbitMqConfig {
+    @Value("${gradution-msg-websocket-queue-name}")
+    private  String websocketQueueName;
     @Value("${gradution-log-queue-name}")
     private  String queueName;
     @Value("${gradution-register-queue-name}")
@@ -25,10 +27,14 @@ public class RabbitMqConfig {
     private  String exchange;
     @Value("${gradution-register-exchange-name}")
     private  String registerExchange;
+    @Value("${gradution-msg-websocket-exchange-name}")
+    private  String websocketExchange;
     @Value("${gradution-log-bind-key}")
     private  String key;
     @Value("${gradution-register-bind-key}")
     private  String registerKey;
+    @Value("${gradution-msg-websocket-bind-key}")
+    private  String websocketKey;
 
     @Autowired
     private CachingConnectionFactory connectionFactory;
@@ -100,6 +106,10 @@ public class RabbitMqConfig {
     public Queue registerQueue(){
         return  new Queue(registerQueueName,true);
     }
+    @Bean
+    public Queue websocketQueue(){
+        return  new Queue(websocketQueueName,true);
+    }
 
     @Bean
     public DirectExchange directExchange(){
@@ -112,6 +122,11 @@ public class RabbitMqConfig {
     }
 
     @Bean
+    public DirectExchange webSocketDirectExchange(){
+        return  new DirectExchange(websocketExchange,true,false);
+    }
+
+    @Bean
     public Binding binding(){
         return BindingBuilder.bind(logQueue()).to(directExchange()).with(key);
     }
@@ -119,5 +134,10 @@ public class RabbitMqConfig {
     @Bean
     public Binding registerBinding(){
         return BindingBuilder.bind(registerQueue()).to(registerDirectExchange()).with(registerKey);
+    }
+
+    @Bean
+    public Binding websocketBinding(){
+        return BindingBuilder.bind(websocketQueue()).to(webSocketDirectExchange()).with(websocketKey);
     }
 }

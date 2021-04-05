@@ -35,4 +35,6 @@ public interface UserMapper extends BaseMapper<User> {
     List<Map> gerUserRole(Integer id);
 
     List<User> getAllUser(User user);
+
+    List<Integer> getAllId();
 }

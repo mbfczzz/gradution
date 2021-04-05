@@ -6,10 +6,22 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.List;
 
 public class JsonUtil {
     private static ObjectMapper objectMapper = new ObjectMapper();
+
+    public static List<String> objToList(Object obj){
+        List<String> result = new ArrayList<String>();
+        if (obj instanceof ArrayList<?>) {
+            for (Object o : (List<?>) obj) {
+                result.add(String.class.cast(o));
+            }
+        }
+        return result;
+    }
+
     public static String object2JsonStr(Object obj) {
         try {
             return objectMapper.writeValueAsString(obj);

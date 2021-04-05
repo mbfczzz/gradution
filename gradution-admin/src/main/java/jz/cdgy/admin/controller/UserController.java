@@ -77,7 +77,7 @@ public class UserController {
     }
 
     @WebLog(OperationModule ="系统用户管理",OperationTarget = "删除角色")
-    @RequestMapping(value = "/deleteUser/{roles}",method = RequestMethod.DELETE)
+    @RequestMapping(value = "/deleteRole/{roles}",method = RequestMethod.DELETE)
     public CommonResult deleteRole(@PathVariable(name = "roles") List<Integer> id){
         userService.deleteRole(id);
         return CommonResult.SUCCESS("删除成功!");
@@ -99,7 +99,7 @@ public class UserController {
     @RequestMapping(value = "/updateTreePermission",method = RequestMethod.PUT)
     public CommonResult updateTreePermission(@RequestBody  Role role){
         userService.updateTreePermission(role);
-        return CommonResult.SUCCESS("删除成功!");
+        return CommonResult.SUCCESS("更新角色权限成功!");
     }
 
     @WebLog(OperationModule ="系统用户管理",OperationTarget = "获取权限类型")

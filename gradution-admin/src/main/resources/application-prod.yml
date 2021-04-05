@@ -1,10 +1,16 @@
 server:
   port: 1201
 spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://159.75.13.218:8848
   datasource:
-    url: jdbc:mysql://159.75.13.218:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://159.75.13.218:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
     username: root
-    password: 123456
+    password: '!Gudeixin991025'
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
       initial-size: 5 #连接池初始化大小
@@ -17,19 +23,34 @@ spring:
         login-password: druid
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: 47.103.59.236 # Redis服务器地址
-    database: 0 # Redis数据库索引（默认为0）
-    port: 6379 # Redis服务器连接端口
-    password: 123456  # Redis服务器连接密码（默认为空）
-    timeout: 3000ms # 连接超时时间（毫秒）
+    #    database: 0
+    #    host: 47.101.131.174         # Redis服务器地址
+    #    port: 6379              # Redis服务器连接端口
+    password:               # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      shutdown-timeout: 100
+    cluster:
+      nodes:
+        - 106.13.17.32:6371
+        - 106.13.17.32:6372
+        - 106.13.17.32:6373
+        - 106.13.17.32:6374
+        - 106.13.17.32:6375
+        - 106.13.17.32:6376
   rabbitmq: #rabbitmq相关配置
-    host: 47.103.59.236
+    host: 47.101.131.174
     port: 5672
     username: guest
     password: guest
   elasticsearch:
     rest:
-      uris: 47.103.59.236:9200
+      uris: 47.101.131.174:9200
   #  data:
   #    mongodb:
   #      uri: mongodb://192.168.37.3:27017
@@ -43,10 +64,10 @@ jwt:
   expiration: 3600
   secret: gradution
 
-mybatis:
+mybatis-plus:
   mapper-locations:
-    - classpath*: jz/cdgy/mbg/xml/*.xml
-    - classpath: mybatis/*.xml
+    - classpath*:jz/cdgy/mbg/xml/*.xml
+    - classpath:mybatis/*.xml
   type-aliases-package: jz/cdgy/mbg/pojo
   configuration:
     map-underscore-to-camel-case: true
@@ -58,41 +79,14 @@ logging:
 gradution-log-queue-name: admin-log-queue
 gradution-log-exchange-name: admin-log-exchange
 gradution-log-bind-key: admin-log-key
-#management: #开启SpringBoot Admin的监控
-#  endpoints:
-#    web:
-#      exposure:
-#        include: '*'
-#  endpoint:
-#    health:
-#      show-details: always
-#
-#redis:
-#  database: mall
-#  key:
-#    admin: 'ums:admin'
-#  expire:
-#    common: 86400 # 24小时
-#aliyun:
-#  oss:
-#    endpoint: oss-cn-shenzhen.aliyuncs.com # oss对外服务的访问域名
-#    accessKeyId: test # 访问身份验证中用到用户标识
-#    accessKeySecret: test # 用户用于加密签名字符串和oss用来验证签名字符串的密钥
-#    bucketName: macro-oss # oss的存储空间
-#    policy:
-#      expire: 300 # 签名有效期(S)
-#    maxSize: 10 # 上传文件大小(M)
-#    callback: http://39.98.190.128:8080/aliyun/oss/callback # 文件上传成功后的回调地址
-#    dir:
-#      prefix: mall/images/ # 上传文件夹路径前缀
-#minio:
-#  endpoint: http://192.168.6.132:9090 #MinIO服务所在地址
-#  bucketName: mall #存储桶名称
-#  accessKey: minioadmin #访问的key
-#  secretKey: minioadmin #访问的秘钥
-#feign:
-#  okhttp:
-#    enabled: true
-#ribbon:
-#  ConnectTimeout: 3000 #服务请求连接超时时间（毫秒）
-#  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）
+
+gradution-register-queue-name: admin-register-queue
+gradution-register-exchange-name: admin-register-exchange
+gradution-register-bind-key: admin-register-key
+
+feign:
+  okhttp:
+    enabled: true
+ribbon:
+  ConnectTimeout: 3000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）

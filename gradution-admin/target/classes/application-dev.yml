@@ -6,7 +6,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: http://localhost:8848
 
   datasource:
     url: jdbc:mysql://localhost:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
@@ -24,11 +24,26 @@ spring:
         login-password: druid
     driver-class-name: com.mysql.jdbc.Driver
   redis:
-    host: 47.101.131.174 # Redis服务器地址
-    database: 0 # Redis数据库索引（默认为0）
-    port: 6379 # Redis服务器连接端口
-    password: 123456  # Redis服务器连接密码（默认为空）
-    timeout: 3000ms # 连接超时时间（毫秒）
+    #    database: 0
+    #    host: 47.101.131.174         # Redis服务器地址
+    #    port: 6379              # Redis服务器连接端口
+    password:               # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      shutdown-timeout: 100
+    cluster:
+      nodes:
+        - 106.13.17.32:6371
+        - 106.13.17.32:6372
+        - 106.13.17.32:6373
+        - 106.13.17.32:6374
+        - 106.13.17.32:6375
+        - 106.13.17.32:6376
   rabbitmq: #rabbitmq相关配置
     host: 47.101.131.174
     port: 5672
@@ -69,6 +84,10 @@ gradution-log-bind-key: admin-log-key
 gradution-register-queue-name: admin-register-queue
 gradution-register-exchange-name: admin-register-exchange
 gradution-register-bind-key: admin-register-key
+
+gradution-msg-websocket-queue-name: msg-websocket-queue
+gradution-msg-websocket-exchange-name: msg-websocket-exchange
+gradution-msg-websocket-bind-key: msg-websocket-key
 
 feign:
   okhttp:

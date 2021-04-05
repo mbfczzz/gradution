@@ -42,6 +42,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     private RoleService roleService;
     @Autowired
     private PermissionMapper permissionMapper;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
     /**
      * 获取所有用户
@@ -85,7 +87,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
     @Override
     public void updateUser(User user) {
         if(user.getId() == null && loginMapper.queryByUsername(user.getUsername())!=null){
-            log.info("123");
             AssertsUtil.isTrue(true,"当前用户已存在!");
         }
         String result = "添加";
@@ -96,9 +97,9 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
                 AssertsUtil.isTrue(userRoleMapper.deleteByExample(userRoleExample)==0,"用户更新失败");
                 result = "更新";
             }
-//           if(StringUtils.isNotBlank(user.getPassword())){
-//            user.setPassword(passwordEncoder.encode(user.getPassword()));
-//            }
+           if(StringUtils.isNotBlank(user.getPassword())){
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            }
             AssertsUtil.isTrue(saveOrUpdate(user)==false,result+"失败");
             user.setId(loginMapper.queryByUsername(user.getUsername()).getId());
             AssertsUtil.isTrue(userRoleMapper.updateUserRole(user.getId().toString(),

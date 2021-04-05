@@ -3,8 +3,10 @@ package jz.cdgy.gateway.authorization;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import com.nimbusds.jose.JWSObject;
+import jz.cdgy.common.Utils.JsonUtil;
 import jz.cdgy.common.constant.AuthConstant;
 import jz.cdgy.common.model.UserDto;
+import jz.cdgy.common.redisService.RedisOption;
 import jz.cdgy.gateway.config.IgnoreUrlConfig;
 import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,16 +35,18 @@ public class Authorization implements ReactiveAuthorizationManager<Authorization
     @Autowired
     private IgnoreUrlConfig ignoreUrlConfig;
 
+    @Autowired
+    private RedisOption redisOption;
+
     @SneakyThrows
     @Override
     public Mono<AuthorizationDecision> check(Mono<Authentication> mono, AuthorizationContext authorizationContext) {
         ServerHttpRequest request = authorizationContext.getExchange().getRequest();
         URI uri = request.getURI();
-        System.out.println(uri.getPath());
         PathMatcher pathMatcher = new AntPathMatcher();
         List<String> ignoreUrls = ignoreUrlConfig.getUrls();
         for (String ignoreUrl : ignoreUrls) {
-            if (pathMatcher.match(ignoreUrl, uri.getPath())) {
+            if (pathMatcher.match(ignoreUrl, uri.getPath())) { ;
                 return Mono.just(new AuthorizationDecision(true));
             }
         }
@@ -61,15 +65,16 @@ public class Authorization implements ReactiveAuthorizationManager<Authorization
         JWSObject jwsObject = JWSObject.parse(realToken);
         String userStr = jwsObject.getPayload().toString();
         UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
-
-        if (!userDto.getAuthorities().contains(uri.getPath())){
+        List<String> authorities = JsonUtil.objToList(redisOption.get("permission"+userDto.getId()));
+        if (!authorities.contains(uri.getPath())){
             return Mono.just(new AuthorizationDecision(true));
         }
+
         return mono
                 .filter(Authentication::isAuthenticated)
                 .flatMapIterable(Authentication::getAuthorities)
                 .map(GrantedAuthority::getAuthority)
-                .any(userDto.getAuthorities()::contains)
+                .any(authorities::contains)
                 .map(AuthorizationDecision::new)
                 .defaultIfEmpty(new AuthorizationDecision(false));
     }

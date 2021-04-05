@@ -1,0 +1,83 @@
+spring:
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: a317242392@163.com
+    password: MHLHUOPJTVHPPBOH
+    protocol: smtp
+    default-encoding: UTF-8
+  application:
+    name: msg
+  cloud:
+    nacos:
+      discovery:
+      server-addr: 127.0.0.1:8848
+  redis:
+    #    database: 0
+    #    host: 47.101.131.174         # Redis服务器地址
+    #    port: 6379              # Redis服务器连接端口
+    password:               # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      shutdown-timeout: 100
+    cluster:
+      nodes:
+        - 106.13.17.32:6371
+        - 106.13.17.32:6372
+        - 106.13.17.32:6373
+        - 106.13.17.32:6374
+        - 106.13.17.32:6375
+        - 106.13.17.32:6376
+  rabbitmq: #rabbitmq相关配置
+    host: 47.101.131.174
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:mysql://localhost:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+    driver-class-name: com.mysql.jdbc.Driver
+mybatis-plus:
+  mapper-locations:
+    - classpath*:jz/cdgy/mbg/xml/*.xml
+    - classpath:mybatis/*.xml
+  type-aliases-package: jz/cdgy/mbg/pojo
+
+gradution-log-queue-name: admin-log-queue
+gradution-log-exchange-name: admin-log-exchange
+gradution-log-bind-key: admin-log-key
+
+gradution-register-queue-name: admin-register-queue
+gradution-register-exchange-name: admin-register-exchange
+gradution-register-bind-key: admin-register-key
+
+gradution-msg-websocket-queue-name: msg-websocket-queue
+gradution-msg-websocket-exchange-name: msg-websocket-exchange
+gradution-msg-websocket-bind-key: msg-websocket-key
+
+netty:
+  websocket:
+    # Websocket服务端口
+    port: 1324
+    # 绑定的网卡
+    ip: 0.0.0.0
+    # 消息帧最大体积
+    max-frame-size: 10240
+    # URI路径
+    path: /channel

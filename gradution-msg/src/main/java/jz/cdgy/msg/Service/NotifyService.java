@@ -23,4 +23,22 @@ public interface NotifyService {
         MsgModel getCurrentTemplate(String id);
 
         void sendMessage(Msg msg);
+
+        List<Map> getMsgSource();
+
+        List<Map> getSendSubject();
+
+        String updateMessage(MsgDto msgDto);
+
+        void deleteMsg(List<Integer> id);
+
+        void checkOk(List<Integer> id);
+
+        void msgReject(List<Integer> id);
+
+        PageInfo<MsgDto> getAllCheckNotify(Integer page, Integer limit, MsgDto msgDto);
+
+        PageInfo<MsgDto> getMessageByName(Integer page, Integer limit,String id);
+
+        PageInfo<MsgDto> getMessageByUser(Integer page, Integer limit, String id);
 }

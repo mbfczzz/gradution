@@ -8,4 +8,6 @@ import java.io.IOException;
 
 public interface RabbitEmailMessage {
     void handlEmailSend(Message message,Channel channel) throws IOException;
+
+    void handAnnounce(Message message,Channel channel);
 }

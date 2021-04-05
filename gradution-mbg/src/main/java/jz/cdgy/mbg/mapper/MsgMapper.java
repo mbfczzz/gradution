@@ -1,10 +1,9 @@
 package jz.cdgy.mbg.mapper;
 
+import java.util.List;
 import jz.cdgy.mbg.pojo.Msg;
 import jz.cdgy.mbg.pojo.MsgExample;
 import org.apache.ibatis.annotations.Param;
-
-import java.util.List;
 
 public interface MsgMapper {
     long countByExample(MsgExample example);

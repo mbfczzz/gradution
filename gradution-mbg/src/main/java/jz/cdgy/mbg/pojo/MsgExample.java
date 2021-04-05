@@ -804,6 +804,66 @@ public class MsgExample {
             addCriterion("msg_content not between", value1, value2, "msgContent");
             return (Criteria) this;
         }
+
+        public Criteria andMsgStatusIsNull() {
+            addCriterion("msg_status is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusIsNotNull() {
+            addCriterion("msg_status is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusEqualTo(Integer value) {
+            addCriterion("msg_status =", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusNotEqualTo(Integer value) {
+            addCriterion("msg_status <>", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusGreaterThan(Integer value) {
+            addCriterion("msg_status >", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("msg_status >=", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusLessThan(Integer value) {
+            addCriterion("msg_status <", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("msg_status <=", value, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusIn(List<Integer> values) {
+            addCriterion("msg_status in", values, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusNotIn(List<Integer> values) {
+            addCriterion("msg_status not in", values, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusBetween(Integer value1, Integer value2) {
+            addCriterion("msg_status between", value1, value2, "msgStatus");
+            return (Criteria) this;
+        }
+
+        public Criteria andMsgStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("msg_status not between", value1, value2, "msgStatus");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

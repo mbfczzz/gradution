@@ -28,10 +28,10 @@ public class ActiveUser implements UserDetails {
         this.user = userDto.getUser();
         this.head = userDto.getHead();
         this.side = userDto.getSide();
-        if (userDto.getAuthorities() != null) {
-            authorities = new ArrayList<>();
-            userDto.getAuthorities().forEach(item -> authorities.add(new SimpleGrantedAuthority(item)));
-        }
+//        if (userDto.getAuthorities() != null) {
+//            authorities = new ArrayList<>();
+//            userDto.getAuthorities().forEach(item -> authorities.add(new SimpleGrantedAuthority(item)));
+//        }
     }
 
     public User getUser() {

@@ -1,5 +1,6 @@
 package jz.cdgy.msg.message.impl;
 
+import cn.hutool.json.JSONUtil;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.rabbitmq.client.Channel;
 import jz.cdgy.msg.Email.AttachEmailSend;
@@ -7,6 +8,7 @@ import jz.cdgy.msg.Email.HtmlEmailSend;
 import jz.cdgy.msg.Email.SimpleEmailSend;
 import jz.cdgy.msg.Email.StaticEmailSend;
 import jz.cdgy.msg.Service.NotifyService;
+import jz.cdgy.msg.Service.PushService;
 import jz.cdgy.msg.message.RabbitEmailMessage;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.Message;
@@ -25,6 +27,9 @@ import java.util.Map;
 @Slf4j
 public class RabbitMessageImpl implements RabbitEmailMessage {
     private static Map<String,Class<?>> map;
+
+    @Autowired
+    private PushService pushService;
 
     static {
         map = new HashMap<>();
@@ -47,6 +52,22 @@ public class RabbitMessageImpl implements RabbitEmailMessage {
             List<Integer> ids = objectMapper.readValue(new String(message.getBody()),List.class);
             notifyService.SendEmail(ids,map.get("simple"));
             log.info("用户注册成功!");
+        }
+        catch (Exception e){
+            log.error(e.getLocalizedMessage()+e.getStackTrace()+e.getMessage()+e.getCause());
+            log.info("消息出现异常!");
+        }
+    }
+
+    @Override
+    @RabbitListener(queues = "msg-websocket-queue")
+    public void handAnnounce(Message message, Channel channel) {
+        try {
+            Integer id = objectMapper.readValue(new String(message.getBody()),Integer.class);
+            HashMap map = new HashMap<>(1);
+            map.put("id",id);
+            pushService.pushMsgToAll(JSONUtil.toJsonStr(map));
+            log.info("websocket发送消息成功!");
         }
         catch (Exception e){
             log.error(e.getLocalizedMessage()+e.getStackTrace()+e.getMessage()+e.getCause());

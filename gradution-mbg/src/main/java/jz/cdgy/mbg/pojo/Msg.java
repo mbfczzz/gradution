@@ -26,6 +26,8 @@ public class Msg implements Serializable {
 
     private String msgContent;
 
+    private Integer msgStatus;
+
     private static final long serialVersionUID = 1L;
 
     public Integer getId() {
@@ -116,6 +118,14 @@ public class Msg implements Serializable {
         this.msgContent = msgContent == null ? null : msgContent.trim();
     }
 
+    public Integer getMsgStatus() {
+        return msgStatus;
+    }
+
+    public void setMsgStatus(Integer msgStatus) {
+        this.msgStatus = msgStatus;
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -133,6 +143,7 @@ public class Msg implements Serializable {
         sb.append(", sendSubject=").append(sendSubject);
         sb.append(", msgTitle=").append(msgTitle);
         sb.append(", msgContent=").append(msgContent);
+        sb.append(", msgStatus=").append(msgStatus);
         sb.append("]");
         return sb.toString();
     }

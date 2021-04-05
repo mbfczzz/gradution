@@ -46,6 +46,11 @@
 <!--            <artifactId>spring-security-core</artifactId>-->
 <!--        </dependency>-->
         <dependency>
+            <!-- redis -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.amqp</groupId>
             <artifactId>spring-rabbit</artifactId>
         </dependency>

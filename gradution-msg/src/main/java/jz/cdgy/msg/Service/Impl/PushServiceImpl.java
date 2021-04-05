@@ -1,13 +1,17 @@
 package jz.cdgy.msg.Service.Impl;
 
+import cn.hutool.json.JSONUtil;
 import io.netty.channel.Channel;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
+import jz.cdgy.common.Utils.JsonUtil;
 import jz.cdgy.msg.Service.PushService;
 import jz.cdgy.msg.config.NettyConfig;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
+@Service
 public class PushServiceImpl implements PushService {
     @Override
     public void pushMsgToOne(String userId, String msg) {

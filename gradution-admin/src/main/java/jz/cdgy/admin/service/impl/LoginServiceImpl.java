@@ -9,6 +9,7 @@ import jz.cdgy.common.constant.AuthConstant;
 import jz.cdgy.common.constant.StatusCode;
 import jz.cdgy.common.exception.ParamException;
 import jz.cdgy.common.model.UserDto;
+import jz.cdgy.common.redisService.RedisOption;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,6 +32,8 @@ public class LoginServiceImpl implements LoginService {
     private LoginMapper loginMapper;
     @Autowired
     private HttpServletRequest request;
+    @Autowired
+    private RedisOption redisOption;
 //
 ////    @Autowired
 ////    private AuthenticationManager authenticationManager;
@@ -84,6 +87,7 @@ public class LoginServiceImpl implements LoginService {
                     tmap.put("parentId",s.get("parentId"));
                     tmap.put("name",s.get("name"));
                     tmap.put("component",s.get("component"));
+                    tmap.put("icon",s.get("icon"));
                     head.add(tmap);
             }
             authList.add(s.get("path").toString());
@@ -97,6 +101,7 @@ public class LoginServiceImpl implements LoginService {
                     smap.put("name",k.get("name"));
                     smap.put("component",k.get("component"));
                     smap.put("parentId",k.get("parentId"));
+                    smap.put("icon",k.get("icon"));
                     List<Map<String,Object>> child =  getChildren((Long) k.get("id"),permission);
                     if(!CollectionUtils.isEmpty(child)){
                         smap.put("children",child);
@@ -113,24 +118,25 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public UserDto loadUserByUsername(String username) {
-        User user = queryUserByuserName(username);
-        List<String> role  = loginMapper.queryRoleByUserId(user.getId());
-        List<Map> permission =  loginMapper.queryPermissionByRoleId(role);
-        Map map = getAuthorities(permission);
-        System.out.println(map.toString());
-        List<String> head = (List<String>) map.get("head");
-        List<String> side = (List<String>) map.get("side");
-        UserDto userDto = new UserDto();
-        if (user != null) {
-            userDto.setHead(head);
-            userDto.setSide(side);
-            userDto.setUser(user);
-            userDto.setUser_name(user.getUsername());
-            userDto.setId(user.getId().toString());
-            userDto.setAuthorities((List<String>) map.get("authority"));
-            return userDto;
-        }
-        log.info("{}","获取信息完成!");
+            User user = queryUserByuserName(username);
+            List<String> role  = loginMapper.queryRoleByUserId(user.getId());
+            List<Map> permission =  loginMapper.queryPermissionByRoleId(role);
+            Map map = getAuthorities(permission);
+            List<String> head = (List<String>) map.get("head");
+            List<String> side = (List<String>) map.get("side");
+            UserDto userDto = new UserDto();
+            if (user != null) {
+                userDto.setHead(head);
+                userDto.setSide(side);
+                userDto.setUser(user);
+                userDto.setUser_name(user.getUsername());
+                userDto.setId(user.getId().toString());
+                userDto.setAuthorities((List<String>) map.get("authority"));
+                redisOption.set("permission"+user.getId().toString(),(List<String>) map.get("authority"));
+                log.info("{}","获取信息完成!");
+                System.out.println(map.get("authority"));
+                return userDto;
+            }
         return null;
     }
 
@@ -172,6 +178,7 @@ public class LoginServiceImpl implements LoginService {
                 map.put("name",k.get("name"));
                 map.put("component",k.get("component"));
                 map.put("parentId",k.get("parentId"));
+                map.put("icon",k.get("icon"));
                 List<Map<String,Object>> child =  getChildren((Long) k.get("id"),permission);
                 if(!CollectionUtils.isEmpty(child)){
                     map.put("children",child);
