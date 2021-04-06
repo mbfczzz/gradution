@@ -7,14 +7,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="gateway" />
-        <module name="gradution-common" />
         <module name="gradution-auth" />
         <module name="gradution-mbg" />
         <module name="gradution-msg" />
-        <module name="Nacos" />
-        <module name="config" />
         <module name="gradution-admin" />
+        <module name="config" />
+        <module name="gateway" />
+        <module name="gradution-common" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

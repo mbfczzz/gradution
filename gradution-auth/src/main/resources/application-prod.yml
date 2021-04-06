@@ -1,24 +1,21 @@
 spring:
   datasource:
-    url: jdbc:mysql://159.75.13.218:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
+    url: jdbc:mysql://rm-uf6ldq88ircf3c7b6zo.mysql.rds.aliyuncs.com:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: gradution
     password: '!Gudeixin991025'
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      initial-size: 5
-      min-idle: 10
-      max-active: 20
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
       web-stat-filter:
-        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
-      stat-view-servlet:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
         login-username: druid
         login-password: druid
     driver-class-name: com.mysql.jdbc.Driver
   cloud:
     nacos:
       discovery:
-        server-addr: http://159.75.13.218:8848
-      config:
-        server-addr: http://159.75.13.218:8848
-        file-extension: yaml
+        server-addr: http://112.124.6.43:8848
 

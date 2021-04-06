@@ -6,10 +6,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://159.75.13.218:8848
+        server-addr: http://112.124.6.43:8848
   datasource:
-    url: jdbc:mysql://159.75.13.218:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&useSSL=false
-    username: root
+    url: jdbc:mysql://rm-uf6ldq88ircf3c7b6zo.mysql.rds.aliyuncs.com:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: gradution
     password: '!Gudeixin991025'
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -83,6 +83,10 @@ gradution-log-bind-key: admin-log-key
 gradution-register-queue-name: admin-register-queue
 gradution-register-exchange-name: admin-register-exchange
 gradution-register-bind-key: admin-register-key
+
+gradution-msg-websocket-queue-name: msg-websocket-queue
+gradution-msg-websocket-exchange-name: msg-websocket-exchange
+gradution-msg-websocket-bind-key: msg-websocket-key
 
 feign:
   okhttp:

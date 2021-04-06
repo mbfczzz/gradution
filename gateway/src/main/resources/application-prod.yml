@@ -2,40 +2,40 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://159.75.13.218:8848
-  gateway:
-    discovery:
-      locator:
-        enabled: true
-        lower-case-service-id: true #使用小写service-id
-    routes: #配置路由路径
-      - id: admin
-        uri: lb://admin
-        predicates:
-          - Path=/admin/**
-        filters:
-          - StripPrefix=1
-      - id: auth
-        uri: lb://auth
-        predicates:
-          - Path=/auth/**
-        filters:
-          - StripPrefix=1
-      - id: msg
-        uri: lb://msg
-        predicates:
-          - Path=/msg/**
-        filters:
-          - StripPrefix=1
-      - id: msg-websocket
-        uri: ws://localhost:1324
-        predicates:
-          - Path=/channel/**
+        server-addr: http://112.124.6.43:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true #使用小写service-id
+      routes: #配置路由路径
+        - id: admin
+          uri: lb://admin
+          predicates:
+            - Path=/admin/**
+          filters:
+            - StripPrefix=1
+        - id: auth
+          uri: lb://auth
+          predicates:
+            - Path=/auth/**
+          filters:
+            - StripPrefix=1
+        - id: msg
+          uri: lb://msg
+          predicates:
+            - Path=/msg/**
+          filters:
+            - StripPrefix=1
+        - id: msg-websocket
+          uri: ws://localhost:1324
+          predicates:
+            - Path=/channel/**
   security:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: 'http://159.75.13.218:1401/auth/rsa/publicKey' #配置RSA的公钥访问地址
+          jwk-set-uri: 'http://106.13.17.32:1401/auth/rsa/publicKey' #配置RSA的公钥访问地址
   redis:
     #    database: 0
     #    host: 47.101.131.174         # Redis服务器地址
@@ -58,8 +58,8 @@ spring:
         - 106.13.17.32:6375
         - 106.13.17.32:6376
   datasource:
-    url: jdbc:mysql://159.75.13.218:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
+    url: jdbc:mysql://rm-uf6ldq88ircf3c7b6zo.mysql.rds.aliyuncs.com:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: gradution
     password: '!Gudeixin991025'
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
@@ -99,7 +99,7 @@ management: #开启SpringBoot Admin的监控
         include: '*'
   endpoint:
     health:
-      show-details: always
+    show-details:
 
 gradution-log-queue-name: admin-log-queue
 gradution-log-exchange-name: admin-log-exchange
@@ -109,4 +109,7 @@ gradution-register-queue-name: admin-register-queue
 gradution-register-exchange-name: admin-register-exchange
 gradution-register-bind-key: admin-register-key
 
+gradution-msg-websocket-queue-name: msg-websocket-queue
+gradution-msg-websocket-exchange-name: msg-websocket-exchange
+gradution-msg-websocket-bind-key: msg-websocket-key
 
