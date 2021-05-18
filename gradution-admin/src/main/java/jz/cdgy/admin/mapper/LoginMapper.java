@@ -6,7 +6,7 @@ import jz.cdgy.mbg.pojo.User;
 import java.util.List;
 import java.util.Map;
 
-public interface LoginMapper extends BaseMapper {
+public interface LoginMapper extends BaseMapper<User> {
 
     User queryByUsername(String username);
 

@@ -12,6 +12,7 @@
         <result column="msg_title" jdbcType="VARCHAR" property="msgTitle" />
         <result column="msg_content" jdbcType="VARCHAR" property="msgContent" />
         <result column="status_name" jdbcType="VARCHAR" property="msgStatus" />
+        <result column="is_read" jdbcType="INTEGER" property="isRead" />
     </resultMap>
     <update id="updateMessage" parameterType="jz.cdgy.msg.Dto.MsgDto">
         update t_msg
@@ -58,6 +59,14 @@
         </set>
         where id = #{id,jdbcType=VARCHAR}
     </update>
+    <update id="updateUserMessage">
+        update t_user_message
+        <set>
+            is_read = 1
+        </set>
+        where uid = #{uid}
+        and mid = #{mid}
+    </update>
     <select id="getAllNotify" parameterType="jz.cdgy.msg.Dto.MsgDto" resultMap="ResultMap">
         SELECT
         t_msg.id,
@@ -88,23 +97,26 @@
         <if test="modelId!=null">
             and model_id = #{modelId}
         </if>
-        <if test="msgTitle">
+        <if test="msgTitle!=null">
             and msg_title like concat('%',#{msgTitle,jdbcType=VARCHAR},'%')
         </if>
-       <if test="msgContent">
+       <if test="msgContent!=null">
             and msg_Content like concat('%',#{msgContent,jdbcType=VARCHAR},'%')
        </if>
        <if test="sourceId!=null and sourceId!=''">
+          and sourceId in
            <foreach item="id" collection='sourceId.split(",")' open="(" separator="," close=")">
                #{id}
            </foreach>
        </if>
        <if test="subjectId!=null and subjectId!=''">
+           and subjectId in
            <foreach item="id" collection='subjectId.split(",")' open="(" separator="," close=")">
                #{id}
            </foreach>
        </if>
             <if test="sendWay!=null and sendWay!=''">
+                and sendWay in
                 <foreach item="id" collection='sendWay.split(",")' open="(" separator="," close=")">
                     #{id}
                 </foreach>
@@ -178,11 +190,29 @@
             model_id,
             msg_title,
             msg_content,
+            status_name,
+            is_read
+        FROM
+            t_user_msg
+                LEFT JOIN t_msg on t_user_msg.id = t_msg.id
+                LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        where
+                t_user_msg.uid=#{id}
+                and
+                t_status.id = 1 or t_status.id = 4
+       </select>
+    <select id="getMessageByCurrent" resultMap ="ResultMap">
+        SELECT
+            t_msg.id,
+            send_people,
+            send_time,
+            model_id,
+            msg_title,
+            msg_content,
             status_name
         FROM
             t_msg
                 LEFT JOIN t_status on t_msg.msg_status = t_status.id
-        where t_msg.id in (select t_user_msg.mes_id from t_user_msg where  t_user_msg.uid = #{id})
-        and   t_status.id = 1 or t_status.id = 4
-         </select>
+        where t_msg.id = #{mid}
+    </select>
 </mapper>

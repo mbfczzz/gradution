@@ -3,7 +3,7 @@
 <mapper namespace="jz.cdgy.mbg.mapper.DepartmentMapper">
   <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Department">
     <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="department_ name" jdbcType="VARCHAR" property="departmentName" />
+    <result column="department_name" jdbcType="VARCHAR" property="departmentName" />
     <result column="is_valid" jdbcType="TINYINT" property="isValid" />
     <result column="department_mark" jdbcType="VARCHAR" property="departmentMark" />
     <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
@@ -68,7 +68,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, "department_ name", is_valid, department_mark, create_time, update_time
+    id, department_name, is_valid, department_mark, create_time, update_time
   </sql>
   <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.DepartmentExample" resultMap="BaseResultMap">
     select
@@ -104,7 +104,7 @@
     <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
       SELECT LAST_INSERT_ID()
     </selectKey>
-    insert into t_department ("department_ name", is_valid, department_mark, 
+    insert into t_department (department_name, is_valid, department_mark,
       create_time, update_time)
     values (#{departmentName,jdbcType=VARCHAR}, #{isValid,jdbcType=TINYINT}, #{departmentMark,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
@@ -116,7 +116,7 @@
     insert into t_department
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="departmentName != null">
-        "department_ name",
+        department_name,
       </if>
       <if test="isValid != null">
         is_valid,
@@ -162,7 +162,7 @@
         id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.departmentName != null">
-        "department_ name" = #{record.departmentName,jdbcType=VARCHAR},
+        department_name = #{record.departmentName,jdbcType=VARCHAR},
       </if>
       <if test="record.isValid != null">
         is_valid = #{record.isValid,jdbcType=TINYINT},
@@ -184,7 +184,7 @@
   <update id="updateByExample" parameterType="map">
     update t_department
     set id = #{record.id,jdbcType=INTEGER},
-      "department_ name" = #{record.departmentName,jdbcType=VARCHAR},
+      department_name = #{record.departmentName,jdbcType=VARCHAR},
       is_valid = #{record.isValid,jdbcType=TINYINT},
       department_mark = #{record.departmentMark,jdbcType=VARCHAR},
       create_time = #{record.createTime,jdbcType=TIMESTAMP},
@@ -197,7 +197,7 @@
     update t_department
     <set>
       <if test="departmentName != null">
-        "department_ name" = #{departmentName,jdbcType=VARCHAR},
+        department_name = #{departmentName,jdbcType=VARCHAR},
       </if>
       <if test="isValid != null">
         is_valid = #{isValid,jdbcType=TINYINT},
@@ -216,7 +216,7 @@
   </update>
   <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Department">
     update t_department
-    set "department_ name" = #{departmentName,jdbcType=VARCHAR},
+    set department_name = #{departmentName,jdbcType=VARCHAR},
       is_valid = #{isValid,jdbcType=TINYINT},
       department_mark = #{departmentMark,jdbcType=VARCHAR},
       create_time = #{createTime,jdbcType=TIMESTAMP},

@@ -29,4 +29,6 @@ public interface EmpMapper extends BaseMapper<Emp> {
     int updateByPrimaryKeySelective(Emp record);
 
     int updateByPrimaryKey(Emp record);
+
+    Emp getOneEmpById(String id);
 }

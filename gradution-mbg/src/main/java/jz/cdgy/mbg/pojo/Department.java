@@ -1,19 +1,34 @@
 package jz.cdgy.mbg.pojo;
 
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@TableName(value = "t_department")
 public class Department implements Serializable {
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
     private String departmentName;
 
+    @TableField(fill = FieldFill.INSERT)
     private Byte isValid;
 
     private String departmentMark;
 
+    @TableField(exist = false)
+    private String createTimeStr;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date createTime;
 
+    @TableField(fill = FieldFill.UPDATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date updateTime;
 
     private static final long serialVersionUID = 1L;
@@ -64,6 +79,18 @@ public class Department implements Serializable {
 
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getCreateTimeStr() {
+        return createTimeStr;
+    }
+
+    public void setCreateTimeStr(String createTimeStr) {
+        this.createTimeStr = createTimeStr;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
     @Override

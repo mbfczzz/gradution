@@ -1,15 +1,22 @@
 package jz.cdgy.mbg.pojo;
 
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
 
+@TableName("t_status")
 public class Status implements Serializable {
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
     private String statusName;
 
     private String statusDescribe;
 
+    @TableField(fill = FieldFill.INSERT)
     private Integer isValid;
+
+    private String type;
 
     private static final long serialVersionUID = 1L;
 
@@ -45,6 +52,14 @@ public class Status implements Serializable {
         this.isValid = isValid;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type == null ? null : type.trim();
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
@@ -55,6 +70,7 @@ public class Status implements Serializable {
         sb.append(", statusName=").append(statusName);
         sb.append(", statusDescribe=").append(statusDescribe);
         sb.append(", isValid=").append(isValid);
+        sb.append(", type=").append(type);
         sb.append("]");
         return sb.toString();
     }

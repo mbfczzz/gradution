@@ -4,11 +4,14 @@ jz\cdgy\admin\controller\LoginController.class
 jz\cdgy\admin\service\LogService.class
 jz\cdgy\admin\mapper\LoginMapper.class
 jz\cdgy\admin\service\impl\UserServiceImpl.class
+jz\cdgy\admin\service\EmpService.class
 jz\cdgy\admin\AdminApplication.class
+jz\cdgy\admin\service\impl\EmpServiceImpl.class
 jz\cdgy\admin\message\RabbitLogMessage.class
 jz\cdgy\admin\config\CommonConfig.class
 jz\cdgy\admin\util\AssertsUtil.class
 jz\cdgy\admin\service\UserService.class
+jz\cdgy\admin\controller\EmpController.class
 jz\cdgy\admin\controller\UserController.class
 jz\cdgy\admin\service\RoleService.class
 jz\cdgy\admin\config\SwaggerConfig.class

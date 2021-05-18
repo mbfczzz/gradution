@@ -87,6 +87,7 @@ public class LoginServiceImpl implements LoginService {
                     tmap.put("parentId",s.get("parentId"));
                     tmap.put("name",s.get("name"));
                     tmap.put("component",s.get("component"));
+//                    tmap.put("type",s.get("permission_type"));
                     tmap.put("icon",s.get("icon"));
                     head.add(tmap);
             }
@@ -101,6 +102,7 @@ public class LoginServiceImpl implements LoginService {
                     smap.put("name",k.get("name"));
                     smap.put("component",k.get("component"));
                     smap.put("parentId",k.get("parentId"));
+                    smap.put("type",k.get("permission_type"));
                     smap.put("icon",k.get("icon"));
                     List<Map<String,Object>> child =  getChildren((Long) k.get("id"),permission);
                     if(!CollectionUtils.isEmpty(child)){
@@ -134,7 +136,6 @@ public class LoginServiceImpl implements LoginService {
                 userDto.setAuthorities((List<String>) map.get("authority"));
                 redisOption.set("permission"+user.getId().toString(),(List<String>) map.get("authority"));
                 log.info("{}","获取信息完成!");
-                System.out.println(map.get("authority"));
                 return userDto;
             }
         return null;
@@ -163,6 +164,7 @@ public class LoginServiceImpl implements LoginService {
         if(StrUtil.isEmpty(userStr)){
             throw  new ParamException(StatusCode.PERMISSION_UNDIFINE.getMessage());
         }
+        System.out.println(userStr);
         UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
         return loadUserByUsername(userDto.getUser_name());
     }
@@ -178,6 +180,7 @@ public class LoginServiceImpl implements LoginService {
                 map.put("name",k.get("name"));
                 map.put("component",k.get("component"));
                 map.put("parentId",k.get("parentId"));
+                map.put("type",k.get("permission_type"));
                 map.put("icon",k.get("icon"));
                 List<Map<String,Object>> child =  getChildren((Long) k.get("id"),permission);
                 if(!CollectionUtils.isEmpty(child)){

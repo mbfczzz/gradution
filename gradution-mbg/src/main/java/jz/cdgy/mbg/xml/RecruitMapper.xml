@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.RecruitMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Recruit">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="release_people" jdbcType="INTEGER" property="releasePeople" />
+    <result column="recruit_content" jdbcType="VARCHAR" property="recruitContent" />
+    <result column="recruit_position" jdbcType="INTEGER" property="recruitPosition" />
+    <result column="recruit_time" jdbcType="TIMESTAMP" property="recruitTime" />
+    <result column="recruit_name" jdbcType="VARCHAR" property="recruitName" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, release_people, recruit_content, recruit_position, recruit_time, recruit_name
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.RecruitExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_recruit
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_recruit
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_recruit
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.RecruitExample">
+    delete from t_recruit
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.Recruit">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_recruit (release_people, recruit_content, recruit_position, 
+      recruit_time, recruit_name)
+    values (#{releasePeople,jdbcType=INTEGER}, #{recruitContent,jdbcType=VARCHAR}, #{recruitPosition,jdbcType=INTEGER}, 
+      #{recruitTime,jdbcType=TIMESTAMP}, #{recruitName,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Recruit">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_recruit
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="releasePeople != null">
+        release_people,
+      </if>
+      <if test="recruitContent != null">
+        recruit_content,
+      </if>
+      <if test="recruitPosition != null">
+        recruit_position,
+      </if>
+      <if test="recruitTime != null">
+        recruit_time,
+      </if>
+      <if test="recruitName != null">
+        recruit_name,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="releasePeople != null">
+        #{releasePeople,jdbcType=INTEGER},
+      </if>
+      <if test="recruitContent != null">
+        #{recruitContent,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitPosition != null">
+        #{recruitPosition,jdbcType=INTEGER},
+      </if>
+      <if test="recruitTime != null">
+        #{recruitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recruitName != null">
+        #{recruitName,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.RecruitExample" resultType="java.lang.Long">
+    select count(*) from t_recruit
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update t_recruit
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.releasePeople != null">
+        release_people = #{record.releasePeople,jdbcType=INTEGER},
+      </if>
+      <if test="record.recruitContent != null">
+        recruit_content = #{record.recruitContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.recruitPosition != null">
+        recruit_position = #{record.recruitPosition,jdbcType=INTEGER},
+      </if>
+      <if test="record.recruitTime != null">
+        recruit_time = #{record.recruitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.recruitName != null">
+        recruit_name = #{record.recruitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_recruit
+    set id = #{record.id,jdbcType=INTEGER},
+      release_people = #{record.releasePeople,jdbcType=INTEGER},
+      recruit_content = #{record.recruitContent,jdbcType=VARCHAR},
+      recruit_position = #{record.recruitPosition,jdbcType=INTEGER},
+      recruit_time = #{record.recruitTime,jdbcType=TIMESTAMP},
+      recruit_name = #{record.recruitName,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.Recruit">
+    update t_recruit
+    <set>
+      <if test="releasePeople != null">
+        release_people = #{releasePeople,jdbcType=INTEGER},
+      </if>
+      <if test="recruitContent != null">
+        recruit_content = #{recruitContent,jdbcType=VARCHAR},
+      </if>
+      <if test="recruitPosition != null">
+        recruit_position = #{recruitPosition,jdbcType=INTEGER},
+      </if>
+      <if test="recruitTime != null">
+        recruit_time = #{recruitTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="recruitName != null">
+        recruit_name = #{recruitName,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Recruit">
+    update t_recruit
+    set release_people = #{releasePeople,jdbcType=INTEGER},
+      recruit_content = #{recruitContent,jdbcType=VARCHAR},
+      recruit_position = #{recruitPosition,jdbcType=INTEGER},
+      recruit_time = #{recruitTime,jdbcType=TIMESTAMP},
+      recruit_name = #{recruitName,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getRulesByRid" resultType="jz.cdgy.mbg.pojo.Rule">
+    select id, rule_name, rule_describe, is_valid
+    from t_rule
+    where t_rule.id in (select rule_id from t_recruit_rule where recruit_id = #{id})
+  </select>
+
+  <resultMap id="recruit" type="jz.cdgy.mbg.pojo.Recruit" >
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="release_people" jdbcType="INTEGER" property="releasePeople" />
+    <result column="recruit_content" jdbcType="VARCHAR" property="recruitContent" />
+    <result column="recruit_position" jdbcType="INTEGER" property="recruitPosition" />
+    <result column="recruit_time" jdbcType="TIMESTAMP" property="recruitTime" />
+    <result column="recruit_name" jdbcType="VARCHAR" property="recruitName" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <result column="position_name" jdbcType="VARCHAR" property="positionName" />
+    <collection property="rules" javaType="ArrayList" ofType="jz.cdgy.mbg.pojo.Rule" select="getRulesByRid" column="id"/>
+  </resultMap>
+
+  <select id="getAllRecruit" resultMap="recruit">
+    select
+    t_recruit.id, release_people, recruit_content, recruit_position, recruit_time, recruit_name,
+    emp_name,position_name
+    from t_recruit
+    left join t_emp on t_recruit.release_people = t_emp.id
+    left join t_position on t_position.id = t_recruit.recruit_position
+    left join t_recruit_rule  on t_recruit.id = t_recruit_rule.recruit_id
+    left join t_rule on t_rule.id= t_recruit_rule.rule_id
+    <where>
+      <if test="recruitContent!=null and recruitContent!=''">
+        and t_recruit.recruit_content like concat('%',#{recruitContent,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="recruitName!=null and recruitName!=''">
+        and t_recruit.recruit_name like concat('%',#{recruitName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="empName!=null and empName!=''">
+        and t_emp.emp_name like concat('%',#{empName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="positionName!=null and positionName!=''">
+        and t_recruit.recruit_position in
+        <foreach item="id" collection='positionName.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="ruleStr!=null and ruleStr!=''">
+        and t_rule.id in
+        <foreach item="id" collection='ruleStr.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="recruitTimeStr!=null and recruitTimeStr!=''">
+        and  DATE_FORMAT(recruit_time,'%Y-%m-%d')
+        between DATE_FORMAT(recruit_time,SUBSTRING_INDEX(#{recruitTimeStr,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(recruit_time,SUBSTRING_INDEX(#{recruitTimeStr,jdbcType=VARCHAR},",",-1))
+      </if>
+    </where>
+    group by
+    t_recruit.id
+  </select>
+</mapper>

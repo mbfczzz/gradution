@@ -754,6 +754,126 @@ public class EmpExample {
             addCriterion("emp_email not between", value1, value2, "empEmail");
             return (Criteria) this;
         }
+
+        public Criteria andEmpPositionIsNull() {
+            addCriterion("emp_position is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionIsNotNull() {
+            addCriterion("emp_position is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionEqualTo(Integer value) {
+            addCriterion("emp_position =", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionNotEqualTo(Integer value) {
+            addCriterion("emp_position <>", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionGreaterThan(Integer value) {
+            addCriterion("emp_position >", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionGreaterThanOrEqualTo(Integer value) {
+            addCriterion("emp_position >=", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionLessThan(Integer value) {
+            addCriterion("emp_position <", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionLessThanOrEqualTo(Integer value) {
+            addCriterion("emp_position <=", value, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionIn(List<Integer> values) {
+            addCriterion("emp_position in", values, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionNotIn(List<Integer> values) {
+            addCriterion("emp_position not in", values, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionBetween(Integer value1, Integer value2) {
+            addCriterion("emp_position between", value1, value2, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpPositionNotBetween(Integer value1, Integer value2) {
+            addCriterion("emp_position not between", value1, value2, "empPosition");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentIsNull() {
+            addCriterion("emp_department is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentIsNotNull() {
+            addCriterion("emp_department is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentEqualTo(Integer value) {
+            addCriterion("emp_department =", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentNotEqualTo(Integer value) {
+            addCriterion("emp_department <>", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentGreaterThan(Integer value) {
+            addCriterion("emp_department >", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentGreaterThanOrEqualTo(Integer value) {
+            addCriterion("emp_department >=", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentLessThan(Integer value) {
+            addCriterion("emp_department <", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentLessThanOrEqualTo(Integer value) {
+            addCriterion("emp_department <=", value, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentIn(List<Integer> values) {
+            addCriterion("emp_department in", values, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentNotIn(List<Integer> values) {
+            addCriterion("emp_department not in", values, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentBetween(Integer value1, Integer value2) {
+            addCriterion("emp_department between", value1, value2, "empDepartment");
+            return (Criteria) this;
+        }
+
+        public Criteria andEmpDepartmentNotBetween(Integer value1, Integer value2) {
+            addCriterion("emp_department not between", value1, value2, "empDepartment");
+            return (Criteria) this;
+        }
     }
 
     public static class Criteria extends GeneratedCriteria {

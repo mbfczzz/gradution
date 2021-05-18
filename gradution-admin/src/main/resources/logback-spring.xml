@@ -48,7 +48,7 @@
     </appender>
 
     <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
-        <destination>106.13.17.32:5044</destination>
+        <destination>106.13.17.32:4560</destination>
         <queueSize>1048576</queueSize>
         <encoder charset="UTF-8"
                  class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">

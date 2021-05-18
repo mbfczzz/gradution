@@ -1,12 +1,13 @@
 package jz.cdgy.mbg.mapper;
 
+import java.util.List;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import jz.cdgy.mbg.pojo.Status;
 import jz.cdgy.mbg.pojo.StatusExample;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
-public interface StatusMapper {
+public interface StatusMapper extends BaseMapper<Status> {
     long countByExample(StatusExample example);
 
     int deleteByExample(StatusExample example);

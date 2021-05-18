@@ -1,9 +1,15 @@
 package jz.cdgy.mbg.pojo;
 
+import com.baomidou.mybatisplus.annotation.*;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@TableName(value = "t_emp")
 public class Emp implements Serializable {
+    @TableId(value = "id",type = IdType.AUTO)
     private Integer id;
 
     private String empName;
@@ -14,15 +20,42 @@ public class Emp implements Serializable {
 
     private String empWx;
 
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date createTime;
 
+    @TableField(exist = false)
+    private String createTimeStr;
+
+    @TableField(fill = FieldFill.UPDATE)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date updateTime;
 
+    @TableField(exist = false)
+    private String updateTimeStr;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern ="yyyy-MM-dd HH:mm:ss",timezone ="GMT+8")
     private Date leaveTime;
 
+    @TableField(exist = false)
+    private String leaveTimeStr;
+
+    @TableField(fill = FieldFill.INSERT)
     private Byte isLeave;
 
     private String empEmail;
+
+    private Integer empPosition;
+
+    private Integer empDepartment;
+
+    @TableField(exist = false)
+    private String positionName;
+
+    @TableField(exist = false)
+    private String departmentName;
 
     private static final long serialVersionUID = 1L;
 
@@ -106,23 +139,85 @@ public class Emp implements Serializable {
         this.empEmail = empEmail == null ? null : empEmail.trim();
     }
 
+
+    public String getCreateTimeStr() {
+        return createTimeStr;
+    }
+
+    public void setCreateTimeStr(String createTimeStr) {
+        this.createTimeStr = createTimeStr;
+    }
+
+    public String getUpdateTimeStr() {
+        return updateTimeStr;
+    }
+
+    public void setUpdateTimeStr(String updateTimeStr) {
+        this.updateTimeStr = updateTimeStr;
+    }
+
+    public String getLeaveTimeStr() {
+        return leaveTimeStr;
+    }
+
+    public void setLeaveTimeStr(String leaveTimeStr) {
+        this.leaveTimeStr = leaveTimeStr;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
+    public Integer getEmpPosition() {
+        return empPosition;
+    }
+
+    public void setEmpPosition(Integer empPosition) {
+        this.empPosition = empPosition;
+    }
+
+    public Integer getEmpDepartment() {
+        return empDepartment;
+    }
+
+    public void setEmpDepartment(Integer empDepartment) {
+        this.empDepartment = empDepartment;
+    }
+
+    public String getPositionName() {
+        return positionName;
+    }
+
+    public void setPositionName(String positionName) {
+        this.positionName = positionName;
+    }
+
+    public String getDepartmentName() {
+        return departmentName;
+    }
+
+    public void setDepartmentName(String departmentName) {
+        this.departmentName = departmentName;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(getClass().getSimpleName());
-        sb.append(" [");
-        sb.append("Hash = ").append(hashCode());
-        sb.append(", id=").append(id);
-        sb.append(", empName=").append(empName);
-        sb.append(", empAddress=").append(empAddress);
-        sb.append(", empPhone=").append(empPhone);
-        sb.append(", empWx=").append(empWx);
-        sb.append(", createTime=").append(createTime);
-        sb.append(", updateTime=").append(updateTime);
-        sb.append(", leaveTime=").append(leaveTime);
-        sb.append(", isLeave=").append(isLeave);
-        sb.append(", empEmail=").append(empEmail);
-        sb.append("]");
-        return sb.toString();
+        return "Emp{" +
+                "id=" + id +
+                ", empName='" + empName + '\'' +
+                ", empAddress='" + empAddress + '\'' +
+                ", empPhone='" + empPhone + '\'' +
+                ", empWx='" + empWx + '\'' +
+                ", createTime=" + createTime +
+                ", createTimeStr='" + createTimeStr + '\'' +
+                ", updateTime=" + updateTime +
+                ", updateTimeStr='" + updateTimeStr + '\'' +
+                ", leaveTime=" + leaveTime +
+                ", leaveTimeStr='" + leaveTimeStr + '\'' +
+                ", isLeave=" + isLeave +
+                ", empEmail='" + empEmail + '\'' +
+                ", empPosition=" + empPosition +
+                ", empDepartment=" + empDepartment +
+                '}';
     }
 }

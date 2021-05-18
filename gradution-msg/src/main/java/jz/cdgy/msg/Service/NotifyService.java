@@ -41,4 +41,8 @@ public interface NotifyService {
         PageInfo<MsgDto> getMessageByName(Integer page, Integer limit,String id);
 
         PageInfo<MsgDto> getMessageByUser(Integer page, Integer limit, String id);
+
+        MsgDto getMessageByCurrent(String mid);
+
+        void updateUserMessage(String uid, String mid);
 }

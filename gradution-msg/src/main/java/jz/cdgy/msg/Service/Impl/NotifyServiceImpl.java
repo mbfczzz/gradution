@@ -111,7 +111,6 @@ public class NotifyServiceImpl implements NotifyService {
         int flag = msg.getId();
         List<Integer> ids = userMapper.getAllId();
         setUserMes(ids,flag);
-        rabbitTemplate.convertAndSend("msg-websocket-exchange","msg-websocket-key",flag);
         AssertsUtil.isTrue(flag==-1,"发送添加失败");
     }
 
@@ -144,6 +143,7 @@ public class NotifyServiceImpl implements NotifyService {
     public void checkOk(List<Integer> ids) {
         ids.forEach(id->{
             AssertsUtil.isTrue(notifyMapper.checkOk(id)!=1,"更新失败");
+            rabbitTemplate.convertAndSend("msg-websocket-exchange","msg-websocket-key",id);
         });
     }
 
@@ -181,5 +181,15 @@ public class NotifyServiceImpl implements NotifyService {
     public PageInfo<MsgDto> getMessageByUser(Integer page, Integer limit, String id) {
         PageHelper.startPage(page,limit);
         return new PageInfo<>(notifyMapper.getMessageByUser(id));
+    }
+
+    @Override
+    public MsgDto getMessageByCurrent(String mid) {
+        return notifyMapper.getMessageByCurrent(mid);
+    }
+
+    @Override
+    public void updateUserMessage(String uid, String mid) {
+        AssertsUtil.isTrue(notifyMapper.updateUserMessage(uid,mid)!=1,"网络错误!");;
     }
 }

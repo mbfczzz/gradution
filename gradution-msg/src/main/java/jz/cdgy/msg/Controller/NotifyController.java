@@ -63,7 +63,7 @@ public class NotifyController {
     @RequestMapping(value = "/sendMessage",method = RequestMethod.POST)
     public CommonResult  sendMessage(@RequestBody Msg msg){
         notifyService.sendMessage(msg);
-        return CommonResult.SUCCESS("消息发送成功!");
+        return CommonResult.SUCCESS("消息发送成功!待审核!");
     }
 
     @WebLog(OperationModule = "消息列表", OperationTarget = "获取事件来源")
@@ -118,5 +118,18 @@ public class NotifyController {
     public CommonResult getMessageByUser(@RequestParam(name = "page",defaultValue = "1")Integer page, @RequestParam(name = "limit",defaultValue = "10")Integer limit,
                                          @RequestParam(name = "id")String id){
         return CommonResult.SUCCESS(notifyService.getMessageByUser(page,limit,id));
+    }
+
+    @WebLog(OperationModule ="消息发布",OperationTarget = "用户获取websocket消息")
+    @RequestMapping(value = "/getMessageByCurrent/{id}",method = RequestMethod.GET)
+    public CommonResult getMessageByCurrent(@PathVariable(name = "id")String mid){
+        return CommonResult.SUCCESS(notifyService.getMessageByCurrent(mid));
+    }
+
+    @WebLog(OperationModule ="消息发布",OperationTarget = "消息已读")
+    @RequestMapping(value = "/updateUserMessage",method = RequestMethod.PUT)
+    public CommonResult updateUserMessage(@RequestParam(name = "uid") String uid,@RequestParam(name = "mid") String mid){
+        notifyService.updateUserMessage(uid,mid);
+        return CommonResult.SUCCESS("消息已读");
     }
 }

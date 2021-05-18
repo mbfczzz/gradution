@@ -3,14 +3,14 @@
 <mapper namespace="jz.cdgy.admin.mapper.LoginMapper">
     <select id="queryByUsername" parameterType="java.lang.String" resultType="jz.cdgy.mbg.pojo.User">
         SELECT
-        *
+        id,username, password, salt, is_valid, is_bind, emp_id, image, create_time, update_time, email
         FROM
         t_user
         where t_user.username = #{name}
     </select>
 
     <select id="queryPermissionByRoleId" parameterType="java.util.List" resultType="java.util.Map">
-        SELECT id,permission_name as title,permission_url as path,parent_id as parentId,Hierarchy as module,name,component,icon
+        SELECT id,permission_name as title,permission_url as path,parent_id as parentId,Hierarchy as module,name,component,icon,permission_type
         FROM
         t_permission
         <where>
@@ -24,6 +24,7 @@
                 </foreach>
             </where>
             )
+            and t_permission.is_valid=1
         </where>
     </select>
 

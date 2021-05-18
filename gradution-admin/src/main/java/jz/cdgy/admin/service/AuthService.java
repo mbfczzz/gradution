@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Map;
 
-@FeignClient(value = "auth",url = "http://localhost:1401/auth")
+@FeignClient(value = "auth")
 public interface AuthService {
 
     @PostMapping(value = "/oauth/token")

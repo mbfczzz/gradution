@@ -2,9 +2,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: http://127.0.0.1:8848
+        server-addr: http://localhost:8848
       config:
-        server-addr: http://127.0.0.1:8848
+        server-addr: http://localhost:8848
         file-extension: yaml
     gateway:
       discovery:
@@ -43,7 +43,7 @@ spring:
 #    database: 0
 #    host: 47.101.131.174         # Redis服务器地址
 #    port: 6379              # Redis服务器连接端口
-    password:               # Redis服务器连接密码（默认为空）
+    password: requirepassgradution              # Redis服务器连接密码（默认为空）
     timeout: 10000
     lettuce:
       pool:
@@ -51,6 +51,9 @@ spring:
           max-wait: -1ms
           min-idle: 0
           max-idle: 8
+      cluster:
+        refresh:
+          adaptive: true
       shutdown-timeout: 100
     cluster:
       nodes:

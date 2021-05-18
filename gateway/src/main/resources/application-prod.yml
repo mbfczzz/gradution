@@ -3,6 +3,9 @@ spring:
     nacos:
       discovery:
         server-addr: http://112.124.6.43:8848
+      config:
+        server-addr: http://112.124.6.43:8848
+        file-extension: yaml
     gateway:
       discovery:
         locator:
@@ -35,12 +38,12 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwk-set-uri: 'http://106.13.17.32:1401/auth/rsa/publicKey' #配置RSA的公钥访问地址
+          jwk-set-uri: 'http://218.78.33.135:1401/auth/rsa/publicKey' #配置RSA的公钥访问地址
   redis:
     #    database: 0
     #    host: 47.101.131.174         # Redis服务器地址
     #    port: 6379              # Redis服务器连接端口
-    password:               # Redis服务器连接密码（默认为空）
+    password: requirepassgradution               # Redis服务器连接密码（默认为空）
     timeout: 10000
     lettuce:
       pool:
@@ -48,6 +51,9 @@ spring:
         max-wait: -1ms
         min-idle: 0
         max-idle: 8
+      cluster:
+        refresh:
+          adaptive: true
       shutdown-timeout: 100
     cluster:
       nodes:

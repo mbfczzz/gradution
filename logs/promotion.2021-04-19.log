@@ -1,0 +1,735 @@
+2021-04-19 20:18:59.257 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-19 20:19:01.456 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - The following profiles are active: dev
+2021-04-19 20:19:04.150 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:19:04.151 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2021-04-19 20:19:04.290 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136ms. Found 1 Elasticsearch repository interfaces.
+2021-04-19 20:19:04.542 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[jz.cdgy.admin]' package. Please check your configuration.
+2021-04-19 20:19:04.854 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:19:04.854 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2021-04-19 20:19:04.863 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Reactive Elasticsearch repository interfaces.
+2021-04-19 20:19:04.870 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:19:04.870 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-19 20:19:04.875 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 MongoDB repository interfaces.
+2021-04-19 20:19:04.884 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:19:04.885 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-19 20:19:04.897 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2021-04-19 20:19:05.023 [restartedMain] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-19 20:19:05.310 [restartedMain] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=98069b86-7ac0-3a8e-9966-156cf5753ccd
+2021-04-19 20:19:06.941 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2021-04-19 20:19:06.949 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:19:06.951 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-19 20:19:06.951 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-04-19 20:19:07.171 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-19 20:19:07.172 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5687 ms
+2021-04-19 20:19:07.338 [restartedMain] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2021-04-19 20:19:07.568 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-04-19 20:19:08.235 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-04-19 20:19:09.285 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.DepartmentMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.332 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.EmpMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.378 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.MsgModelMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.415 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.PermissionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.440 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.PositionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.471 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RewardsMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.497 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RoleMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.534 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RolePermissionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.587 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.SpendMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.631 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.SpendWayMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.680 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.StandardMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.753 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.TransferMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.779 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:09.807 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.UserRoleMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:19:10.240 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.241 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.241 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.241 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.258 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.258 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.258 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:10.258 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:12.335 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2021-04-19 20:19:12.335 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2021-04-19 20:19:12.335 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client used: 7.6.2
+2021-04-19 20:19:12.335 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch cluster: 7.7.0
+2021-04-19 20:19:12.335 [restartedMain] WARN  o.s.data.elasticsearch.support.VersionInfo - Version mismatch in between Elasticsearch Client and Cluster: 7.6.2 - 7.7.0
+2021-04-19 20:19:12.794 [restartedMain] INFO  o.s.b.d.autoconfigure.OptionalLiveReloadServer - LiveReload server is running on port 35729
+2021-04-19 20:19:13.695 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-04-19 20:19:15.981 [restartedMain] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-04-19 20:19:16.398 [restartedMain] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-04-19 20:19:16.697 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:16.725 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:19:17.003 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-19 20:19:17.193 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-19 20:19:17.228 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-04-19 20:19:17.228 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-19 20:19:17.233 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-04-19 20:19:17.233 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-19 20:19:17.305 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 20:19:17.464 [cluster-ClusterId{value='607d7544eb90902646baebd1', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:127)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:63)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+2021-04-19 20:19:17.479 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2021-04-19 20:19:19.483 [restartedMain] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-04-19 20:19:19.788 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:19:19.807 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1201 (http) with context path ''
+2021-04-19 20:19:20.935 [restartedMain] ERROR c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, admin register failed...NacosRegistration{nacosDiscoveryProperties=NacosDiscoveryProperties{serverAddr='http://localhost:8848', endpoint='', namespace='', watchDelay=30000, logName='', service='admin', weight=1.0, clusterName='DEFAULT', group='DEFAULT_GROUP', namingLoadCacheAtStart='false', metadata={preserved.register.source=SPRING_CLOUD}, registerEnabled=true, ip='192.168.43.126', networkInterface='', port=1201, secure=false, accessKey='', secretKey='', heartBeatInterval=null, heartBeatTimeout=null, ipDeleteTimeout=null}},
+java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([http://localhost:8848]) tried: failed to req API:http://localhost:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:467)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:389)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:191)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at jz.cdgy.admin.AdminApplication.main(AdminApplication.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+2021-04-19 20:19:20.936 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([http://localhost:8848]) tried: failed to req API:http://localhost:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
+2021-04-19 20:19:20.937 [restartedMain] WARN  o.s.beans.factory.support.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'tomcatMetricsBinder': java.lang.NullPointerException
+2021-04-19 20:19:20.938 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-04-19 20:19:20.954 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService
+2021-04-19 20:19:20.963 [restartedMain] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Shutdown ignored - container is not active already
+2021-04-19 20:19:20.966 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2021-04-19 20:19:20.970 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2021-04-19 20:19:20.972 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Pausing ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:19:21.223 [restartedMain] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2021-04-19 20:19:21.227 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Stopping ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:19:21.232 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Destroying ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:19:21.246 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-04-19 20:19:21.255 [restartedMain] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([http://localhost:8848]) tried: failed to req API:http://localhost:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:894)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:553)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at jz.cdgy.admin.AdminApplication.main(AdminApplication.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: failed to req API:/nacos/v1/ns/instance after all servers([http://localhost:8848]) tried: failed to req API:http://localhost:8848/nacos/v1/ns/instance. code:500 msg: java.net.ConnectException: Connection refused: connect
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:467)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.reqAPI(NamingProxy.java:389)
+	at com.alibaba.nacos.client.naming.net.NamingProxy.registerService(NamingProxy.java:191)
+	at com.alibaba.nacos.client.naming.NacosNamingService.registerInstance(NacosNamingService.java:207)
+	at com.alibaba.cloud.nacos.registry.NacosServiceRegistry.register(NacosServiceRegistry.java:64)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.register(AbstractAutoServiceRegistration.java:239)
+	at com.alibaba.cloud.nacos.registry.NacosAutoServiceRegistration.register(NacosAutoServiceRegistration.java:76)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.start(AbstractAutoServiceRegistration.java:138)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.bind(AbstractAutoServiceRegistration.java:101)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:88)
+	at org.springframework.cloud.client.serviceregistry.AbstractAutoServiceRegistration.onApplicationEvent(AbstractAutoServiceRegistration.java:47)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:403)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:360)
+	at org.springframework.boot.web.servlet.context.WebServerStartStopLifecycle.start(WebServerStartStopLifecycle.java:46)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	... 19 common frames omitted
+2021-04-19 20:22:12.287 [restartedMain] INFO  o.s.b.d.env.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-04-19 20:22:14.628 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - The following profiles are active: dev
+2021-04-19 20:22:16.202 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:22:16.203 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Elasticsearch repositories in DEFAULT mode.
+2021-04-19 20:22:16.290 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81ms. Found 1 Elasticsearch repository interfaces.
+2021-04-19 20:22:16.535 [restartedMain] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[jz.cdgy.admin]' package. Please check your configuration.
+2021-04-19 20:22:16.834 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:22:16.835 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Elasticsearch repositories in DEFAULT mode.
+2021-04-19 20:22:16.846 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 9ms. Found 0 Reactive Elasticsearch repository interfaces.
+2021-04-19 20:22:16.851 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:22:16.852 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-04-19 20:22:16.856 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 MongoDB repository interfaces.
+2021-04-19 20:22:16.866 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-04-19 20:22:16.867 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2021-04-19 20:22:16.878 [restartedMain] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4ms. Found 0 Redis repository interfaces.
+2021-04-19 20:22:16.984 [restartedMain] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2021-04-19 20:22:17.266 [restartedMain] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=98069b86-7ac0-3a8e-9966-156cf5753ccd
+2021-04-19 20:22:19.037 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 1201 (http)
+2021-04-19 20:22:19.047 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:22:19.048 [restartedMain] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2021-04-19 20:22:19.048 [restartedMain] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.35]
+2021-04-19 20:22:19.300 [restartedMain] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-04-19 20:22:19.300 [restartedMain] INFO  org.springframework.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4636 ms
+2021-04-19 20:22:19.476 [restartedMain] WARN  o.springframework.boot.actuate.endpoint.EndpointId - Endpoint ID 'nacos-discovery' contains invalid characters, please migrate to a valid format.
+2021-04-19 20:22:19.765 [restartedMain] INFO  c.a.d.s.b.a.DruidDataSourceAutoConfigure - Init DruidDataSource
+2021-04-19 20:22:20.103 [restartedMain] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2021-04-19 20:22:20.394 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.DepartmentMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.445 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.EmpMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.496 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.MsgModelMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.534 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.PermissionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.559 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.PositionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.582 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RewardsMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.608 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RoleMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.636 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.RolePermissionMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.665 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.SpendMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.691 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.SpendWayMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.716 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.StandardMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.757 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.TransferMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.778 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.UserMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:20.811 [restartedMain] WARN  c.b.mybatisplus.core.injector.AbstractMethod - [jz.cdgy.mbg.mapper.UserRoleMapper.insert] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.Insert]
+2021-04-19 20:22:21.045 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.045 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.045 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.045 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.065 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.geo.Point to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.065 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.geo.Point as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.065 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class org.springframework.data.elasticsearch.core.geo.GeoPoint to interface java.util.Map as writing converter although it doesn't convert to a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:21.065 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from interface java.util.Map to class org.springframework.data.elasticsearch.core.geo.GeoPoint as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:22.009 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Spring Data Elasticsearch: 4.0.0.RELEASE
+2021-04-19 20:22:22.010 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client in build: 7.6.2
+2021-04-19 20:22:22.010 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch Client used: 7.6.2
+2021-04-19 20:22:22.010 [restartedMain] INFO  o.s.data.elasticsearch.support.VersionInfo - Version Elasticsearch cluster: 7.7.0
+2021-04-19 20:22:22.010 [restartedMain] WARN  o.s.data.elasticsearch.support.VersionInfo - Version mismatch in between Elasticsearch Client and Cluster: 7.6.2 - 7.7.0
+2021-04-19 20:22:22.160 [restartedMain] WARN  o.s.b.d.autoconfigure.OptionalLiveReloadServer - Unable to start LiveReload server
+2021-04-19 20:22:22.890 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService
+2021-04-19 20:22:25.043 [restartedMain] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-04-19 20:22:25.333 [restartedMain] INFO  org.mongodb.driver.cluster - Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-04-19 20:22:25.442 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:25.467 [restartedMain] WARN  org.springframework.data.convert.CustomConversions - Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2021-04-19 20:22:25.687 [restartedMain] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-04-19 20:22:25.798 [restartedMain] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-04-19 20:22:25.827 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-04-19 20:22:25.827 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-19 20:22:25.831 [restartedMain] WARN  com.netflix.config.sources.URLConfigurationSource - No URLs will be polled as dynamic configuration sources.
+2021-04-19 20:22:25.831 [restartedMain] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-04-19 20:22:25.909 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-04-19 20:22:26.031 [restartedMain] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+2021-04-19 20:22:26.387 [cluster-ClusterId{value='607d7601f7af1950c54f8a39', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server localhost:27017
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:70)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:127)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:117)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:63)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:79)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:65)
+	... 3 common frames omitted
+2021-04-19 20:22:27.840 [restartedMain] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-04-19 20:22:28.031 [restartedMain] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-1201"]
+2021-04-19 20:22:28.056 [restartedMain] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 1201 (http) with context path ''
+2021-04-19 20:22:28.194 [restartedMain] INFO  c.a.cloud.nacos.registry.NacosServiceRegistry - nacos registry, DEFAULT_GROUP admin 192.168.43.126:1201 register finished
+2021-04-19 20:22:29.621 [restartedMain] INFO  org.springframework.cloud.commons.util.InetUtils - Cannot determine local hostname
+2021-04-19 20:22:29.622 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-04-19 20:22:29.760 [restartedMain] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-04-19 20:22:29.857 [restartedMain] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-04-19 20:22:30.230 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: deleteEmpUsingDELETE_1
+2021-04-19 20:22:30.237 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: updateEmpUsingPUT_1
+2021-04-19 20:22:30.296 [restartedMain] INFO  s.d.s.w.r.operation.CachingOperationNameGenerator - Generating unique operation named: gerUserRoleUsingGET_1
+2021-04-19 20:22:30.367 [restartedMain] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [47.101.131.174:5672]
+2021-04-19 20:22:30.676 [restartedMain] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4a654cb6:0/SimpleConnection@677b979c [delegate=amqp://guest@47.101.131.174:5672/, localPort= 52386]
+2021-04-19 20:22:31.755 [restartedMain] INFO  jz.cdgy.admin.AdminApplication - Started AdminApplication in 21.624 seconds (JVM running for 24.24)
+2021-04-19 20:22:32.693 [RMI TCP Connection(21)-192.168.37.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-19 20:22:32.693 [RMI TCP Connection(21)-192.168.37.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-04-19 20:22:32.704 [RMI TCP Connection(21)-192.168.37.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2021-04-19 20:22:32.801 [RMI TCP Connection(19)-192.168.37.1] INFO  org.mongodb.driver.cluster - Cluster description not yet available. Waiting for 30000 ms before timing out
+2021-04-19 20:23:02.804 [RMI TCP Connection(19)-192.168.37.1] WARN  o.s.boot.actuate.mongo.MongoHealthIndicator - MongoDB health check failed
+org.springframework.dao.DataAccessResourceFailureException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]; nested exception is com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at org.springframework.data.mongodb.core.MongoExceptionTranslator.translateExceptionIfPossible(MongoExceptionTranslator.java:88)
+	at org.springframework.data.mongodb.core.MongoTemplate.potentiallyConvertRuntimeException(MongoTemplate.java:2863)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:541)
+	at org.springframework.data.mongodb.core.MongoTemplate.executeCommand(MongoTemplate.java:457)
+	at org.springframework.boot.actuate.mongo.MongoHealthIndicator.doHealthCheck(MongoHealthIndicator.java:46)
+	at org.springframework.boot.actuate.health.AbstractHealthIndicator.health(AbstractHealthIndicator.java:82)
+	at org.springframework.boot.actuate.health.HealthIndicator.getHealth(HealthIndicator.java:37)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:71)
+	at org.springframework.boot.actuate.health.HealthEndpoint.getHealth(HealthEndpoint.java:39)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:99)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getAggregateHealth(HealthEndpointSupport.java:110)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getContribution(HealthEndpointSupport.java:96)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:74)
+	at org.springframework.boot.actuate.health.HealthEndpointSupport.getHealth(HealthEndpointSupport.java:61)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:65)
+	at org.springframework.boot.actuate.health.HealthEndpoint.health(HealthEndpoint.java:55)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:282)
+	at org.springframework.boot.actuate.endpoint.invoke.reflect.ReflectiveOperationInvoker.invoke(ReflectiveOperationInvoker.java:77)
+	at org.springframework.boot.actuate.endpoint.annotation.AbstractDiscoveredOperation.invoke(AbstractDiscoveredOperation.java:60)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:121)
+	at org.springframework.boot.actuate.endpoint.jmx.EndpointMBean.invoke(EndpointMBean.java:96)
+	at com.sun.jmx.interceptor.DefaultMBeanServerInterceptor.invoke(DefaultMBeanServerInterceptor.java:819)
+	at com.sun.jmx.mbeanserver.JmxMBeanServer.invoke(JmxMBeanServer.java:801)
+	at javax.management.remote.rmi.RMIConnectionImpl.doOperation(RMIConnectionImpl.java:1468)
+	at javax.management.remote.rmi.RMIConnectionImpl.access$300(RMIConnectionImpl.java:76)
+	at javax.management.remote.rmi.RMIConnectionImpl$PrivilegedOperation.run(RMIConnectionImpl.java:1309)
+	at javax.management.remote.rmi.RMIConnectionImpl.doPrivilegedOperation(RMIConnectionImpl.java:1401)
+	at javax.management.remote.rmi.RMIConnectionImpl.invoke(RMIConnectionImpl.java:829)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at sun.rmi.server.UnicastServerRef.dispatch(UnicastServerRef.java:357)
+	at sun.rmi.transport.Transport$1.run(Transport.java:200)
+	at sun.rmi.transport.Transport$1.run(Transport.java:197)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.Transport.serviceCall(Transport.java:196)
+	at sun.rmi.transport.tcp.TCPTransport.handleMessages(TCPTransport.java:573)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run0(TCPTransport.java:834)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.lambda$run$0(TCPTransport.java:688)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at sun.rmi.transport.tcp.TCPTransport$ConnectionHandler.run(TCPTransport.java:687)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused: connect}}]
+	at com.mongodb.internal.connection.BaseCluster.getDescription(BaseCluster.java:177)
+	at com.mongodb.internal.connection.SingleServerCluster.getDescription(SingleServerCluster.java:41)
+	at com.mongodb.client.internal.MongoClientDelegate.getConnectedClusterDescription(MongoClientDelegate.java:147)
+	at com.mongodb.client.internal.MongoClientDelegate.createClientSession(MongoClientDelegate.java:98)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.getClientSession(MongoClientDelegate.java:278)
+	at com.mongodb.client.internal.MongoClientDelegate$DelegateOperationExecutor.execute(MongoClientDelegate.java:182)
+	at com.mongodb.client.internal.MongoDatabaseImpl.executeCommand(MongoDatabaseImpl.java:194)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:163)
+	at com.mongodb.client.internal.MongoDatabaseImpl.runCommand(MongoDatabaseImpl.java:158)
+	at org.springframework.data.mongodb.core.MongoTemplate.lambda$executeCommand$2(MongoTemplate.java:457)
+	at org.springframework.data.mongodb.core.MongoTemplate.execute(MongoTemplate.java:539)
+	... 46 common frames omitted
+2021-04-19 20:23:44.596 [http-nio-1201-exec-1] INFO  jz.cdgy.common.aop.LogAspect - 开始记录日志信息
+2021-04-19 20:23:44.789 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryByUsername - ==>  Preparing: SELECT * FROM t_user where t_user.username = ?
+2021-04-19 20:23:44.810 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryByUsername - ==> Parameters: admin(String)
+2021-04-19 20:23:44.839 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryByUsername - <==    Columns: id, username, password, salt, is_valid, is_bind, emp_id, image, create_time, update_time, email
+2021-04-19 20:23:44.842 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryByUsername - <==        Row: 3, admin, $2a$10$ZeJtcp.fMXs.SsyJD7IRwOSuOtWJLy/jGMm1qLKFHdfKpKdM8VKH6, null, 1, 0, null, null, 2020-12-30 07:50:55.0, 2021-03-27 00:16:18.0, null
+2021-04-19 20:23:44.844 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryByUsername - <==      Total: 1
+2021-04-19 20:23:44.908 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - ==>  Preparing: SELECT t_user_role.rid FROM t_user_role WHERE t_user_role.uid = ?
+2021-04-19 20:23:44.908 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - ==> Parameters: 3(Integer)
+2021-04-19 20:23:44.915 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - <==    Columns: rid
+2021-04-19 20:23:44.916 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - <==        Row: 3
+2021-04-19 20:23:44.916 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - <==        Row: 1
+2021-04-19 20:23:44.916 [http-nio-1201-exec-1] TRACE jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - <==        Row: 2
+2021-04-19 20:23:44.916 [http-nio-1201-exec-1] DEBUG jz.cdgy.admin.mapper.LoginMapper.queryRoleByUserId - <==      Total: 3
+2021-04-19 20:23:44.919 [http-nio-1201-exec-1] DEBUG j.c.a.mapper.LoginMapper.queryPermissionByRoleId - ==>  Preparing: SELECT id,permission_name as title,permission_url as path,parent_id as parentId,Hierarchy as module,name,component,icon,permission_type FROM t_permission WHERE t_permission.id in ( SELECT distinct t_role_permission.pid FROM t_role_permission WHERE t_role_permission.rid in ( ? , ? , ? ) ) and t_permission.is_valid=1
+2021-04-19 20:23:44.920 [http-nio-1201-exec-1] DEBUG j.c.a.mapper.LoginMapper.queryPermissionByRoleId - ==> Parameters: 3(String), 1(String), 2(String)
+2021-04-19 20:23:44.931 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==    Columns: id, title, path, parentId, module, name, component, icon, permission_type
+2021-04-19 20:23:44.931 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 1, 系统管理, /SystemManagement, 1, 1, SystemManagement, , bandcamp, moudel
+2021-04-19 20:23:44.932 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 2, 人事管理, /PersonManagement, 2, 1, PersonManagement , null, users, moudel
+2021-04-19 20:23:44.933 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 3, 薪资管理, /SalaryManagement, 3, 1, SalaryManagement, , creative-commons, moudel
+2021-04-19 20:23:44.933 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 4, 工作管理, /WorkManagement, 4, 1, WorkManagement, , wordpress, moudel
+2021-04-19 20:23:44.933 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 5, 招聘管理, /RecruitmentManagement, 5, 1, RecruitmentManagement, , reddit, moudel
+2021-04-19 20:23:44.933 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 6, 消息管理, /SystemManagement/NotificationManagement, 1, 2, , , comments-o, memu
+2021-04-19 20:23:44.933 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 7, 用户信息管理, /SystemManagement/UserManagement, 1, 2, , , user-circle, memu
+2021-04-19 20:23:44.934 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 8, 员工信息管理, /PersonManagement/StaffManagement, 2, 2, , , user, memu
+2021-04-19 20:23:44.934 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 9, 企业信息管理, /PersonManagement/BusinessManagement, 2, 2, , , university, memu
+2021-04-19 20:23:44.935 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 10, 支出管理, /SalaryManagement/ExpenditureManagement, 3, 2, , , expand, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 11, 工资发放管理, /SalaryManagement/Paymentmanagement, 3, 2, , , money, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 12, 工资账套管理, /SalaryManagement/SalaryAccountSet, 3, 2, , , money, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 13, 工资报表, /SalaryManagement/SalaryReport, 3, 2, , , compass, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 14, 工作分配, /WorkManagement/Assignment, 4, 2, , , building-o, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 15, 工作调动, /WorkManagement/JobTransfer, 4, 2, , , exchange, memu
+2021-04-19 20:23:44.936 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 16, 招聘信息管理, /RecruitmentManagement/RecruitmentInformation, 5, 2, , , info, memu
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 17, 招聘职位管理, /RecruitmentManagement/RecruitmentPosition , 5, 2, , , buysellads, memu
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 18, 招聘报表, /RecruitmentManagement/RecruitmentReport, 5, 2, , , bars, memu
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 19, 消息列表, /SystemManagement/NotificationManagement/NotificationList, 6, 3, NotificationList, system/SystemManagement/NotificationManagement/NotificationList, th-list, page
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 20, 消息发布, /SystemManagement/NotificationManagement/DeliverAnnouncement, 6, 3, DeliverAnnouncement, system/SystemManagement/NotificationManagement/DeliverAnnouncement, bullhorn, page
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 21, 消息审核, /SystemManagement/NotificationManagement/NotificationReview, 6, 3, NotificationReview, system/SystemManagement/NotificationManagement/NotificationReview, check, page
+2021-04-19 20:23:44.937 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 22, 消息参数列表, /SystemManagement/NotificationManagement/NotificationParameters, 6, 3, NotificationParameters, system/SystemManagement/NotificationManagement/NotificationParameters, superpowers, page
+2021-04-19 20:23:44.938 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 23, 日志管理, /SystemManagement/LogManagement, 1, 2, , , plane, memu
+2021-04-19 20:23:44.938 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 24, 日志列表, /SystemManagement/LogManagement/LogList, 23, 3, LogList, system/SystemManagement/LogManagement/LogList, bars, page
+2021-04-19 20:23:44.938 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 25, 日志参数管理, /SystemManagement/LogManagement/Parameter, 23, 3, Parameter, system/SystemManagement/LogManagement/Parameter, superpowers, page
+2021-04-19 20:23:44.938 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 26, 用户列表, /SystemManagement/UserManagement/UserList, 7, 3, UserList, system/SystemManagement/UserManagement/UserList, superpowers, page
+2021-04-19 20:23:44.938 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 27, 角色管理, /SystemManagement/UserManagement/RoleManagement, 7, 3, RoleManagement, system/SystemManagement/UserManagement/RoleManagement, rocket, page
+2021-04-19 20:23:44.939 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 28, 个人信息, /SystemManagement/UserManagement/PersonInformation, 7, 3, PersonInformation, system/SystemManagement/UserManagement/PersonInformation, user-plus, page
+2021-04-19 20:23:44.939 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 29, 权限管理, /SystemManagement/UserManagement/PermissionManagement, 7, 3, PermissionManagement, system/SystemManagement/UserManagement/PermissionManagement, product-hunt, page
+2021-04-19 20:23:44.939 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 30, 员工列表, /PersonManagement/StaffManagement/EmpList, 8, 3, EmpList, system/PersonManagement/StaffManagement/EmpList, bars, page
+2021-04-19 20:23:44.939 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 31, 部门管理, /PersonManagement/BusinessManagement/DepartmentManagement, 9, 3, DepartmentManagement, system/PersonManagement/BusinessManagement/DepartmentManagement, building-o, page
+2021-04-19 20:23:44.939 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 32, 职位管理, /PersonManagement/BusinessManagement/PositionManagement, 9, 3, PositionManagement, system/PersonManagement/BusinessManagement/PositionManagement, cog, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 33, 支出列表, /SalaryManagement/ExpenditureManagement/SpendList, 10, 3, SpendList, system/SalaryManagement/ExpenditureManagement/SpendList, paypal, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 34, 员工调动管理, /PersonManagement/StaffTransferManagement, 2, 2, , , transgender, memu
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 35, 员工考勤管理, /PersonManagement/AttendanceManagement, 2, 2, , , ellipsis-v, memu
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 36, 员工奖惩管理, /PersonManagement/RewardPunishmentManagement, 2, 2, , , magnet, memu
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 37, 调动列表, /PersonManagement/StaffTransferManagement/TransferList, 34, 3, TransferList, system/PersonManagement/StaffTransferManagement/TransferList, transgender, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 38, 调动申请, /PersonManagement/StaffTransferManagement/TransferApplication, 34, 3, TransferApplication, system/PersonManagement/StaffTransferManagement/TransferApplication, transgender, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 39, 调动审核, /PersonManagement/StaffTransferManagement/TransferAudit, 34, 3, TransferAudit, system/PersonManagement/StaffTransferManagement/TransferAudit, check-circle, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 40, 请假外出申请, /PersonManagement/AttendanceManagement/AttendanceLeave, 35, 3, AttendanceLeave, system/PersonManagement/AttendanceManagement/Leave, sign-out, page
+2021-04-19 20:23:44.940 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 41, 打卡管理, /PersonManagement/AttendanceManagement/PunchTheClock, 35, 3, PunchTheClock, system/PersonManagement/AttendanceManagement/PunchTheClock, clock-o, page
+2021-04-19 20:23:44.941 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 42, 离职申请, /PersonManagement/StaffManagement/Leave, 8, 3, Leave, system/PersonManagement/StaffManagement/Leave, level-up, page
+2021-04-19 20:23:44.941 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 43, 离职审核, /PersonManagement/StaffManagement/ToExamine, 8, 3, ToExamine, system/PersonManagement/StaffManagement/ToExamine, check-circle, page
+2021-04-19 20:23:44.941 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 44, 考勤列表, /PersonManagement/AttendanceManagement/AttendanceList, 35, 3, AttendanceList, system/PersonManagement/AttendanceManagement/AttendanceList, list-ul, page
+2021-04-19 20:23:44.941 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 45, 考勤审核, /PersonManagement/AttendanceManagement/AttendanceCheck, 35, 3, AttendanceCheck, system/PersonManagement/AttendanceManagement/AttendanceCheck, check-circle, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 46, 奖惩列表, /PersonManagement/RewardPunishmentManagement/RewardList, 36, 3, RewardList, system/PersonManagement/RewardPunishmentManagement/RewardList, magnet, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 47, 奖惩规范, /PersonManagement/RewardPunishmentManagement/Standard, 36, 3, Standard, system/PersonManagement/RewardPunishmentManagement/Standard, paragraph, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 48, 报销申请, /SalaryManagement/ExpenditureManagement/Reimbursement, 10, 3, Reimbursement, system/SalaryManagement/ExpenditureManagement/Reimbursement, angle-double-right, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 49, 报销审核, /SalaryManagement/ExpenditureManagement/ExpenditureCheck, 10, 3, ExpenditureCheck, system/SalaryManagement/ExpenditureManagement/ExpenditureCheck, check-circle, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 50, 支付方式管理, /SalaryManagement/ExpenditureManagement/PaymentWay, 10, 3, PaymentWay, system/SalaryManagement/ExpenditureManagement/PaymentWay, cc-stripe, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 51, 工资列表, /SalaryManagement/Paymentmanagement/WagesList, 11, 3, WagesList, system/SalaryManagement/Paymentmanagement/WagesList, info-circle, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 52, 收款信息管理, /SalaryManagement/Paymentmanagement/Process, 11, 3, Process, system/SalaryManagement/Paymentmanagement/Process, product-hunt, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 53, 发放申请, /SalaryManagement/Paymentmanagement/SendApply, 11, 3, SendApply, system/SalaryManagement/Paymentmanagement/SendApply, neuter, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 54, 发放审核, /SalaryManagement/Paymentmanagement/SendCheck, 11, 3, SendCheck, system/SalaryManagement/Paymentmanagement/SendCheck, check-circle, page
+2021-04-19 20:23:44.942 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 55, 账套列表, /SalaryManagement/SalaryAccountSet/AccountList, 12, 3, AccountList, system/SalaryManagement/SalaryAccountSet/AccountList, globe, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 56, 分配列表, /WorkManagement/Assignment/AssigmentList, 14, 3, AssigmentList, system/WorkManagement/Assignment/AssigmentList, assistive-listening-systems, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 57, 工作分配, /WorkManagement/Assignment/WorkAssigment, 14, 3, WorkAssigment, system/WorkManagement/Assignment/WorkAssigment, assistive-listening-systems, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 58, 调动申请, /WorkManagement/JobTransfer/TransferApply, 15, 3, TransferApply, system/WorkManagement/JobTransfer/TransferApply, pagelines, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 59, 调动列表, /WorkManagement/JobTransfer/JobTransferList, 15, 3, JobTransferList, system/WorkManagement/JobTransfer/TransferList, pagelines, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 60, 调动审核, /WorkManagement/JobTransfer/TransferCheck, 15, 3, TransferCheck, system/WorkManagement/JobTransfer/TransferCheck, check-circle, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 61, 招聘信息列表, /RecruitmentManagement/RecruitmentInformation/RecruitmentList, 16, 3, RecruitmentList, system/RecruitmentManagement/RecruitmentInformation/RecruitmentList, recycle, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 62, 招聘信息发布, /RecruitmentManagement/RecruitmentInformation/RecruitmentRelease, 16, 3, RecruitmentRelease, system/RecruitmentManagement/RecruitmentInformation/RecruitmentRelease, recycle, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 63, 招聘信息审核, /RecruitmentManagement/RecruitmentInformation/RecruitmentCheck, 16, 3, RecruitmentCheck, system/RecruitmentManagement/RecruitmentInformation/RecruitmentCheck, check-circle, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 64, 招聘岗位列表, /RecruitmentManagement/RecruitmentPosition/RecruitList, 17, 3, RecruitList, system/RecruitmentManagement/RecruitmentPosition/RecruitList, angle-double-right, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 65, 工资报表, /SalaryManagement/SalaryReport/SalaryReport, 13, 3, SalaryReport, system/SalaryManagement/SalaryReport/SalaryReport, check-circle, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 66, 招聘报表, /RecruitmentManagement/RecruitmentReport/RecruitmentReport, 18, 3, RecruitmentReport, system/RecruitmentManagement/RecruitmentReport/RecruitmentReport, bars, page
+2021-04-19 20:23:44.943 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 67, kibana可视化, /SystemManagement/KibanaPage, 1, 2, KibanaPage, system/SystemManagement/KibanaPage, magnet, page
+2021-04-19 20:23:44.944 [http-nio-1201-exec-1] TRACE j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==        Row: 68, docker可视化, /SystemManagement/DockerPage, 1, 2, DockerPage, system/SystemManagement/DockerPage, magnet, page
+2021-04-19 20:23:44.944 [http-nio-1201-exec-1] DEBUG j.c.a.mapper.LoginMapper.queryPermissionByRoleId - <==      Total: 68
+2021-04-19 20:23:45.487 [http-nio-1201-exec-1] INFO  jz.cdgy.admin.service.impl.LoginServiceImpl - 获取信息完成!
+2021-04-19 20:23:45.504 [http-nio-1201-exec-1] INFO  jz.cdgy.common.aop.LogAspect - esLog(id=null, operator=admin, operatorTime=2021-04-19 20:23:45, operatorModel=系统登录, operatorTarget=获取用户信息, operatorIp=192.168.43.126, operatorMethod=GET, requestUrl=http://192.168.43.126:1201/getUserInfo, requestUri=/getUserInfo, result=CommonResult{code=200, message='获取当前用户成功!', result=UserDto(user_name=admin, id=3, user=User{id=3, username='admin', password='$2a$10$ZeJtcp.fMXs.SsyJD7IRwOSuOtWJLy/jGMm1qLKFHdfKpKdM8VKH6', salt='null', isValid=1, isBind=0, empId=null, image='null', userole='null', createTime=Wed Dec 30 07:50:55 CST 2020, updateTime=Sat Mar 27 00:16:18 CST 2021, strDate='null'}, head=[{path=/SystemManagement, component=, name=SystemManagement, icon=bandcamp, title=系统管理, parentId=1}, {path=/PersonManagement, component=null, name=PersonManagement , icon=users, title=人事管理, parentId=2}, {path=/SalaryManagement, component=, name=SalaryManagement, icon=creative-commons, title=薪资管理, parentId=3}, {path=/WorkManagement, component=, name=WorkManagement, icon=wordpress, title=工作管理, parentId=4}, {path=/RecruitmentManagement, component=, name=RecruitmentManagement, icon=reddit, title=招聘管理, parentId=5}], side=[{path=/SystemManagement/NotificationManagement, component=, children=[{path=/SystemManagement/NotificationManagement/NotificationList, component=system/SystemManagement/NotificationManagement/NotificationList, name=NotificationList, icon=th-list, title=消息列表, type=page, parentId=6}, {path=/SystemManagement/NotificationManagement/DeliverAnnouncement, component=system/SystemManagement/NotificationManagement/DeliverAnnouncement, name=DeliverAnnouncement, icon=bullhorn, title=消息发布, type=page, parentId=6}, {path=/SystemManagement/NotificationManagement/NotificationReview, component=system/SystemManagement/NotificationManagement/NotificationReview, name=NotificationReview, icon=check, title=消息审核, type=page, parentId=6}, {path=/SystemManagement/NotificationManagement/NotificationParameters, component=system/SystemManagement/NotificationManagement/NotificationParameters, name=NotificationParameters, icon=superpowers, title=消息参数列表, type=page, parentId=6}], name=, icon=comments-o, title=消息管理, type=memu, parentId=1}, {path=/SystemManagement/UserManagement, component=, children=[{path=/SystemManagement/UserManagement/UserList, component=system/SystemManagement/UserManagement/UserList, name=UserList, icon=superpowers, title=用户列表, type=page, parentId=7}, {path=/SystemManagement/UserManagement/RoleManagement, component=system/SystemManagement/UserManagement/RoleManagement, name=RoleManagement, icon=rocket, title=角色管理, type=page, parentId=7}, {path=/SystemManagement/UserManagement/PersonInformation, component=system/SystemManagement/UserManagement/PersonInformation, name=PersonInformation, icon=user-plus, title=个人信息, type=page, parentId=7}, {path=/SystemManagement/UserManagement/PermissionManagement, component=system/SystemManagement/UserManagement/PermissionManagement, name=PermissionManagement, icon=product-hunt, title=权限管理, type=page, parentId=7}], name=, icon=user-circle, title=用户信息管理, type=memu, parentId=1}, {path=/SystemManagement/LogManagement, component=, children=[{path=/SystemManagement/LogManagement/LogList, component=system/SystemManagement/LogManagement/LogList, name=LogList, icon=bars, title=日志列表, type=page, parentId=23}, {path=/SystemManagement/LogManagement/Parameter, component=system/SystemManagement/LogManagement/Parameter, name=Parameter, icon=superpowers, title=日志参数管理, type=page, parentId=23}], name=, icon=plane, title=日志管理, type=memu, parentId=1}, {path=/SystemManagement/KibanaPage, component=system/SystemManagement/KibanaPage, name=KibanaPage, icon=magnet, title=kibana可视化, type=page, parentId=1}, {path=/SystemManagement/DockerPage, component=system/SystemManagement/DockerPage, name=DockerPage, icon=magnet, title=docker可视化, type=page, parentId=1}, {path=/PersonManagement/StaffManagement, component=, children=[{path=/PersonManagement/StaffManagement/EmpList, component=system/PersonManagement/StaffManagement/EmpList, name=EmpList, icon=bars, title=员工列表, type=page, parentId=8}, {path=/PersonManagement/StaffManagement/Leave, component=system/PersonManagement/StaffManagement/Leave, name=Leave, icon=level-up, title=离职申请, type=page, parentId=8}, {path=/PersonManagement/StaffManagement/ToExamine, component=system/PersonManagement/StaffManagement/ToExamine, name=ToExamine, icon=check-circle, title=离职审核, type=page, parentId=8}], name=, icon=user, title=员工信息管理, type=memu, parentId=2}, {path=/PersonManagement/BusinessManagement, component=, children=[{path=/PersonManagement/BusinessManagement/DepartmentManagement, component=system/PersonManagement/BusinessManagement/DepartmentManagement, name=DepartmentManagement, icon=building-o, title=部门管理, type=page, parentId=9}, {path=/PersonManagement/BusinessManagement/PositionManagement, component=system/PersonManagement/BusinessManagement/PositionManagement, name=PositionManagement, icon=cog, title=职位管理, type=page, parentId=9}], name=, icon=university, title=企业信息管理, type=memu, parentId=2}, {path=/PersonManagement/StaffTransferManagement, component=, children=[{path=/PersonManagement/StaffTransferManagement/TransferList, component=system/PersonManagement/StaffTransferManagement/TransferList, name=TransferList, icon=transgender, title=调动列表, type=page, parentId=34}, {path=/PersonManagement/StaffTransferManagement/TransferApplication, component=system/PersonManagement/StaffTransferManagement/TransferApplication, name=TransferApplication, icon=transgender, title=调动申请, type=page, parentId=34}, {path=/PersonManagement/StaffTransferManagement/TransferAudit, component=system/PersonManagement/StaffTransferManagement/TransferAudit, name=TransferAudit, icon=check-circle, title=调动审核, type=page, parentId=34}], name=, icon=transgender, title=员工调动管理, type=memu, parentId=2}, {path=/PersonManagement/AttendanceManagement, component=, children=[{path=/PersonManagement/AttendanceManagement/AttendanceLeave, component=system/PersonManagement/AttendanceManagement/Leave, name=AttendanceLeave, icon=sign-out, title=请假外出申请, type=page, parentId=35}, {path=/PersonManagement/AttendanceManagement/PunchTheClock, component=system/PersonManagement/AttendanceManagement/PunchTheClock, name=PunchTheClock, icon=clock-o, title=打卡管理, type=page, parentId=35}, {path=/PersonManagement/AttendanceManagement/AttendanceList, component=system/PersonManagement/AttendanceManagement/AttendanceList, name=AttendanceList, icon=list-ul, title=考勤列表, type=page, parentId=35}, {path=/PersonManagement/AttendanceManagement/AttendanceCheck, component=system/PersonManagement/AttendanceManagement/AttendanceCheck, name=AttendanceCheck, icon=check-circle, title=考勤审核, type=page, parentId=35}], name=, icon=ellipsis-v, title=员工考勤管理, type=memu, parentId=2}, {path=/PersonManagement/RewardPunishmentManagement, component=, children=[{path=/PersonManagement/RewardPunishmentManagement/RewardList, component=system/PersonManagement/RewardPunishmentManagement/RewardList, name=RewardList, icon=magnet, title=奖惩列表, type=page, parentId=36}, {path=/PersonManagement/RewardPunishmentManagement/Standard, component=system/PersonManagement/RewardPunishmentManagement/Standard, name=Standard, icon=paragraph, title=奖惩规范, type=page, parentId=36}], name=, icon=magnet, title=员工奖惩管理, type=memu, parentId=2}, {path=/SalaryManagement/ExpenditureManagement, component=, children=[{path=/SalaryManagement/ExpenditureManagement/SpendList, component=system/SalaryManagement/ExpenditureManagement/SpendList, name=SpendList, icon=paypal, title=支出列表, type=page, parentId=10}, {path=/SalaryManagement/ExpenditureManagement/Reimbursement, component=system/SalaryManagement/ExpenditureManagement/Reimbursement, name=Reimbursement, icon=angle-double-right, title=报销申请, type=page, parentId=10}, {path=/SalaryManagement/ExpenditureManagement/ExpenditureCheck, component=system/SalaryManagement/ExpenditureManagement/ExpenditureCheck, name=ExpenditureCheck, icon=check-circle, title=报销审核, type=page, parentId=10}, {path=/SalaryManagement/ExpenditureManagement/PaymentWay, component=system/SalaryManagement/ExpenditureManagement/PaymentWay, name=PaymentWay, icon=cc-stripe, title=支付方式管理, type=page, parentId=10}], name=, icon=expand, title=支出管理, type=memu, parentId=3}, {path=/SalaryManagement/Paymentmanagement, component=, children=[{path=/SalaryManagement/Paymentmanagement/WagesList, component=system/SalaryManagement/Paymentmanagement/WagesList, name=WagesList, icon=info-circle, title=工资列表, type=page, parentId=11}, {path=/SalaryManagement/Paymentmanagement/Process, component=system/SalaryManagement/Paymentmanagement/Process, name=Process, icon=product-hunt, title=收款信息管理, type=page, parentId=11}, {path=/SalaryManagement/Paymentmanagement/SendApply, component=system/SalaryManagement/Paymentmanagement/SendApply, name=SendApply, icon=neuter, title=发放申请, type=page, parentId=11}, {path=/SalaryManagement/Paymentmanagement/SendCheck, component=system/SalaryManagement/Paymentmanagement/SendCheck, name=SendCheck, icon=check-circle, title=发放审核, type=page, parentId=11}], name=, icon=money, title=工资发放管理, type=memu, parentId=3}, {path=/SalaryManagement/SalaryAccountSet, component=, children=[{path=/SalaryManagement/SalaryAccountSet/AccountList, component=system/SalaryManagement/SalaryAccountSet/AccountList, name=AccountList, icon=globe, title=账套列表, type=page, parentId=12}], name=, icon=money, title=工资账套管理, type=memu, parentId=3}, {path=/SalaryManagement/SalaryReport, component=, children=[{path=/SalaryManagement/SalaryReport/SalaryReport, component=system/SalaryManagement/SalaryReport/SalaryReport, name=SalaryReport, icon=check-circle, title=工资报表, type=page, parentId=13}], name=, icon=compass, title=工资报表, type=memu, parentId=3}, {path=/WorkManagement/Assignment, component=, children=[{path=/WorkManagement/Assignment/AssigmentList, component=system/WorkManagement/Assignment/AssigmentList, name=AssigmentList, icon=assistive-listening-systems, title=分配列表, type=page, parentId=14}, {path=/WorkManagement/Assignment/WorkAssigment, component=system/WorkManagement/Assignment/WorkAssigment, name=WorkAssigment, icon=assistive-listening-systems, title=工作分配, type=page, parentId=14}], name=, icon=building-o, title=工作分配, type=memu, parentId=4}, {path=/WorkManagement/JobTransfer, component=, children=[{path=/WorkManagement/JobTransfer/TransferApply, component=system/WorkManagement/JobTransfer/TransferApply, name=TransferApply, icon=pagelines, title=调动申请, type=page, parentId=15}, {path=/WorkManagement/JobTransfer/JobTransferList, component=system/WorkManagement/JobTransfer/TransferList, name=JobTransferList, icon=pagelines, title=调动列表, type=page, parentId=15}, {path=/WorkManagement/JobTransfer/TransferCheck, component=system/WorkManagement/JobTransfer/TransferCheck, name=TransferCheck, icon=check-circle, title=调动审核, type=page, parentId=15}], name=, icon=exchange, title=工作调动, type=memu, parentId=4}, {path=/RecruitmentManagement/RecruitmentInformation, component=, children=[{path=/RecruitmentManagement/RecruitmentInformation/RecruitmentList, component=system/RecruitmentManagement/RecruitmentInformation/RecruitmentList, name=RecruitmentList, icon=recycle, title=招聘信息列表, type=page, parentId=16}, {path=/RecruitmentManagement/RecruitmentInformation/RecruitmentRelease, component=system/RecruitmentManagement/RecruitmentInformation/RecruitmentRelease, name=RecruitmentRelease, icon=recycle, title=招聘信息发布, type=page, parentId=16}, {path=/RecruitmentManagement/RecruitmentInformation/RecruitmentCheck, component=system/RecruitmentManagement/RecruitmentInformation/RecruitmentCheck, name=RecruitmentCheck, icon=check-circle, title=招聘信息审核, type=page, parentId=16}], name=, icon=info, title=招聘信息管理, type=memu, parentId=5}, {path=/RecruitmentManagement/RecruitmentPosition , component=, children=[{path=/RecruitmentManagement/RecruitmentPosition/RecruitList, component=system/RecruitmentManagement/RecruitmentPosition/RecruitList, name=RecruitList, icon=angle-double-right, title=招聘岗位列表, type=page, parentId=17}], name=, icon=buysellads, title=招聘职位管理, type=memu, parentId=5}, {path=/RecruitmentManagement/RecruitmentReport, component=, children=[{path=/RecruitmentManagement/RecruitmentReport/RecruitmentReport, component=system/RecruitmentManagement/RecruitmentReport/RecruitmentReport, name=RecruitmentReport, icon=bars, title=招聘报表, type=page, parentId=18}], name=, icon=bars, title=招聘报表, type=memu, parentId=5}], clientId=null, authorities=[/SystemManagement, /PersonManagement, /SalaryManagement, /WorkManagement, /RecruitmentManagement, /SystemManagement/NotificationManagement, /SystemManagement/UserManagement, /PersonManagement/StaffManagement, /PersonManagement/BusinessManagement, /SalaryManagement/ExpenditureManagement, /SalaryManagement/Paymentmanagement, /SalaryManagement/SalaryAccountSet, /SalaryManagement/SalaryReport, /WorkManagement/Assignment, /WorkManagement/JobTransfer, /RecruitmentManagement/RecruitmentInformation, /RecruitmentManagement/RecruitmentPosition , /RecruitmentManagement/RecruitmentReport, /SystemManagement/NotificationManagement/NotificationList, /SystemManagement/NotificationManagement/DeliverAnnouncement, /SystemManagement/NotificationManagement/NotificationReview, /SystemManagement/NotificationManagement/NotificationParameters, /SystemManagement/LogManagement, /SystemManagement/LogManagement/LogList, /SystemManagement/LogManagement/Parameter, /SystemManagement/UserManagement/UserList, /SystemManagement/UserManagement/RoleManagement, /SystemManagement/UserManagement/PersonInformation, /SystemManagement/UserManagement/PermissionManagement, /PersonManagement/StaffManagement/EmpList, /PersonManagement/BusinessManagement/DepartmentManagement, /PersonManagement/BusinessManagement/PositionManagement, /SalaryManagement/ExpenditureManagement/SpendList, /PersonManagement/StaffTransferManagement, /PersonManagement/AttendanceManagement, /PersonManagement/RewardPunishmentManagement, /PersonManagement/StaffTransferManagement/TransferList, /PersonManagement/StaffTransferManagement/TransferApplication, /PersonManagement/StaffTransferManagement/TransferAudit, /PersonManagement/AttendanceManagement/AttendanceLeave, /PersonManagement/AttendanceManagement/PunchTheClock, /PersonManagement/StaffManagement/Leave, /PersonManagement/StaffManagement/ToExamine, /PersonManagement/AttendanceManagement/AttendanceList, /PersonManagement/AttendanceManagement/AttendanceCheck, /PersonManagement/RewardPunishmentManagement/RewardList, /PersonManagement/RewardPunishmentManagement/Standard, /SalaryManagement/ExpenditureManagement/Reimbursement, /SalaryManagement/ExpenditureManagement/ExpenditureCheck, /SalaryManagement/ExpenditureManagement/PaymentWay, /SalaryManagement/Paymentmanagement/WagesList, /SalaryManagement/Paymentmanagement/Process, /SalaryManagement/Paymentmanagement/SendApply, /SalaryManagement/Paymentmanagement/SendCheck, /SalaryManagement/SalaryAccountSet/AccountList, /WorkManagement/Assignment/AssigmentList, /WorkManagement/Assignment/WorkAssigment, /WorkManagement/JobTransfer/TransferApply, /WorkManagement/JobTransfer/JobTransferList, /WorkManagement/JobTransfer/TransferCheck, /RecruitmentManagement/RecruitmentInformation/RecruitmentList, /RecruitmentManagement/RecruitmentInformation/RecruitmentRelease, /RecruitmentManagement/RecruitmentInformation/RecruitmentCheck, /RecruitmentManagement/RecruitmentPosition/RecruitList, /SalaryManagement/SalaryReport/SalaryReport, /RecruitmentManagement/RecruitmentReport/RecruitmentReport, /SystemManagement/KibanaPage, /SystemManagement/DockerPage])}, parameter=[])
+2021-04-19 20:23:45.563 [rabbitConnectionFactory1] INFO  jz.cdgy.common.config.RabbitMqConfig - 消息发送成功:correlationData(null),ack(true),cause(null)
+2021-04-19 20:23:47.056 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  jz.cdgy.admin.message.impl.RabbitLogMessageImpl - aop日志收集
+2021-04-19 20:23:49.338 [http-nio-1201-exec-2] INFO  jz.cdgy.common.aop.LogAspect - 开始记录日志信息
+2021-04-19 20:23:49.422 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - ==>  Preparing: SELECT count(0) FROM t_emp
+2021-04-19 20:23:49.422 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - ==> Parameters: 
+2021-04-19 20:23:49.428 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==    Columns: count(0)
+2021-04-19 20:23:49.428 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==        Row: 1002
+2021-04-19 20:23:49.429 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==      Total: 1
+2021-04-19 20:23:49.433 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - ==>  Preparing: SELECT id,leave_time,is_leave,emp_email,update_time,emp_wx,emp_phone,create_time,emp_name,emp_address FROM t_emp LIMIT ?
+2021-04-19 20:23:49.434 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - ==> Parameters: 10(Integer)
+2021-04-19 20:23:49.436 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==    Columns: id, leave_time, is_leave, emp_email, update_time, emp_wx, emp_phone, create_time, emp_name, emp_address
+2021-04-19 20:23:49.436 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 1, 2021-04-14 03:39:47.0, 0, a764582@qq.com, 2021-04-14 03:39:47.464547, mkasdsa_dsasad, 13945451447, 2021-04-14 03:39:47.464547, emp0, 420000,421000,421022
+2021-04-19 20:23:49.436 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 2, 2021-04-14 03:25:55.0, 1, a764582@qq.com, 2021-04-14 03:25:56.115611, mkasdsa_dsasad, 13945451447, 2021-04-14 03:25:56.115611, emp1, 420000,421000,421003
+2021-04-19 20:23:49.437 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 3, 2021-04-14 03:26:00.0, 1, a764582@qq.com, 2021-04-14 03:26:01.090219, mkasdsa_dsasad, 13945451447, 2021-04-14 03:26:01.090219, emp2, 420000,421000,421003
+2021-04-19 20:23:49.437 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 4, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp3, 420000,421000,421003
+2021-04-19 20:23:49.437 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 5, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp4, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 6, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp5, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 7, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp6, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 8, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp7, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 9, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp8, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 10, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp9, 420000,421000,421003
+2021-04-19 20:23:49.438 [http-nio-1201-exec-2] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - <==      Total: 10
+2021-04-19 20:23:49.440 [http-nio-1201-exec-2] INFO  jz.cdgy.common.aop.LogAspect - esLog(id=null, operator=admin, operatorTime=2021-04-19 20:23:49, operatorModel=人事管理, operatorTarget=获取全部员工, operatorIp=192.168.43.126, operatorMethod=POST, requestUrl=http://192.168.43.126:1201/emp/getAllEmp, requestUri=/emp/getAllEmp, result=CommonResult{code=200, message='获取用户信息成功!', result=PageInfo{pageNum=1, pageSize=10, size=10, startRow=1, endRow=10, total=1002, pages=101, list=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=1002, pages=101, reasonable=false, pageSizeZero=false}[Emp [Hash = 1949690335, id=1, empName=emp0, empAddress=420000,421000,421022, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:39:47 CST 2021, updateTime=Wed Apr 14 03:39:47 CST 2021, leaveTime=Wed Apr 14 03:39:47 CST 2021, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 370101976, id=2, empName=emp1, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:25:56 CST 2021, updateTime=Wed Apr 14 03:25:56 CST 2021, leaveTime=Wed Apr 14 03:25:55 CST 2021, isLeave=1, empEmail=a764582@qq.com], Emp [Hash = 54623254, id=3, empName=emp2, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:26:01 CST 2021, updateTime=Wed Apr 14 03:26:01 CST 2021, leaveTime=Wed Apr 14 03:26:00 CST 2021, isLeave=1, empEmail=a764582@qq.com], Emp [Hash = 1652961141, id=4, empName=emp3, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 958814699, id=5, empName=emp4, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 1437837721, id=6, empName=emp5, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 1570430709, id=7, empName=emp6, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 246722484, id=8, empName=emp7, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 89544328, id=9, empName=emp8, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 1306646746, id=10, empName=emp9, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com]], prePage=0, nextPage=2, isFirstPage=true, isLastPage=false, hasPreviousPage=false, hasNextPage=true, navigatePages=8, navigateFirstPage=1, navigateLastPage=8, navigatepageNums=[1, 2, 3, 4, 5, 6, 7, 8]}}, parameter=[1, 10, Emp [Hash = 1174919909, id=null, empName=, empAddress=, empPhone=, empWx=, createTime=null, updateTime=null, leaveTime=null, isLeave=null, empEmail=null]])
+2021-04-19 20:23:49.508 [rabbitConnectionFactory1] INFO  jz.cdgy.common.config.RabbitMqConfig - 消息发送成功:correlationData(null),ack(true),cause(null)
+2021-04-19 20:23:53.065 [http-nio-1201-exec-3] INFO  jz.cdgy.common.aop.LogAspect - 开始记录日志信息
+2021-04-19 20:23:53.067 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - ==>  Preparing: SELECT count(0) FROM t_emp
+2021-04-19 20:23:53.067 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - ==> Parameters: 
+2021-04-19 20:23:53.068 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==    Columns: count(0)
+2021-04-19 20:23:53.068 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==        Row: 1002
+2021-04-19 20:23:53.068 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList_COUNT - <==      Total: 1
+2021-04-19 20:23:53.069 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - ==>  Preparing: SELECT id,leave_time,is_leave,emp_email,update_time,emp_wx,emp_phone,create_time,emp_name,emp_address FROM t_emp LIMIT ?
+2021-04-19 20:23:53.069 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - ==> Parameters: 10(Integer)
+2021-04-19 20:23:53.070 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==    Columns: id, leave_time, is_leave, emp_email, update_time, emp_wx, emp_phone, create_time, emp_name, emp_address
+2021-04-19 20:23:53.071 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 1, 2021-04-14 03:39:47.0, 0, a764582@qq.com, 2021-04-14 03:39:47.464547, mkasdsa_dsasad, 13945451447, 2021-04-14 03:39:47.464547, emp0, 420000,421000,421022
+2021-04-19 20:23:53.071 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 2, 2021-04-14 03:25:55.0, 1, a764582@qq.com, 2021-04-14 03:25:56.115611, mkasdsa_dsasad, 13945451447, 2021-04-14 03:25:56.115611, emp1, 420000,421000,421003
+2021-04-19 20:23:53.071 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 3, 2021-04-14 03:26:00.0, 1, a764582@qq.com, 2021-04-14 03:26:01.090219, mkasdsa_dsasad, 13945451447, 2021-04-14 03:26:01.090219, emp2, 420000,421000,421003
+2021-04-19 20:23:53.071 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 4, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp3, 420000,421000,421003
+2021-04-19 20:23:53.071 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 5, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp4, 420000,421000,421003
+2021-04-19 20:23:53.072 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 6, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp5, 420000,421000,421003
+2021-04-19 20:23:53.073 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 7, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp6, 420000,421000,421003
+2021-04-19 20:23:53.074 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 8, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp7, 420000,421000,421003
+2021-04-19 20:23:53.074 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 9, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp8, 420000,421000,421003
+2021-04-19 20:23:53.075 [http-nio-1201-exec-3] TRACE jz.cdgy.mbg.mapper.EmpMapper.selectList - <==        Row: 10, null, 0, a764582@qq.com, 2021-04-14 01:47:00.507968, mkasdsa_dsasad, 13945451447, 2021-04-14 01:47:00.507968, emp9, 420000,421000,421003
+2021-04-19 20:23:53.075 [http-nio-1201-exec-3] DEBUG jz.cdgy.mbg.mapper.EmpMapper.selectList - <==      Total: 10
+2021-04-19 20:23:53.077 [http-nio-1201-exec-3] INFO  jz.cdgy.common.aop.LogAspect - esLog(id=null, operator=admin, operatorTime=2021-04-19 20:23:53, operatorModel=人事管理, operatorTarget=获取全部员工, operatorIp=192.168.43.126, operatorMethod=POST, requestUrl=http://192.168.43.126:1201/emp/getAllEmp, requestUri=/emp/getAllEmp, result=CommonResult{code=200, message='获取用户信息成功!', result=PageInfo{pageNum=1, pageSize=10, size=10, startRow=1, endRow=10, total=1002, pages=101, list=Page{count=true, pageNum=1, pageSize=10, startRow=0, endRow=10, total=1002, pages=101, reasonable=false, pageSizeZero=false}[Emp [Hash = 2031077695, id=1, empName=emp0, empAddress=420000,421000,421022, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:39:47 CST 2021, updateTime=Wed Apr 14 03:39:47 CST 2021, leaveTime=Wed Apr 14 03:39:47 CST 2021, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 2080413531, id=2, empName=emp1, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:25:56 CST 2021, updateTime=Wed Apr 14 03:25:56 CST 2021, leaveTime=Wed Apr 14 03:25:55 CST 2021, isLeave=1, empEmail=a764582@qq.com], Emp [Hash = 609872677, id=3, empName=emp2, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 03:26:01 CST 2021, updateTime=Wed Apr 14 03:26:01 CST 2021, leaveTime=Wed Apr 14 03:26:00 CST 2021, isLeave=1, empEmail=a764582@qq.com], Emp [Hash = 207258087, id=4, empName=emp3, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 186378082, id=5, empName=emp4, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 1935213333, id=6, empName=emp5, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 405982872, id=7, empName=emp6, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 1077879232, id=8, empName=emp7, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 340524626, id=9, empName=emp8, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com], Emp [Hash = 800134757, id=10, empName=emp9, empAddress=420000,421000,421003, empPhone=13945451447, empWx=mkasdsa_dsasad, createTime=Wed Apr 14 01:47:00 CST 2021, updateTime=Wed Apr 14 01:47:00 CST 2021, leaveTime=null, isLeave=0, empEmail=a764582@qq.com]], prePage=0, nextPage=2, isFirstPage=true, isLastPage=false, hasPreviousPage=false, hasNextPage=true, navigatePages=8, navigateFirstPage=1, navigateLastPage=8, navigatepageNums=[1, 2, 3, 4, 5, 6, 7, 8]}}, parameter=[1, 10, Emp [Hash = 561597189, id=null, empName=, empAddress=, empPhone=, empWx=, createTime=null, updateTime=null, leaveTime=null, isLeave=null, empEmail=null]])
+2021-04-19 20:23:53.137 [rabbitConnectionFactory1] INFO  jz.cdgy.common.config.RabbitMqConfig - 消息发送成功:correlationData(null),ack(true),cause(null)
+2021-04-19 20:23:53.289 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  jz.cdgy.admin.message.impl.RabbitLogMessageImpl - aop日志收集
+2021-04-19 21:46:38.462 [AMQP Connection 47.101.131.174:5672] WARN  com.rabbitmq.client.impl.ForgivingExceptionHandler - An unexpected connection driver error occured (Exception message: Connection reset)
+2021-04-19 21:46:38.463 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.464 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.465 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.464 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.463 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.463 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.472 [AMQP Connection 47.101.131.174:5672] ERROR o.s.a.rabbit.connection.CachingConnectionFactory - Channel shutdown: connection error
+2021-04-19 21:46:38.474 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.479 [AMQP Connection 47.101.131.174:5672] ERROR o.s.a.rabbit.connection.CachingConnectionFactory - Channel shutdown: connection error
+2021-04-19 21:46:38.481 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.503 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.CommandHandler - null Unexpected exception during request: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:253)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1133)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:350)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:714)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Thread.java:748)
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6371
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6376
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6375
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6376
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6376
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6372
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6374
+2021-04-19 21:46:38.602 [lettuce-eventExecutorLoop-1-7] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6373
+2021-04-19 21:46:38.616 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was /106.13.17.32:6372
+2021-04-19 21:46:39.161 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  o.s.a.r.listener.SimpleMessageListenerContainer - Restarting Consumer@37868b30: tags=[[amq.ctag-Sc80nGMjCfFWZKmosQzG_g]], channel=Cached Rabbit Channel: PublisherCallbackChannelImpl: AMQChannel(amqp://guest@47.101.131.174:5672/,1), conn: Proxy@295171a1 Shared Rabbit Connection: SimpleConnection@677b979c [delegate=amqp://guest@47.101.131.174:5672/, localPort= 52386], acknowledgeMode=AUTO local queue size=0
+2021-04-19 21:46:39.165 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [47.101.131.174:5672]
+2021-04-19 21:46:48.611 [lettuce-nioEventLoop-4-8] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6373]: connection timed out: /106.13.17.32:6373
+2021-04-19 21:46:48.611 [lettuce-nioEventLoop-4-2] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6372]: connection timed out: /106.13.17.32:6372
+2021-04-19 21:46:48.611 [lettuce-nioEventLoop-4-3] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6371]: connection timed out: /106.13.17.32:6371
+2021-04-19 21:46:48.611 [lettuce-nioEventLoop-4-1] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6376]: connection timed out: /106.13.17.32:6376
+2021-04-19 21:46:48.614 [lettuce-nioEventLoop-4-4] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6375]: connection timed out: /106.13.17.32:6375
+2021-04-19 21:46:48.615 [lettuce-nioEventLoop-4-6] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6375]: connection timed out: /106.13.17.32:6375
+2021-04-19 21:46:48.615 [lettuce-nioEventLoop-4-5] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6374]: connection timed out: /106.13.17.32:6374
+2021-04-19 21:46:48.616 [lettuce-nioEventLoop-4-7] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6375]: connection timed out: /106.13.17.32:6375
+2021-04-19 21:46:48.620 [lettuce-nioEventLoop-4-8] WARN  io.lettuce.core.protocol.ConnectionWatchdog - Cannot reconnect to [106.13.17.32:6372]: connection timed out: /106.13.17.32:6372
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-5] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6372
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-4] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6375
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-6] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6375
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-7] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6374
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6373
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-2] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6376
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-3] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6371
+2021-04-19 21:46:48.701 [lettuce-eventExecutorLoop-1-1] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6375
+2021-04-19 21:46:48.708 [lettuce-eventExecutorLoop-1-8] INFO  io.lettuce.core.protocol.ConnectionWatchdog - Reconnecting, last destination was 106.13.17.32:6372
+2021-04-19 21:46:48.732 [lettuce-nioEventLoop-4-3] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6374
+2021-04-19 21:46:48.732 [lettuce-nioEventLoop-4-4] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6376
+2021-04-19 21:46:48.732 [lettuce-nioEventLoop-4-2] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6371
+2021-04-19 21:46:48.732 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6372
+2021-04-19 21:46:48.733 [lettuce-nioEventLoop-4-5] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6375
+2021-04-19 21:46:48.737 [lettuce-nioEventLoop-4-7] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6371
+2021-04-19 21:46:48.737 [lettuce-nioEventLoop-4-6] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6373
+2021-04-19 21:46:48.738 [lettuce-nioEventLoop-4-8] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6371
+2021-04-19 21:46:48.740 [lettuce-nioEventLoop-4-1] INFO  io.lettuce.core.protocol.ReconnectionHandler - Reconnected to 106.13.17.32:6372
+2021-04-19 21:47:00.176 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] ERROR o.s.a.r.listener.SimpleMessageListenerContainer - Failed to check/redeclare auto-delete queue(s).
+org.springframework.amqp.AmqpConnectException: java.net.ConnectException: Connection timed out: connect
+	at org.springframework.amqp.rabbit.support.RabbitExceptionTranslator.convertRabbitAccessException(RabbitExceptionTranslator.java:61)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:510)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createConnection(CachingConnectionFactory.java:751)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.createBareChannel(CachingConnectionFactory.java:702)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getCachedChannelProxy(CachingConnectionFactory.java:676)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.getChannel(CachingConnectionFactory.java:567)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory.access$1600(CachingConnectionFactory.java:102)
+	at org.springframework.amqp.rabbit.connection.CachingConnectionFactory$ChannelCachingConnectionProxy.createChannel(CachingConnectionFactory.java:1430)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.doExecute(RabbitTemplate.java:2095)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2062)
+	at org.springframework.amqp.rabbit.core.RabbitTemplate.execute(RabbitTemplate.java:2042)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueInfo(RabbitAdmin.java:407)
+	at org.springframework.amqp.rabbit.core.RabbitAdmin.getQueueProperties(RabbitAdmin.java:391)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.attemptDeclarations(AbstractMessageListenerContainer.java:1830)
+	at org.springframework.amqp.rabbit.listener.AbstractMessageListenerContainer.redeclareElementsIfNecessary(AbstractMessageListenerContainer.java:1811)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.initialize(SimpleMessageListenerContainer.java:1342)
+	at org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer$AsyncMessageProcessingConsumer.run(SimpleMessageListenerContainer.java:1188)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:606)
+	at com.rabbitmq.client.impl.SocketFrameHandlerFactory.create(SocketFrameHandlerFactory.java:60)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1137)
+	at com.rabbitmq.client.ConnectionFactory.newConnection(ConnectionFactory.java:1087)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.connect(AbstractConnectionFactory.java:526)
+	at org.springframework.amqp.rabbit.connection.AbstractConnectionFactory.createBareConnection(AbstractConnectionFactory.java:473)
+	... 16 common frames omitted
+2021-04-19 21:47:00.177 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Attempting to connect to: [47.101.131.174:5672]
+2021-04-19 21:47:00.271 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.rabbit.connection.CachingConnectionFactory - Created new connection: rabbitConnectionFactory#4a654cb6:2/SimpleConnection@3cd42d70 [delegate=amqp://guest@47.101.131.174:5672/, localPort= 60806]

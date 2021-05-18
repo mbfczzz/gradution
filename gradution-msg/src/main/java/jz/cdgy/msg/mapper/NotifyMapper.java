@@ -32,4 +32,8 @@ public interface NotifyMapper {
     List<MsgDto> getMessageByName(String id);
 
     List<MsgDto> getMessageByUser(String id);
+
+    MsgDto getMessageByCurrent(String mid);
+
+    Integer updateUserMessage(String uid, String id);
 }
