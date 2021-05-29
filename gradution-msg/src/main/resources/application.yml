@@ -1,5 +1,0 @@
-server:
-  port: 1301
-spring:
-  profiles:
-    active: dev
