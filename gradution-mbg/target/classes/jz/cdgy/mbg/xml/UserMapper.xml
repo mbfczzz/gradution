@@ -331,13 +331,16 @@
     GROUP BY t_user.id) as t  on t_user.id = t.id
     <where>
       <if test="username!=null and username!=''">
-        and t_user.username = #{username,jdbcType=VARCHAR}
+        and t_user.username like concat('%',#{username,jdbcType=VARCHAR},'%')
       </if>
       <if test="isValid!=null">
         and t_user.is_valid = #{isValid,jdbcType=TINYINT}
       </if>
       <if test="userole!=null and userole!='' ">
-        and locate(#{userole,jdbcType=VARCHAR},t.rid)!=0
+      and
+            <foreach collection="userole.split(',')" item="id" separator="or" >
+                     find_in_set(#{id},t.rid)
+            </foreach>
       </if>
       <if test="strDate!=null and strDate!=''">
         and  DATE_FORMAT(create_time,'%Y-%m-%d')

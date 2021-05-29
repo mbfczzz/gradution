@@ -39,6 +39,6 @@ public class LoginController {
     @WebLog(OperationModule = "系统登录",OperationTarget = "用户注册")
     @RequestMapping(value = "/register",method = RequestMethod.POST)
     public CommonResult register(@RequestBody  User user){
-        return CommonResult.SUCCESS(null);
+        return CommonResult.SUCCESS(loginService.register(user));
     }
 }

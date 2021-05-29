@@ -36,6 +36,14 @@ public class UserController {
         return CommonResult.SUCCESS("增加成功!");
     }
 
+
+    @WebLog(OperationModule ="系统用户管理",OperationTarget = "改变用户状态")
+    @RequestMapping(value = "/updateUserByIsValid",method = RequestMethod.PUT)
+    public CommonResult updateUserByIsValid(@RequestBody User user){
+        userService.updateUserByIsValid(user);
+        return CommonResult.SUCCESS("增加成功!");
+    }
+
     @WebLog(OperationModule ="系统用户管理",OperationTarget = "更新用户")
     @RequestMapping(value = "/updateUser",method = RequestMethod.PUT)
     public CommonResult updateUser(@RequestBody  User user){

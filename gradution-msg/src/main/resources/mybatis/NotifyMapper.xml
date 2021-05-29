@@ -87,12 +87,12 @@
         LEFT JOIN t_status on t_msg.msg_status = t_status.id
         <where>
         <if test="sendPeople!=null and sendPeople!=''">
-            and sendPeople = #{sendPeople}
+            and send_people like concat('%',#{sendPeople,jdbcType=VARCHAR},'%')
         </if>
         <if test="sendTime!=null and sendTime!=''">
-            and  DATE_FORMAT(sendTime,'%Y-%m-%d')
-            between DATE_FORMAT(sendTime,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",1))
-            and  DATE_FORMAT(sendTime,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",-1))
+            and  DATE_FORMAT(send_time,'%Y-%m-%d')
+            between DATE_FORMAT(send_time,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",1))
+            and  DATE_FORMAT(send_time,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",-1))
         </if>
         <if test="modelId!=null">
             and model_id = #{modelId}
@@ -104,19 +104,19 @@
             and msg_Content like concat('%',#{msgContent,jdbcType=VARCHAR},'%')
        </if>
        <if test="sourceId!=null and sourceId!=''">
-          and sourceId in
+          and msg_source in
            <foreach item="id" collection='sourceId.split(",")' open="(" separator="," close=")">
                #{id}
            </foreach>
        </if>
        <if test="subjectId!=null and subjectId!=''">
-           and subjectId in
+           and send_subject in
            <foreach item="id" collection='subjectId.split(",")' open="(" separator="," close=")">
                #{id}
            </foreach>
        </if>
             <if test="sendWay!=null and sendWay!=''">
-                and sendWay in
+                and send_way in
                 <foreach item="id" collection='sendWay.split(",")' open="(" separator="," close=")">
                     #{id}
                 </foreach>

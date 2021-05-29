@@ -19,6 +19,8 @@ public interface UserService  extends  IService<User>{
 
     void updateUser(User user);
 
+    void updateUserByIsValid(User user);
+
     List<Map> gerUserRole(Integer id);
 
     List<Map> gerRolePermission(Integer id);

@@ -347,6 +347,6 @@
      when 2 then '二级权限'
      when 3 then '三级权限'
      else '数据权限'
-     end label from t_permission group by permission_type
+     end label from t_permission group by Hierarchy
   </select>
 </mapper>

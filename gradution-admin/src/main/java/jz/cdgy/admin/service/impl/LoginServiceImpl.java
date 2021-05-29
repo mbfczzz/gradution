@@ -4,14 +4,20 @@ import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import jz.cdgy.admin.mapper.LoginMapper;
 import jz.cdgy.admin.service.AuthService;
+import jz.cdgy.admin.util.AssertsUtil;
 import jz.cdgy.common.api.CommonResult;
 import jz.cdgy.common.constant.AuthConstant;
 import jz.cdgy.common.constant.StatusCode;
 import jz.cdgy.common.exception.ParamException;
 import jz.cdgy.common.model.UserDto;
 import jz.cdgy.common.redisService.RedisOption;
+import jz.cdgy.mbg.mapper.UserMapper;
+import jz.cdgy.mbg.mapper.UserRoleMapper;
+import jz.cdgy.mbg.pojo.UserRole;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import jz.cdgy.admin.service.LoginService;
@@ -34,6 +40,14 @@ public class LoginServiceImpl implements LoginService {
     private HttpServletRequest request;
     @Autowired
     private RedisOption redisOption;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
+    @Autowired
+    private UserMapper userMapper;
+    @Autowired
+    private RabbitTemplate rabbitTemplate;
+    @Autowired
+    private UserRoleMapper userRoleMapper;
 //
 ////    @Autowired
 ////    private AuthenticationManager authenticationManager;
@@ -87,7 +101,7 @@ public class LoginServiceImpl implements LoginService {
                     tmap.put("parentId",s.get("parentId"));
                     tmap.put("name",s.get("name"));
                     tmap.put("component",s.get("component"));
-//                    tmap.put("type",s.get("permission_type"));
+                    tmap.put("type",s.get("permission_type"));
                     tmap.put("icon",s.get("icon"));
                     head.add(tmap);
             }
@@ -141,30 +155,33 @@ public class LoginServiceImpl implements LoginService {
         return null;
     }
 
-//    @Override
-//    public String register(User user) {
-//        if(loginService.queryUserByuserName(user.getUsername())!=null){
-//            AssertsUtil.isTrue(true,"当前用户已存在!");
-//        }
-//            String password = user.getPassword();
-//            String encodePassword = passwordEncoder.encode(password);
-//            user.setPassword(encodePassword);
-//            if(userMapper.insert(user)==1){
-//                List<Integer> list = new ArrayList<>(1);
-//                list.add(user.getId());
-//                rabbitTemplate.convertAndSend("admin-register-exchange","admin-register-key",list);
-//                return  "注册成功!";
-//            }
-//            return "注册失败!";
-//    }
-//
+    @Override
+    public String register(User user) {
+        if(queryUserByuserName(user.getUsername())!=null){
+            AssertsUtil.isTrue(true,"当前用户已存在!");
+        }
+            String password = user.getPassword();
+            String encodePassword = passwordEncoder.encode(password);
+            user.setPassword(encodePassword);
+            if(userMapper.insert(user)==1){
+                List<Integer> list = new ArrayList<>(1);
+                list.add(user.getId());
+                UserRole userRole = new UserRole();
+                userRole.setUid(user.getId());
+                userRole.setRid(3);
+                userRoleMapper.insert(userRole);
+                rabbitTemplate.convertAndSend("admin-register-exchange","admin-register-key",list);
+                return  "注册成功!";
+            }
+            return "注册失败!";
+    }
+
     @Override
     public UserDto getUserInfo() {
         String userStr = request.getHeader(AuthConstant.USER_TOKEN_HEADER);
         if(StrUtil.isEmpty(userStr)){
             throw  new ParamException(StatusCode.PERMISSION_UNDIFINE.getMessage());
         }
-        System.out.println(userStr);
         UserDto userDto = JSONUtil.toBean(userStr, UserDto.class);
         return loadUserByUsername(userDto.getUser_name());
     }

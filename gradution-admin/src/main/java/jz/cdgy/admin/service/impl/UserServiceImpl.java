@@ -106,6 +106,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper,User> implements Use
                 Arrays.asList(user.getUserole().split(",")))==0,result+"失败");
     }
 
+    @Override
+    public void updateUserByIsValid(User user) {
+        AssertsUtil.isTrue(userMapper.updateByPrimaryKeySelective(user)!=1,"更新状态失败");
+    }
+
     /**
      * 获取用户对应角色,没有id就获取所有角色
      * @param id

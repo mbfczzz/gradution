@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.AttendanceMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Attendance">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="attendance_time" jdbcType="TIMESTAMP" property="attendanceTime" />
+    <result column="is_card" jdbcType="TINYINT" property="isCard" />
+    <result column="is_agency" jdbcType="TINYINT" property="isAgency" />
+    <result column="is_replacement" jdbcType="TINYINT" property="isReplacement" />
+    <result column="one_card" jdbcType="TIMESTAMP" property="oneCard" />
+    <result column="tow_card" jdbcType="TIMESTAMP" property="towCard" />
+    <result column="card_people" jdbcType="INTEGER" property="cardPeople" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, attendance_time, is_card, is_agency, is_replacement, one_card, tow_card, card_people
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.AttendanceExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_attendance
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_attendance
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_attendance
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.AttendanceExample">
+    delete from t_attendance
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.Attendance">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_attendance (attendance_time, is_card, is_agency, 
+      is_replacement, one_card, tow_card, 
+      card_people)
+    values (#{attendanceTime,jdbcType=TIMESTAMP}, #{isCard,jdbcType=TINYINT}, #{isAgency,jdbcType=TINYINT}, 
+      #{isReplacement,jdbcType=TINYINT}, #{oneCard,jdbcType=TIMESTAMP}, #{towCard,jdbcType=TIMESTAMP}, 
+      #{cardPeople,jdbcType=INTEGER})
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Attendance">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_attendance
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="attendanceTime != null">
+        attendance_time,
+      </if>
+      <if test="isCard != null">
+        is_card,
+      </if>
+      <if test="isAgency != null">
+        is_agency,
+      </if>
+      <if test="isReplacement != null">
+        is_replacement,
+      </if>
+      <if test="oneCard != null">
+        one_card,
+      </if>
+      <if test="towCard != null">
+        tow_card,
+      </if>
+      <if test="cardPeople != null">
+        card_people,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="attendanceTime != null">
+        #{attendanceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isCard != null">
+        #{isCard,jdbcType=TINYINT},
+      </if>
+      <if test="isAgency != null">
+        #{isAgency,jdbcType=TINYINT},
+      </if>
+      <if test="isReplacement != null">
+        #{isReplacement,jdbcType=TINYINT},
+      </if>
+      <if test="oneCard != null">
+        #{oneCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="towCard != null">
+        #{towCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cardPeople != null">
+        #{cardPeople,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.AttendanceExample" resultType="java.lang.Long">
+    select count(*) from t_attendance
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update t_attendance
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.attendanceTime != null">
+        attendance_time = #{record.attendanceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.isCard != null">
+        is_card = #{record.isCard,jdbcType=TINYINT},
+      </if>
+      <if test="record.isAgency != null">
+        is_agency = #{record.isAgency,jdbcType=TINYINT},
+      </if>
+      <if test="record.isReplacement != null">
+        is_replacement = #{record.isReplacement,jdbcType=TINYINT},
+      </if>
+      <if test="record.oneCard != null">
+        one_card = #{record.oneCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.towCard != null">
+        tow_card = #{record.towCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.cardPeople != null">
+        card_people = #{record.cardPeople,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_attendance
+    set id = #{record.id,jdbcType=INTEGER},
+      attendance_time = #{record.attendanceTime,jdbcType=TIMESTAMP},
+      is_card = #{record.isCard,jdbcType=TINYINT},
+      is_agency = #{record.isAgency,jdbcType=TINYINT},
+      is_replacement = #{record.isReplacement,jdbcType=TINYINT},
+      one_card = #{record.oneCard,jdbcType=TIMESTAMP},
+      tow_card = #{record.towCard,jdbcType=TIMESTAMP},
+      card_people = #{record.cardPeople,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.Attendance">
+    update t_attendance
+    <set>
+      <if test="attendanceTime != null">
+        attendance_time = #{attendanceTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isCard != null">
+        is_card = #{isCard,jdbcType=TINYINT},
+      </if>
+      <if test="isAgency != null">
+        is_agency = #{isAgency,jdbcType=TINYINT},
+      </if>
+      <if test="isReplacement != null">
+        is_replacement = #{isReplacement,jdbcType=TINYINT},
+      </if>
+      <if test="oneCard != null">
+        one_card = #{oneCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="towCard != null">
+        tow_card = #{towCard,jdbcType=TIMESTAMP},
+      </if>
+      <if test="cardPeople != null">
+        card_people = #{cardPeople,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Attendance">
+    update t_attendance
+    set attendance_time = #{attendanceTime,jdbcType=TIMESTAMP},
+      is_card = #{isCard,jdbcType=TINYINT},
+      is_agency = #{isAgency,jdbcType=TINYINT},
+      is_replacement = #{isReplacement,jdbcType=TINYINT},
+      one_card = #{oneCard,jdbcType=TIMESTAMP},
+      tow_card = #{towCard,jdbcType=TIMESTAMP},
+      card_people = #{cardPeople,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+
+  <select id="getAgencyByid" resultType="jz.cdgy.mbg.pojo.Agency">
+    select id, agency_name, agency_describe, is_valid
+    from t_agency where id IN(select agency_id from t_emp_agency where emp_id = #{id})
+  </select>
+
+  <resultMap id="attendance" type="jz.cdgy.mbg.pojo.Attendance" >
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="attendance_time" jdbcType="TIMESTAMP" property="attendanceTime" />
+    <result column="is_card" jdbcType="TINYINT" property="isCard" />
+    <result column="is_agency" jdbcType="TINYINT" property="isAgency" />
+    <result column="is_replacement" jdbcType="TINYINT" property="isReplacement" />
+    <result column="one_card" jdbcType="TIMESTAMP" property="oneCard" />
+    <result column="tow_card" jdbcType="TIMESTAMP" property="towCard" />
+    <result column="card_people" jdbcType="INTEGER" property="cardPeople" />
+    <result column="emp_name" jdbcType="VARCHAR" property="empName" />
+    <collection property="agencys" javaType="ArrayList" ofType="jz.cdgy.mbg.pojo.Agency" select="getAgencyByid" column="card_people"/>
+  </resultMap>
+
+  <select id="getAllAttendance" resultMap="attendance">
+    select
+    t_attendance.id, attendance_time, is_card, is_agency, is_replacement, one_card, tow_card, card_people,
+    emp_name
+    from t_attendance
+    left join t_emp on t_attendance.card_people = t_emp.id
+     left join t_emp_agency  on t_emp.id = t_emp_agency.emp_id
+     left join t_agency on t_agency.id= t_emp_agency.agency_id
+    <where>
+      <if test="empName!=null and empName!=''">
+        and t_emp.emp_name like concat('%',#{empName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="attendanceTimeStr!=null and attendanceTimeStr!=''">
+        and DATE_FORMAT(t_attendance.attendance_time,'%Y-%m-%d') = DATE_FORMAT(#{attendanceTimeStr},'%Y-%m-%d')
+      </if>
+      <if test="oneCardStr!=null and oneCardStr!=''">
+        and  DATE_FORMAT(t_attendance.one_card,'%Y-%m-%d %H-%i-%s')
+        between DATE_FORMAT(t_attendance.one_card,SUBSTRING_INDEX(#{oneCardStr,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(t_attendance.one_card,SUBSTRING_INDEX(#{oneCardStr,jdbcType=VARCHAR},",",-1))
+      </if>
+      <if test="towCardStr!=null and towCardStr!=''">
+        and  DATE_FORMAT(t_attendance.tow_card,'%Y-%m-%d %H-%i-%s')
+        between DATE_FORMAT(t_attendance.tow_card,SUBSTRING_INDEX(#{towCardStr,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(t_attendance.tow_card,SUBSTRING_INDEX(#{towCardStr,jdbcType=VARCHAR},",",-1))
+      </if>
+      <if test="isAgency!=null">
+        and t_attendance.is_agency = #{isAgency}
+      </if>
+      <if test="isReplacement!=null">
+        and t_attendance.is_replacement = #{isReplacement}
+      </if>
+      <if test="isCard!=null">
+        and t_attendance.is_card = #{isCard}
+      </if>
+      <if test="agencyStr!=null and agencyStr!=''">
+        and t_agency.id in
+        <foreach item="id" collection='agencyStr.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+    </where>
+    group by
+    t_attendance.id
+  </select>
+</mapper>

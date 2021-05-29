@@ -98,6 +98,8 @@ secure:
       - "/admin/login"
       - "/admin/loadByUsername"
       - "/admin/register"
+      - "/admin/oss/policy"
+      - "/admin/oss/callback"
 management: #开启SpringBoot Admin的监控
   endpoints:
     web:

@@ -10,7 +10,7 @@ import java.util.Map;
 public interface LoginService {
     CommonResult login(User user);
 //
-//    String register(User user);
+    String register(User user);
 //
     UserDto getUserInfo();
 //
