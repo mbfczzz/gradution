@@ -39,7 +39,7 @@
         <druid.version>1.2.5</druid.version>
         <hutool.version>5.4.0</hutool.version>
         <mybatis-generator.version>1.4.0</mybatis-generator.version>
-        <mybatis.version>3.5.5</mybatis.version>
+        <mybatis.version>3.5.6</mybatis.version>
         <aliyun-oss.version>2.5.0</aliyun-oss.version>
         <mysql-connector.version>5.1.8</mysql-connector.version>
         <spring-data-commons.version>2.3.0.RELEASE</spring-data-commons.version>
