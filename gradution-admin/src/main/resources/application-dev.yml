@@ -1,0 +1,100 @@
+server:
+  port: 1201
+spring:
+  application:
+    name: admin
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://localhost:8848
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gradution?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+    driver-class-name: com.mysql.jdbc.Driver
+  redis:
+    #    database: 0
+    #    host: 47.101.131.174         # Redis服务器地址
+    #    port: 6379              # Redis服务器连接端口
+    password: requirepassgradution              # Redis服务器连接密码（默认为空）
+    timeout: 10000
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        min-idle: 0
+        max-idle: 8
+      shutdown-timeout: 10000
+      cluster:
+        refresh:
+          adaptive: true
+    cluster:
+      nodes:
+        - 106.13.17.32:6371
+        - 106.13.17.32:6372
+        - 106.13.17.32:6373
+        - 106.13.17.32:6374
+        - 106.13.17.32:6375
+        - 106.13.17.32:6376
+  rabbitmq: #rabbitmq相关配置
+    host: 47.101.131.174
+    port: 5672
+    username: guest
+    password: guest
+  elasticsearch:
+    rest:
+      uris: 47.101.131.174:9200
+  #  data:
+  #    mongodb:
+  #      uri: mongodb://192.168.37.3:27017
+  servlet:
+    multipart:
+      enabled: true #开启文件上传
+      max-file-size: 10MB #限制文件上传大小为10M
+jwt:
+  tokenHeader: Authorization
+  tokenHead: Bearer
+  expiration: 3600
+  secret: gradution
+
+mybatis-plus:
+  mapper-locations:
+    - classpath*:jz/cdgy/mbg/xml/*.xml
+    - classpath:mybatis/*.xml
+  type-aliases-package: jz/cdgy/mbg/pojo
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+logging:
+  config: classpath:logback-spring.xml
+
+gradution-log-queue-name: admin-log-queue
+gradution-log-exchange-name: admin-log-exchange
+gradution-log-bind-key: admin-log-key
+
+gradution-register-queue-name: admin-register-queue
+gradution-register-exchange-name: admin-register-exchange
+gradution-register-bind-key: admin-register-key
+
+gradution-msg-websocket-queue-name: msg-websocket-queue
+gradution-msg-websocket-exchange-name: msg-websocket-exchange
+gradution-msg-websocket-bind-key: msg-websocket-key
+
+feign:
+  okhttp:
+    enabled: true
+ribbon:
+  ConnectTimeout: 3000 #服务请求连接超时时间（毫秒）
+  ReadTimeout: 3000 #服务请求处理超时时间（毫秒）

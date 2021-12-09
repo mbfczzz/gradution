@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.TransferMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Transfer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="source_addr" jdbcType="VARCHAR" property="sourceAddr" />
+    <result column="destine_addr" jdbcType="VARCHAR" property="destineAddr" />
+    <result column="transfer_time" jdbcType="TIMESTAMP" property="transferTime" />
+    <result column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="status_id" jdbcType="INTEGER" property="statusId" />
+    <result column="transfer_reason" jdbcType="VARCHAR" property="transferReason" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, source_addr, destine_addr, transfer_time, emp_id, status_id, transfer_reason
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.TransferExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_transfer
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_transfer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.TransferExample">
+    delete from t_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.Transfer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_transfer (source_addr, destine_addr, transfer_time,
+      emp_id, status_id, transfer_reason
+      )
+    values (#{sourceAddr,jdbcType=VARCHAR}, #{destineAddr,jdbcType=VARCHAR}, #{transferTime,jdbcType=TIMESTAMP},
+      #{empId,jdbcType=INTEGER}, #{statusId,jdbcType=INTEGER}, #{transferReason,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Transfer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_transfer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sourceAddr != null">
+        source_addr,
+      </if>
+      <if test="destineAddr != null">
+        destine_addr,
+      </if>
+      <if test="transferTime != null">
+        transfer_time,
+      </if>
+      <if test="empId != null">
+        emp_id,
+      </if>
+      <if test="statusId != null">
+        status_id,
+      </if>
+      <if test="transferReason != null">
+        transfer_reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sourceAddr != null">
+        #{sourceAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="destineAddr != null">
+        #{destineAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="transferTime != null">
+        #{transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        #{empId,jdbcType=INTEGER},
+      </if>
+      <if test="statusId != null">
+        #{statusId,jdbcType=INTEGER},
+      </if>
+      <if test="transferReason != null">
+        #{transferReason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.TransferExample" resultType="java.lang.Long">
+    select count(*) from t_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update t_transfer
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.sourceAddr != null">
+        source_addr = #{record.sourceAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.destineAddr != null">
+        destine_addr = #{record.destineAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="record.transferTime != null">
+        transfer_time = #{record.transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.empId != null">
+        emp_id = #{record.empId,jdbcType=INTEGER},
+      </if>
+      <if test="record.statusId != null">
+        status_id = #{record.statusId,jdbcType=INTEGER},
+      </if>
+      <if test="record.transferReason != null">
+        transfer_reason = #{record.transferReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_transfer
+    set id = #{record.id,jdbcType=INTEGER},
+      source_addr = #{record.sourceAddr,jdbcType=VARCHAR},
+      destine_addr = #{record.destineAddr,jdbcType=VARCHAR},
+      transfer_time = #{record.transferTime,jdbcType=TIMESTAMP},
+      emp_id = #{record.empId,jdbcType=INTEGER},
+      status_id = #{record.statusId,jdbcType=INTEGER},
+      transfer_reason = #{record.transferReason,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.Transfer">
+    update t_transfer
+    <set>
+      <if test="sourceAddr != null">
+        source_addr = #{sourceAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="destineAddr != null">
+        destine_addr = #{destineAddr,jdbcType=VARCHAR},
+      </if>
+      <if test="transferTime != null">
+        transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        emp_id = #{empId,jdbcType=INTEGER},
+      </if>
+      <if test="statusId != null">
+        status_id = #{statusId,jdbcType=INTEGER},
+      </if>
+      <if test="transferReason != null">
+        transfer_reason = #{transferReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Transfer">
+    update t_transfer
+    set source_addr = #{sourceAddr,jdbcType=VARCHAR},
+      destine_addr = #{destineAddr,jdbcType=VARCHAR},
+      transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+      emp_id = #{empId,jdbcType=INTEGER},
+      status_id = #{statusId,jdbcType=INTEGER},
+      transfer_reason = #{transferReason,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="getAllTransfer" resultType="jz.cdgy.mbg.pojo.Transfer">
+    SELECT t_transfer.id,
+    t_transfer.source_addr,
+    t_transfer.destine_addr,
+    t_transfer.transfer_time,
+    t_transfer.transfer_reason,
+    t_emp.id as emp_id,
+    t_status.id as status_id,
+    t_emp.emp_name,
+    t_status.status_name
+    FROM t_transfer
+    LEFT JOIN t_emp on t_emp.id = t_transfer.emp_id
+    LEFT JOIN t_status on t_status.id = t_transfer.status_id
+    <where>
+      <if test="sourceAddr!=null and sourceAddr!=''">
+        and t_transfer.source_addr = #{sourceAddr,jdbcType=VARCHAR}
+      </if>
+      <if test="transferReason!=null and transferReason!=''">
+        and t_transfer.transfer_reason = #{transferReason,jdbcType=VARCHAR}
+      </if>
+      <if test="destineAddr!=null and destineAddr!=''">
+        and t_transfer.destine_addr = #{destineAddr,jdbcType=VARCHAR}
+      </if>
+      <if test="statusName!=null and statusName!=''">
+        and t_status.id in
+        <foreach item="id" collection='statusName.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="empName!=null and empName!=''">
+        and t_emp.emp_name like concat('%',#{empName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="transferTimeStr!=null and transferTimeStr!=''">
+        and  DATE_FORMAT(transfer_time,'%Y-%m-%d')
+        between DATE_FORMAT(transfer_time,SUBSTRING_INDEX(#{transferTimeStr,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(transfer_time,SUBSTRING_INDEX(#{transferTimeStr,jdbcType=VARCHAR},",",-1))
+      </if>
+    </where>
+  </select>
+</mapper>

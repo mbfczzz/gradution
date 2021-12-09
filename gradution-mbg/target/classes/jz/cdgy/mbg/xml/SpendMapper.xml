@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.SpendMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Spend">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="spend_people" jdbcType="VARCHAR" property="spendPeople" />
+    <result column="spend_item" jdbcType="VARCHAR" property="spendItem" />
+    <result column="spend_way" jdbcType="INTEGER" property="spendWay" />
+    <result column="spend_time" jdbcType="TIMESTAMP" property="spendTime" />
+    <result column="spend_mark" jdbcType="VARCHAR" property="spendMark" />
+    <result column="spend_status" jdbcType="INTEGER" property="spendStatus" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, spend_people, spend_item, spend_way, spend_time, spend_mark, spend_status
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.SpendExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_spend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_spend
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_spend
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.SpendExample">
+    delete from t_spend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.Spend">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_spend (spend_people, spend_item, spend_way, 
+      spend_time, spend_mark, spend_status
+      )
+    values (#{spendPeople,jdbcType=VARCHAR}, #{spendItem,jdbcType=VARCHAR}, #{spendWay,jdbcType=INTEGER}, 
+      #{spendTime,jdbcType=TIMESTAMP}, #{spendMark,jdbcType=VARCHAR}, #{spendStatus,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Spend">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_spend
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="spendPeople != null">
+        spend_people,
+      </if>
+      <if test="spendItem != null">
+        spend_item,
+      </if>
+      <if test="spendWay != null">
+        spend_way,
+      </if>
+      <if test="spendTime != null">
+        spend_time,
+      </if>
+      <if test="spendMark != null">
+        spend_mark,
+      </if>
+      <if test="spendStatus != null">
+        spend_status,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="spendPeople != null">
+        #{spendPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="spendItem != null">
+        #{spendItem,jdbcType=VARCHAR},
+      </if>
+      <if test="spendWay != null">
+        #{spendWay,jdbcType=INTEGER},
+      </if>
+      <if test="spendTime != null">
+        #{spendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spendMark != null">
+        #{spendMark,jdbcType=VARCHAR},
+      </if>
+      <if test="spendStatus != null">
+        #{spendStatus,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.SpendExample" resultType="java.lang.Long">
+    select count(*) from t_spend
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update t_spend
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.spendPeople != null">
+        spend_people = #{record.spendPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spendItem != null">
+        spend_item = #{record.spendItem,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spendWay != null">
+        spend_way = #{record.spendWay,jdbcType=INTEGER},
+      </if>
+      <if test="record.spendTime != null">
+        spend_time = #{record.spendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.spendMark != null">
+        spend_mark = #{record.spendMark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.spendStatus != null">
+        spend_status = #{record.spendStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_spend
+    set id = #{record.id,jdbcType=INTEGER},
+      spend_people = #{record.spendPeople,jdbcType=VARCHAR},
+      spend_item = #{record.spendItem,jdbcType=VARCHAR},
+      spend_way = #{record.spendWay,jdbcType=INTEGER},
+      spend_time = #{record.spendTime,jdbcType=TIMESTAMP},
+      spend_mark = #{record.spendMark,jdbcType=VARCHAR},
+      spend_status = #{record.spendStatus,jdbcType=INTEGER}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.Spend">
+    update t_spend
+    <set>
+      <if test="spendPeople != null">
+        spend_people = #{spendPeople,jdbcType=VARCHAR},
+      </if>
+      <if test="spendItem != null">
+        spend_item = #{spendItem,jdbcType=VARCHAR},
+      </if>
+      <if test="spendWay != null">
+        spend_way = #{spendWay,jdbcType=INTEGER},
+      </if>
+      <if test="spendTime != null">
+        spend_time = #{spendTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="spendMark != null">
+        spend_mark = #{spendMark,jdbcType=VARCHAR},
+      </if>
+      <if test="spendStatus != null">
+        spend_status = #{spendStatus,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Spend">
+    update t_spend
+    set spend_people = #{spendPeople,jdbcType=VARCHAR},
+      spend_item = #{spendItem,jdbcType=VARCHAR},
+      spend_way = #{spendWay,jdbcType=INTEGER},
+      spend_time = #{spendTime,jdbcType=TIMESTAMP},
+      spend_mark = #{spendMark,jdbcType=VARCHAR},
+      spend_status = #{spendStatus,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+
+  <select id="getAllSpend" resultType="jz.cdgy.mbg.pojo.Spend">
+      select
+      t_spend.id,
+      t_spend.spend_people,
+      t_spend.spend_item,
+      t_spend.spend_way,
+      t_spend.spend_time,
+      t_spend.spend_mark,
+      t_spend.spend_status,
+      t_spend_way.way_name,
+      t_status.status_name,
+      t_item.item_name
+      from t_spend
+      left join t_spend_way on t_spend_way.id = t_spend.spend_way
+      left join t_status on t_status.id = t_spend.spend_status
+      left join t_item on t_item.id = t_spend.spend_item
+      <where>
+        <if test="spendPeople!=null and spendPeople!=''">
+          and t_spend.spend_people like concat('%',#{spendPeople,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="spendMark!=null and spendMark!=''">
+          and t_spend.spend_mark like concat('%',#{spendMark,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="itemName!=null and itemName!=''">
+          and t_spend.spend_item in
+          <foreach item="id" collection='itemName.split(",")' open="(" separator="," close=")">
+            #{id}
+          </foreach>
+        </if>
+        <if test="wayName!=null and wayName!=''">
+          and t_spend_way.id in
+          <foreach item="id" collection='wayName.split(",")' open="(" separator="," close=")">
+            #{id}
+          </foreach>
+        </if>
+        <if test="statusName!=null and statusName!=''">
+          and t_status.id in
+          <foreach item="id" collection='statusName.split(",")' open="(" separator="," close=")">
+            #{id}
+          </foreach>
+        </if>
+        <if test="spendTimeStr!=null and spendTimeStr!=''">
+          and  DATE_FORMAT(spend_time,'%Y-%m-%d')
+          between DATE_FORMAT(spend_time,SUBSTRING_INDEX(#{spendTimeStr,jdbcType=VARCHAR},",",1))
+          and  DATE_FORMAT(spend_time,SUBSTRING_INDEX(#{spendTimeStr,jdbcType=VARCHAR},",",-1))
+        </if>
+      </where>
+  </select>
+</mapper>

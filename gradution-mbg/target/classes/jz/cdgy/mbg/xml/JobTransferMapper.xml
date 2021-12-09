@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.JobTransferMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.JobTransfer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="source_department" jdbcType="INTEGER" property="sourceDepartment" />
+    <result column="destine_department" jdbcType="INTEGER" property="destineDepartment" />
+    <result column="transfer_time" jdbcType="TIMESTAMP" property="transferTime" />
+    <result column="emp_id" jdbcType="INTEGER" property="empId" />
+    <result column="status_id" jdbcType="INTEGER" property="statusId" />
+    <result column="transfer_reason" jdbcType="VARCHAR" property="transferReason" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, source_department, destine_department, transfer_time, emp_id, status_id, transfer_reason
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.JobTransferExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_job_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_job_transfer
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_job_transfer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.JobTransferExample">
+    delete from t_job_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.JobTransfer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_job_transfer (source_department, destine_department, 
+      transfer_time, emp_id, status_id, 
+      transfer_reason)
+    values (#{sourceDepartment,jdbcType=INTEGER}, #{destineDepartment,jdbcType=INTEGER}, 
+      #{transferTime,jdbcType=TIMESTAMP}, #{empId,jdbcType=INTEGER}, #{statusId,jdbcType=INTEGER}, 
+      #{transferReason,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.JobTransfer">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_job_transfer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sourceDepartment != null">
+        source_department,
+      </if>
+      <if test="destineDepartment != null">
+        destine_department,
+      </if>
+      <if test="transferTime != null">
+        transfer_time,
+      </if>
+      <if test="empId != null">
+        emp_id,
+      </if>
+      <if test="statusId != null">
+        status_id,
+      </if>
+      <if test="transferReason != null">
+        transfer_reason,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sourceDepartment != null">
+        #{sourceDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="destineDepartment != null">
+        #{destineDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="transferTime != null">
+        #{transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        #{empId,jdbcType=INTEGER},
+      </if>
+      <if test="statusId != null">
+        #{statusId,jdbcType=INTEGER},
+      </if>
+      <if test="transferReason != null">
+        #{transferReason,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.JobTransferExample" resultType="java.lang.Long">
+    select count(*) from t_job_transfer
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+    <update id="updateByExampleSelective" parameterType="map">
+    update t_job_transfer
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.sourceDepartment != null">
+        source_department = #{record.sourceDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="record.destineDepartment != null">
+        destine_department = #{record.destineDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="record.transferTime != null">
+        transfer_time = #{record.transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.empId != null">
+        emp_id = #{record.empId,jdbcType=INTEGER},
+      </if>
+      <if test="record.statusId != null">
+        status_id = #{record.statusId,jdbcType=INTEGER},
+      </if>
+      <if test="record.transferReason != null">
+        transfer_reason = #{record.transferReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_job_transfer
+    set id = #{record.id,jdbcType=INTEGER},
+      source_department = #{record.sourceDepartment,jdbcType=INTEGER},
+      destine_department = #{record.destineDepartment,jdbcType=INTEGER},
+      transfer_time = #{record.transferTime,jdbcType=TIMESTAMP},
+      emp_id = #{record.empId,jdbcType=INTEGER},
+      status_id = #{record.statusId,jdbcType=INTEGER},
+      transfer_reason = #{record.transferReason,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.JobTransfer">
+    update t_job_transfer
+    <set>
+      <if test="sourceDepartment != null">
+        source_department = #{sourceDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="destineDepartment != null">
+        destine_department = #{destineDepartment,jdbcType=INTEGER},
+      </if>
+      <if test="transferTime != null">
+        transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="empId != null">
+        emp_id = #{empId,jdbcType=INTEGER},
+      </if>
+      <if test="statusId != null">
+        status_id = #{statusId,jdbcType=INTEGER},
+      </if>
+      <if test="transferReason != null">
+        transfer_reason = #{transferReason,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.JobTransfer">
+    update t_job_transfer
+    set source_department = #{sourceDepartment,jdbcType=INTEGER},
+      destine_department = #{destineDepartment,jdbcType=INTEGER},
+      transfer_time = #{transferTime,jdbcType=TIMESTAMP},
+      emp_id = #{empId,jdbcType=INTEGER},
+      status_id = #{statusId,jdbcType=INTEGER},
+      transfer_reason = #{transferReason,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+
+  <select id="getAllJobTransfer" resultType="jz.cdgy.mbg.pojo.JobTransfer">
+    SELECT
+    t_job_transfer.id, source_department, destine_department, transfer_time, emp_id, status_id, transfer_reason,
+    t_emp.emp_name,
+    t_status.status_name,
+    department_name as source_departmentName,
+    destineDepartmentName as destine_departmentName
+    FROM t_job_transfer
+    LEFT JOIN t_emp on t_emp.id = t_job_transfer.emp_id
+    LEFT JOIN t_status on t_status.id = t_job_transfer.status_id
+    LEFT JOIN t_department on t_department.id = t_job_transfer.source_department
+    LEFT JOIN (SELECT id,department_name as destineDepartmentName FROM t_department) as t on t.id = t_job_transfer.destine_department
+    <where>
+      <if test="sourceDepartmentName!=null and sourceDepartmentName!=''">
+        and t_job_transfer.source_department in
+        <foreach item="id" collection='sourceDepartmentName.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="transferReason!=null and transferReason!=''">
+        and t_job_transfer.transfer_reason  like concat('%',#{transferReason,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="destineDepartmentName!=null and destineDepartmentName!=''">
+        and  t_job_transfer.destine_department in
+        <foreach item="id" collection='destineDepartmentName.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="statusName!=null and statusName!=''">
+        and t_job_transfer.status_id in
+        <foreach item="id" collection='statusName.split(",")' open="(" separator="," close=")">
+          #{id}
+        </foreach>
+      </if>
+      <if test="empName!=null and empName!=''">
+        and t_emp.emp_name like concat('%',#{empName,jdbcType=VARCHAR},'%')
+      </if>
+      <if test="transferTimeStr!=null and transferTimeStr!=''">
+        and  DATE_FORMAT(transfer_time,'%Y-%m-%d')
+        between DATE_FORMAT(transfer_time,SUBSTRING_INDEX(#{transferTimeStr,jdbcType=VARCHAR},",",1))
+        and  DATE_FORMAT(transfer_time,SUBSTRING_INDEX(#{transferTimeStr,jdbcType=VARCHAR},",",-1))
+      </if>
+    </where>
+  </select>
+</mapper>

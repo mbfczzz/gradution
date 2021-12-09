@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.msg.mapper.NotifyMapper">
+    <resultMap id="ResultMap" type="jz.cdgy.msg.Dto.MsgDto">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="send_people" jdbcType="VARCHAR" property="sendPeople" />
+        <result column="send_time" jdbcType="VARCHAR" property="sendTime" />
+        <result column="model_id" jdbcType="INTEGER" property="modelId" />
+        <result column="way_name" jdbcType="VARCHAR" property="sendWay" />
+        <result column="source_name" jdbcType="VARCHAR" property="sourceId" />
+        <result column="subject_name" jdbcType="VARCHAR" property="subjectId" />
+        <result column="msg_title" jdbcType="VARCHAR" property="msgTitle" />
+        <result column="msg_content" jdbcType="VARCHAR" property="msgContent" />
+        <result column="status_name" jdbcType="VARCHAR" property="msgStatus" />
+        <result column="is_read" jdbcType="INTEGER" property="isRead" />
+    </resultMap>
+    <update id="updateMessage" parameterType="jz.cdgy.msg.Dto.MsgDto">
+        update t_msg
+        <set>
+            <if test="msgTitle != null">
+                msg_title = #{msgTitle,jdbcType=VARCHAR},
+            </if>
+            <if test="msgContent != null">
+                msg_content = #{msgContent,jdbcType=VARCHAR},
+            </if>
+            <if test="sendWay != null">
+                send_way = #{sendWay,jdbcType=VARCHAR},
+            </if>
+            <if test="sendPeople != null">
+                send_people = #{sendPeople,jdbcType=VARCHAR},
+            </if>
+            <if test="sourceId != null">
+                msg_source = #{sourceId,jdbcType=VARCHAR},
+            </if>
+            <if test="subjectId != null">
+                send_subject = #{subjectId,jdbcType=VARCHAR},
+            </if>
+            <if test="sendTime != null">
+                send_time = #{sendTime,jdbcType=TIMESTAMP},
+            </if>
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="checkOk">
+        update t_msg
+        <set>
+                msg_status = 1
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <delete id="deleteByPrimaryKey">
+        delete from t_msg
+        where id = #{id,jdbcType=INTEGER}
+    </delete>
+    <update id="msgReject">
+        update t_msg
+        <set>
+            msg_status = 5
+        </set>
+        where id = #{id,jdbcType=VARCHAR}
+    </update>
+    <update id="updateUserMessage">
+        update t_user_message
+        <set>
+            is_read = 1
+        </set>
+        where uid = #{uid}
+        and mid = #{mid}
+    </update>
+    <select id="getAllNotify" parameterType="jz.cdgy.msg.Dto.MsgDto" resultMap="ResultMap">
+        SELECT
+        t_msg.id,
+        send_people,
+        send_time,
+        way_name,
+        model_id,
+        source_name,
+        subject_name,
+        msg_title,
+        msg_content,
+        status_name
+        FROM
+        t_msg
+        LEFT JOIN t_msg_source on t_msg.msg_source = t_msg_source.id
+        LEFT JOIN t_msg_subject on t_msg.send_subject = t_msg_subject.id
+        LEFT JOIN t_msg_way on t_msg_way.id = t_msg.send_way
+        LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        <where>
+        <if test="sendPeople!=null and sendPeople!=''">
+            and send_people like concat('%',#{sendPeople,jdbcType=VARCHAR},'%')
+        </if>
+        <if test="sendTime!=null and sendTime!=''">
+            and  DATE_FORMAT(send_time,'%Y-%m-%d')
+            between DATE_FORMAT(send_time,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",1))
+            and  DATE_FORMAT(send_time,SUBSTRING_INDEX(#{sendTime,jdbcType=VARCHAR},",",-1))
+        </if>
+        <if test="modelId!=null">
+            and model_id = #{modelId}
+        </if>
+        <if test="msgTitle!=null">
+            and msg_title like concat('%',#{msgTitle,jdbcType=VARCHAR},'%')
+        </if>
+       <if test="msgContent!=null">
+            and msg_Content like concat('%',#{msgContent,jdbcType=VARCHAR},'%')
+       </if>
+       <if test="sourceId!=null and sourceId!=''">
+          and msg_source in
+           <foreach item="id" collection='sourceId.split(",")' open="(" separator="," close=")">
+               #{id}
+           </foreach>
+       </if>
+       <if test="subjectId!=null and subjectId!=''">
+           and send_subject in
+           <foreach item="id" collection='subjectId.split(",")' open="(" separator="," close=")">
+               #{id}
+           </foreach>
+       </if>
+            <if test="sendWay!=null and sendWay!=''">
+                and send_way in
+                <foreach item="id" collection='sendWay.split(",")' open="(" separator="," close=")">
+                    #{id}
+                </foreach>
+            </if>
+        and t_msg.msg_status = 1
+        or t_msg.msg_status = 4
+        </where>
+        order by send_time
+    </select>
+    <select id="getSendWay" resultType="java.util.Map">
+        select way_name as name,id as value
+        from t_msg_way
+    </select>
+    <select id="getNotifyTemplate" resultType="java.util.Map">
+        select msg_name as name,id as value
+        from t_msg_model
+        where t_msg_model.msg_type = 3
+    </select>
+    <select id="getCurrentTemplate" resultType="jz.cdgy.mbg.pojo.MsgModel">
+        select t_msg_model.id,t_msg_model.msg_type,t_msg_model.msg_content,t_msg_model.msg_name,t_msg_model.title,t_msg_model.is_valid,t_msg_model.create_time,t_msg_model.update_time,t_msg_model.resoure_url,t_msg_model.is_use,t_msg_model.way_id
+        from t_msg_model
+        where t_msg_model.id = #{id}
+        and t_msg_model.msg_type = 3
+    </select>
+    <select id="getMsgSource" resultType="java.util.Map">
+        select t_msg_source.source_name as name,t_msg_source.id as value
+        from t_msg_source;
+    </select>
+    <select id="getSendSubject" resultType="java.util.Map">
+        select t_msg_subject.subject_name as name,t_msg_subject.id as value
+        from t_msg_subject;
+    </select>
+    <select id="getAllCheckNotify" resultMap="ResultMap">
+        SELECT
+            t_msg.id,
+            send_time,
+            way_name,
+            msg_title,
+            msg_content,
+            status_name,
+            send_people
+        FROM
+        t_msg
+        LEFT JOIN t_msg_way on t_msg_way.id = t_msg.send_way
+        LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        where
+        t_status.id = 2
+        or
+        t_status.id = 5
+        or
+        t_status.id = 3
+        order by send_time
+    </select>
+    <select id="getMessageByName" resultMap="ResultMap">
+        select
+        t_msg.id,
+        t_msg.send_time,
+        t_msg.msg_title,
+        t_msg.msg_content,
+        status_name
+        from
+        t_msg
+        LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        where t_msg.id in (select t_user_msg.mes_id from t_user_msg where t_user_msg.uid = #{id})
+    </select>
+    <select id="getMessageByUser" resultMap ="ResultMap">
+        SELECT
+            t_msg.id,
+            send_people,
+            send_time,
+            model_id,
+            msg_title,
+            msg_content,
+            status_name,
+            is_read
+        FROM
+            t_user_msg
+                LEFT JOIN t_msg on t_user_msg.id = t_msg.id
+                LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        where
+                t_user_msg.uid=#{id}
+                and
+                t_status.id = 1 or t_status.id = 4
+       </select>
+    <select id="getMessageByCurrent" resultMap ="ResultMap">
+        SELECT
+            t_msg.id,
+            send_people,
+            send_time,
+            model_id,
+            msg_title,
+            msg_content,
+            status_name
+        FROM
+            t_msg
+                LEFT JOIN t_status on t_msg.msg_status = t_status.id
+        where t_msg.id = #{mid}
+    </select>
+</mapper>

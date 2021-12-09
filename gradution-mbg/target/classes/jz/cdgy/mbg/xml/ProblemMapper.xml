@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jz.cdgy.mbg.mapper.ProblemMapper">
+  <resultMap id="BaseResultMap" type="jz.cdgy.mbg.pojo.Problem">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="problem_model" jdbcType="VARCHAR" property="problemModel" />
+    <result column="problem_content" jdbcType="VARCHAR" property="problemContent" />
+    <result column="is_ok" jdbcType="TINYINT" property="isOk" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="add_people" jdbcType="VARCHAR" property="addPeople" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, problem_model, problem_content, is_ok, create_time, add_people
+  </sql>
+  <select id="selectByExample" parameterType="jz.cdgy.mbg.pojo.ProblemExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_problem
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_problem
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_problem
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="jz.cdgy.mbg.pojo.ProblemExample">
+    delete from t_problem
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="jz.cdgy.mbg.pojo.Problem">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_problem (problem_model, problem_content, is_ok, 
+      create_time, add_people)
+    values (#{problemModel,jdbcType=VARCHAR}, #{problemContent,jdbcType=VARCHAR}, #{isOk,jdbcType=TINYINT}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{addPeople,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="jz.cdgy.mbg.pojo.Problem">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_problem
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="problemModel != null">
+        problem_model,
+      </if>
+      <if test="problemContent != null">
+        problem_content,
+      </if>
+      <if test="isOk != null">
+        is_ok,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="addPeople != null">
+        add_people,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="problemModel != null">
+        #{problemModel,jdbcType=VARCHAR},
+      </if>
+      <if test="problemContent != null">
+        #{problemContent,jdbcType=VARCHAR},
+      </if>
+      <if test="isOk != null">
+        #{isOk,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addPeople != null">
+        #{addPeople,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="jz.cdgy.mbg.pojo.ProblemExample" resultType="java.lang.Long">
+    select count(*) from t_problem
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_problem
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.problemModel != null">
+        problem_model = #{record.problemModel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.problemContent != null">
+        problem_content = #{record.problemContent,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isOk != null">
+        is_ok = #{record.isOk,jdbcType=TINYINT},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.addPeople != null">
+        add_people = #{record.addPeople,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_problem
+    set id = #{record.id,jdbcType=INTEGER},
+      problem_model = #{record.problemModel,jdbcType=VARCHAR},
+      problem_content = #{record.problemContent,jdbcType=VARCHAR},
+      is_ok = #{record.isOk,jdbcType=TINYINT},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      add_people = #{record.addPeople,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="jz.cdgy.mbg.pojo.Problem">
+    update t_problem
+    <set>
+      <if test="problemModel != null">
+        problem_model = #{problemModel,jdbcType=VARCHAR},
+      </if>
+      <if test="problemContent != null">
+        problem_content = #{problemContent,jdbcType=VARCHAR},
+      </if>
+      <if test="isOk != null">
+        is_ok = #{isOk,jdbcType=TINYINT},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="addPeople != null">
+        add_people = #{addPeople,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="jz.cdgy.mbg.pojo.Problem">
+    update t_problem
+    set problem_model = #{problemModel,jdbcType=VARCHAR},
+      problem_content = #{problemContent,jdbcType=VARCHAR},
+      is_ok = #{isOk,jdbcType=TINYINT},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      add_people = #{addPeople,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
